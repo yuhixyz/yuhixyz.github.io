@@ -12,16 +12,15 @@ jobs:
         with: # 参数
           submodules: true
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2.4.13
+        uses: peaceiris/actions-hugo@v2.2.2
         with:
-          hugo-version: '0.72.0'
+          hugo-version: '0.66.2'
           extended: true
       - name: Build
         run: hugo --minify
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3.7.3
-        with:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        uses: peaceiris/actions-gh-pages@v2.5.1
+        env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           EXTERNAL_REPOSITORY: yuhixyz/yuhixyz.github.io
           PUBLISH_BRANCH: build
