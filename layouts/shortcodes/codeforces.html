@@ -1,0 +1,33 @@
+<script type='text/Javascript' src='https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js'></script>
+<script type='text/Javascript'>
+    $(document).ready(function () {
+        $.ajax({
+                dataType: "json",
+                url: "https://codeforces.com/api/user.info?handles=ketchuppp",
+                cache: false, 
+                success: function (response) {
+                    x = response.result[0].rating;
+                    y = response.result[0].rank;
+                    z = y + ' ' + x;
+                    z = z.toUpperCase();
+                    document.getElementById("info").innerHTML=z;
+                }
+        })
+                
+    });                
+</script>
+	
+<center>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="28">
+        <g shape-rendering="crispEdges">
+            <path fill="#555" d="M0 0h129v28H0z" />
+            <path fill="#007ec6" d="M129 0h111v28H129z" />
+        </g>
+        <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="100">
+            <image x="9" y="7" width="14" height="14"
+                xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMUY4QUNCIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+Q29kZWZvcmNlcyBpY29uPC90aXRsZT48cGF0aCBkPSJNNC41IDcuNUM1LjMyOCA3LjUgNiA4LjE3MiA2IDl2MTAuNWMwIC44MjgtLjY3MiAxLjUtMS41IDEuNWgtM0MuNjczIDIxIDAgMjAuMzI4IDAgMTkuNVY5YzAtLjgyOC42NzMtMS41IDEuNS0xLjVoM3ptOS00LjVjLjgyOCAwIDEuNS42NzIgMS41IDEuNXYxNWMwIC44MjgtLjY3MiAxLjUtMS41IDEuNWgtM2MtLjgyNyAwLTEuNS0uNjcyLTEuNS0xLjV2LTE1YzAtLjgyOC42NzMtMS41IDEuNS0xLjVoM3ptOSA3LjVjLjgyOCAwIDEuNS42NzIgMS41IDEuNXY3LjVjMCAuODI4LS42NzIgMS41LTEuNSAxLjVoLTNjLS44MjggMC0xLjUtLjY3Mi0xLjUtMS41VjEyYzAtLjgyOC42NzItMS41IDEuNS0xLjVoM3oiLz48L3N2Zz4=" />
+            <text  x="730" y="175" transform="scale(.1)" textLength="880">KETCHUPPP</text>
+            <text id="info" x="1845" y="175" font-weight="bold" transform="scale(.1)" textLength="870"><span id="info"></span></text>
+        </g>
+    </svg>
+</center>

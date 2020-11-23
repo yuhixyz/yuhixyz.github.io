@@ -1,0 +1,11 @@
+<span class="caption-wrapper">
+     <img class="caption" src="/images/{{ .Get "src" }}"
+          title="{{ .Get "title" }}"
+          alt="{{ if .Get "alt" }}{{ .Get "alt" }}{{ else }}{{ .Get "title" }}{{ end }}"
+          width="{{ if .Get "width" }}{{ .Get "width" }}{{ else }}98%{{ end }}"
+     >
+     {{ if .Get "title" }}
+     <span class="caption">◎ {{ .Get "title" }}</span>
+     {{ end }}
+</span>
+   

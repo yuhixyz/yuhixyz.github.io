@@ -1,0 +1,7 @@
+{{ define "main" }}
+    {{ if .Site.Params.enableAlgorithmCloud }}
+        {{ partial "pages/algorithm-cloud.html" . }}
+    {{ else }}
+        {{ partial "pages/taxonomy.html" . }}
+    {{ end }}
+{{ end }}

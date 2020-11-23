@@ -1,0 +1,9 @@
+node_modules
+*.bat
+public
+config.yaml
+gulpfile.js
+resources
+package.json
+package-lock.json
+sw-template.js
