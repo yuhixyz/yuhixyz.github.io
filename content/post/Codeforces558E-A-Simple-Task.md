@@ -6,7 +6,7 @@ description:
 tags: []
 categories: [ACM, Solutions]
 series: []
-algorithms: [分块, 线段树]
+algorithms: [分块]
 comments: true
 displayCopyright: true
 toc: true
@@ -208,14 +208,4 @@ int main() {
     return 0;
 }
 ```
-
-
-### 线段树
-
-还不会（
-
-```cpp
-
-```
-
 
