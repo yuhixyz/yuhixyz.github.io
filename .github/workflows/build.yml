@@ -14,9 +14,6 @@ jobs:
     steps:
     - name: 'Building...'
       uses: reuixiy/hugo-deploy@v1
-      with:
-        hugo-version: '0.72.0'
-        extended: true
       env:
         DEPLOY_REPO: yuhixyz/yuhixyz.github.io
         DEPLOY_BRANCH: build
