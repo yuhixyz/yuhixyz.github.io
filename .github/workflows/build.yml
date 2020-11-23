@@ -1,28 +1,30 @@
-name: build #自动化的名称
+name: Github-Pages
+
 on:
-  push: # push的时候触发
-    branches: # 那些分支需要触发
+  push:
+    branches:
       - master
+
 jobs:
   build:
-    runs-on: ubuntu-latest # 镜像市场
+    runs-on: ubuntu-18.04
     steps:
-      - name: checkout # 步骤的名称
-        uses: actions/checkout@master #软件市场的名称
-        with: # 参数
-          submodules: true
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2.2.2
+      - uses: actions/checkout@v1
         with:
-          hugo-version: '0.59.1'
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.57.2'
           extended: true
+
       - name: Build
-        run: hugo --minify
+        run: hugo --gc --minify --cleanDestinationDir
+
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2.5.1
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          EXTERNAL_REPOSITORY: yuhixyz/yuhixyz.github.io
-          PUBLISH_BRANCH: build
-          PUBLISH_DIR: ./public
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: build
+          force_orphan: true
