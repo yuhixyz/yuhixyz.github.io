@@ -1,0 +1,27 @@
+name: gh-pages-deploy #自动化的名称
+on:
+  push: # push的时候触发
+    branches: # push到master分支触发
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest # 镜像市场
+    steps:
+      - name: checkout # 步骤的名称
+        uses: actions/checkout@master #软件市场的名称
+        with: # 参数
+          submodules: true
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2.2.2
+        with:
+          hugo-version: '0.72.0'
+          extended: true
+      - name: Build
+        run: hugo --minify
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2.5.1
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          EXTERNAL_REPOSITORY: yuhixyz/yuhixyz.github.io
+          PUBLISH_BRANCH: deploy # 需要将deploy分支部署到github pages
+          PUBLISH_DIR: ./public
