@@ -638,9 +638,8 @@ uglyURLs = false
     # 说明：仅在生产环境（production）下渲染
 
     # 是否开启（全局设置）
-    enableComments = true
-    # 说明：文章的 Front Matter 中的 `comments`
-    #      的优先级高于此处
+    enableComments = false 
+    # 修改后的逻辑：false为全局优先级第一，一篇文章的评论开启，必须开启全局评论的情况下，再开启对应文章 Front Matter 中的 `comments` 为true
 
     ## Disqus
     enableDisqus = false
@@ -666,7 +665,7 @@ uglyURLs = false
     # 说明：https://valine.js.org/
 
     ## Utterances
-    enableUtterances = false
+    enableUtterances = false    
     utterancesRepo = ""
     utterancesIssueTerm = "pathname"
     utterancesTheme = "github-light"
@@ -1308,7 +1307,7 @@ uglyURLs = false
     # hugo server --environment production
 
     # 是否开启，注意开启后可能导致无法打开生产环境
-    enableForceHTTPS = true
+    enableForceHTTPS = false
 
     # 说明：使用 JavaScript 来实现跳转。如果你
     #      的服务器不支持强制 HTTPS 跳转，则可
