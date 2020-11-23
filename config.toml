@@ -31,7 +31,7 @@ enableEmoji = true
 footnoteReturnLinkContents = "↩"
 
 # 是否启用 Git 版本信息
-enableGitInfo = false
+enableGitInfo = true
 
 # 是否生成 robots.txt 文件
 enableRobotsTXT = true
@@ -1081,17 +1081,17 @@ uglyURLs = false
     # 文章的 Git 版本信息
 
     # 是否开启
-    enablePostGitInfo = false
+    enablePostGitInfo = true
 
     # 是否显示（全局设置）
-    displayPostGitInfo = false
+    displayPostGitInfo = true
     # 说明：文章的 Front Matter 中的 `gitinfo`
     #      的优先级高于此处
 
     # 仓库地址
-    repoURL = ""
+    repoURL = "https://github.com/yuhixyz/yuhixyz.github.io"
     # 编辑地址
-    repoEditURL = ""
+    repoEditURL = "https://github.com/yuhixyz/yuhixyz.github.io/tree/master"
 
     # Git 的图标
     gitIcon = "code-branch"
@@ -1185,7 +1185,7 @@ uglyURLs = false
     enablePostNav = true
 
     # 是否仅限于相同的文章分区
-    postNavInSection = false
+    postNavInSection = true
     ######################################
     # 极简页脚
 
@@ -1247,7 +1247,7 @@ uglyURLs = false
     # 自定义页脚（支持 Markdown）
     customFooter = "[苏ICP备19054878号-2](http://www.beian.miit.gov.cn/)"
 
-    displayBusuanziSiteUVAndPV = true
+    displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = ""
     busuanziSiteUVIcon = "user"
     busuanziSitePVText = ""
@@ -1282,7 +1282,7 @@ uglyURLs = false
     enableHighlight = true
 
     # 是否开启竖直滚动
-    enableOverflowY = true
+    enableOverflowY = false
     # 最大高度
     maxHeight = 45
     # 单位：em
@@ -1308,7 +1308,7 @@ uglyURLs = false
     # hugo server --environment production
 
     # 是否开启，注意开启后可能导致无法打开生产环境
-    enableForceHTTPS = false
+    enableForceHTTPS = true
 
     # 说明：使用 JavaScript 来实现跳转。如果你
     #      的服务器不支持强制 HTTPS 跳转，则可

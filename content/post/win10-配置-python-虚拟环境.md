@@ -10,6 +10,7 @@ algorithms: []
 comments: true
 displayCopyright: true
 toc: true
+gitinfo: true 
 draft: false
 ---
 
