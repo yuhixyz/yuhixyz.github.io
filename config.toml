@@ -956,7 +956,8 @@ uglyURLs = false
     fontFamilyBody = "'EB Garamond', 'Noto Serif SC', serif"
 
     # 网络字体链接
-    fontsLink = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Cinzel+Decorative&family=Fira+Mono" # &family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Liu+Jian+Mao+Cao&family=Zhi+Mang+Xing&display=swap&subset=chinese-simplified
+    # fontsLink = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Cinzel+Decorative&family=Fira+Mono" # &family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Liu+Jian+Mao+Cao&family=Zhi+Mang+Xing&display=swap&subset=chinese-simplified
+    fontsLink = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative&family=Fira+Mono"
     # 说明：要想读者一定体验到你设置的字体，最好
     #      采用网络字体。MemE 主题目前仅支持
     #      Google Fonts 的链接，请前往
