@@ -10,7 +10,7 @@ algorithms: [贪心, 分解质因数]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 解题以及补题报告。
