@@ -11,7 +11,6 @@ jobs:
         uses: actions/checkout@master #软件市场的名称
         with: # 参数
           submodules: true
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2.4.12
         with:
@@ -22,6 +21,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.6.2
         env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           EXTERNAL_REPOSITORY: yuhixyz/yuhixyz.github.io
           PUBLISH_BRANCH: build
