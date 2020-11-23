@@ -19,7 +19,9 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --gc --minify --cleanDestinationDir
+        run: |
+           git config --global core.quotepath false         
+           hugo --gc --minify --cleanDestinationDir
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
