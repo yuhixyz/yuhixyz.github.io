@@ -20,8 +20,8 @@ jobs:
         run: hugo --minify
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.7.3
-        with:
-          # ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           EXTERNAL_REPOSITORY: yuhixyz/yuhixyz.github.io
           PUBLISH_BRANCH: build
