@@ -1,0 +1,21 @@
+# .github/workflows/build.yml
+
+name: build
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 'Building...'
+      uses: reuixiy/hugo-deploy@v1
+      env:
+        DEPLOY_REPO: yuhixyz/yuhixyz.github.io
+        DEPLOY_BRANCH: build
+        DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        TZ: Asia/Shanghai
