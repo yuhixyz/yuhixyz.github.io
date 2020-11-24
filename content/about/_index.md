@@ -30,6 +30,6 @@ draft: false
 
 曾尝试过各种 `Hugo` 主题，也把博客部署过很多地方，比如 `github / gitee / coding pages`，阿里云 `ECS`。
 
-现在返璞归真，博客使用 [`MemE`](https://github.com/reuixiy/hugo-theme-meme) 主题，通过 `Github Action` 部署于 `Github Pages`.
+博客使用 [`MemE`](https://github.com/reuixiy/hugo-theme-meme) 主题，通过 `Github Action` 部署于 `Github Pages`.
 
-关闭了 `Valine` 评论系统，而采用 `github issues` 的方式，每篇文章下面都有相关链接。
+返璞归真，关闭了 `busuanzi` 访问量统计；关闭了 `Valine` 评论系统，采用 `github issues` 的方式，每篇文章下面都有相关链接。
