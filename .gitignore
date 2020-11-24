@@ -1,7 +1,6 @@
 node_modules
 *.bat
 public
-config.yaml
 gulpfile.js
 resources
 package.json

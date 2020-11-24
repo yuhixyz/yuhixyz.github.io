@@ -1,0 +1,10 @@
+---
+baseURL: "/"
+languageCode: "zh"
+title: "Yuhi's Blog"
+theme: "meme"
+
+algolia:
+  index: "blog"
+  appID: "ZIX9U32BGZ"
+---
