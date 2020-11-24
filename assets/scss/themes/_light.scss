@@ -20,17 +20,16 @@
     @if ($enableHighlight) {
         /* https://xyproto.github.io/splash/docs/all.html */
         /* Color values matching manni style */
-
-        --chroma-line-numbers-background: #ffffcc;
-        --chroma-line-numbers-color: #7f7f7f;
-        --chroma-keyword-color: #006699;
-        --chroma-name-color: #9999ff;
-        --chroma-attribute-color: #330099;
-        --chroma-literal-color: #cc3300;
-        --chroma-number-color: #ff6600;
-        --chroma-comment-color: #0099ff;
-        --chroma-deleted-color: #ffcccc;
-        --chroma-output-color: #aaaaaa;
+        --chroma-line-numbers-background: #ffffcc; // LineHighlight
+        --chroma-line-numbers-color: #7f7f7f; // LineNumbersTable
+        --chroma-keyword-color: rgb(65, 166, 216); // Keyword
+        --chroma-name-color: #9999ff; // NameDecorator
+        --chroma-attribute-color: #634b94; // NameTag
+        --chroma-literal-color: #e7501d; // LiteralString
+        --chroma-number-color: #e49841; // LiteralNumber
+        --chroma-comment-color: #0099ff; // Comment
+        --chroma-deleted-color: #ffcccc; // GenericDeleted
+        --chroma-output-color: #aaaaaa; // GenericOutput
     }
 }
 

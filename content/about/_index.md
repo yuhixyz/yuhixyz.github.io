@@ -11,6 +11,8 @@ meta: false
 draft: false
 ---
 
+## 「我」
+
 南京邮电大学大三学生，大一暑假开始学习算法，大二上进入校队，大二下疫情严重（猝不及防），大三上有望打比赛。
 
 目前拉胯的比赛经历：
@@ -23,3 +25,13 @@ draft: false
 
 + 将要打的天梯赛
 + 接下来未知的 ICPC
+
+## 博客相关
+
+![GitHub Actions](https://github.com/yuhixyz/yuhixyz.github.io/workflows/build/badge.svg)
+
+曾尝试过各种 `Hugo` 主题，也把博客部署过很多地方，比如 `github / gitee / coding pages`，阿里云 `ECS`。
+
+现在返璞归真，博客使用 [`MemE`](https://github.com/reuixiy/hugo-theme-meme) 主题，通过 `Github Action` 部署于 `Github Pages`.
+
+关闭了 `Valine` 评论系统，而采用 `github issues` 的方式，每篇文章下面都有相关链接。

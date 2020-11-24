@@ -6,4 +6,4 @@
 
 现在返璞归真，博客使用 [`MemE`](https://github.com/reuixiy/hugo-theme-meme) 主题，通过 `Github Action` 部署于 `Github Pages`.
 
-关闭了 Valine 评论系统，而采用 github issues 的方式。
+关闭了 `Valine` 评论系统，而采用 `github issues` 的方式。
