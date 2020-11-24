@@ -673,11 +673,6 @@ uglyURLs = false
     utterancesLabel = ""
     # 说明：https://utteranc.es/
 
-    ## Algolia
-    algoliaAppId = "ZIX9U32BGZ"
-    algoliaIndexName = "blog"
-    algoliaSearchOnlyKey = "97696b63e2ee6774cc65c5a5ad29cff1"
-
     ######################################
     # Google Analytics
 
