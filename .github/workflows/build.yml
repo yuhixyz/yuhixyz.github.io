@@ -27,7 +27,7 @@ jobs:
         run: |
           npm install hugo-algolia -g
           hugo-algolia -s
-        env:
+        with:
           ALGOLIA_WRITE_KEY: ${{ secrets.ALGOLIA_WRITE_KEY }} # adminkey
 
       - name: Deploy
