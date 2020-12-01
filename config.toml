@@ -203,11 +203,11 @@ uglyURLs = false
         weight = 3
         pre = "internal"
         # post = "tags"
-    [[menu.main]]
-        url = "/series/"
-        name = "专栏"
-        weight = 4
-        pre = "internal"
+    # [[menu.main]]
+    #     url = "/series/"
+    #     name = "专栏"
+    #     weight = 4
+    #     pre = "internal"
     [[menu.main]]
     url = "/algorithms/"
     name = "算法"
