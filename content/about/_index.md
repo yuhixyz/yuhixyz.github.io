@@ -23,7 +23,11 @@ draft: false
 + 天梯赛全国团队二等奖，个人三等奖
 + 即将到来的 ICPC 南京站（打不好就是最后一场了qwq
 
-## 博客相关
+## 状态
+
+废物大学生感觉即将失学失业，焦虑拉满。
+
+## 博客
 
 博客使用 [`MemE`](https://github.com/reuixiy/hugo-theme-meme) 主题，通过 `Github Action` 部署于 `Github Pages`.
 
