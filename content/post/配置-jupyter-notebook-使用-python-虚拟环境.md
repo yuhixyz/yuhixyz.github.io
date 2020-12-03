@@ -71,3 +71,8 @@ jupyter notebook
 或者在已经创建的文件上方选择：Kernel > Change kernel > env4tf
 
 {{< img src="jupyter-notebook-kernel.png" >}}
+
+
+## 参考资料
+
+1. [如何在Jupyter notebook中使用virtualenv虚拟环境](https://blog.csdn.net/jingyoushui/article/details/97494240)
