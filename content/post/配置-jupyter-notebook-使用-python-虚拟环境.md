@@ -68,7 +68,7 @@ jupyter notebook
 
 {{< img src="jupyter-notebook-new.png" width="40%" >}}
 
-或者在已经创建的文件上方选择：Kernel > Change kernel > env4tf
+或者在已经创建的文件上方选择：Kernel > Change kernel > env4tf 进入虚拟环境。
 
 {{< img src="jupyter-notebook-kernel.png" >}}
 
