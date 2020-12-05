@@ -72,7 +72,29 @@ jupyter notebook
 
 {{< img src="jupyter-notebook-kernel.png" >}}
 
+## 在 jupyter notebook 中删除虚拟环境
+
+查看已经添加到 jupyter notebook 中的虚拟环境
+
+```powershell
+jupyter kernelspec list
+```
+
+可以看到类似这样的信息：
+
+```
+Available kernels:
+  env4tf     C:\Users\Yuhi\AppData\Roaming\jupyter\kernels\env4tf
+  python3    c:\users\yuhi\scoop\apps\python\3.7.9\share\jupyter\kernels\python3
+```
+
+如果你想要删除 `env4tf`（从 jupyter notebook 中删除这个虚拟环境并不影响原来的）
+
+```
+jupyter kernelspec uninstall env4tf
+```
 
 ## 参考资料
 
 1. [如何在Jupyter notebook中使用virtualenv虚拟环境](https://blog.csdn.net/jingyoushui/article/details/97494240)
+2. [Using Virtual Environments in Jupyter Notebook and Python](https://janakiev.com/blog/jupyter-virtual-envs/)
