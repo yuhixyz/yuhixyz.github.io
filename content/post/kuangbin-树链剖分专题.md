@@ -174,10 +174,476 @@ int main() {
 
 ## HDU3966 Aragorn's Story
 
-## LightOJ1348 Aladdin and the Return Journey 
+分析：树剖后线段树搞一搞也是板子。
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <cstdio>
+#include <cstring>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+typedef long long LL;
+
+const int N = 50010, M = N << 1;
+
+int n, m, p;
+int a[N], new_a[N];
+int h[N], e[M], w[M], ne[M], idx;
+struct Tree {
+    int l, r;
+    LL add, sum;
+} tr[N << 2];
+int dfn[N], ts;
+int dep[N], sz[N], top[N], fa[N], son[N];
+
+void add(int a, int b) {
+    e[idx] = b, ne[idx] = h[a], h[a] = idx++;
+}
+
+void dfs1(int u, int father, int depth) {
+    dep[u] = depth, fa[u] = father, sz[u] = 1;
+    for (int i = h[u]; ~i; i = ne[i]) {
+        int j = e[i];
+        if (j == father) continue;
+        dfs1(j, u, depth + 1);
+        sz[u] += sz[j];
+        if (sz[son[u]] < sz[j]) son[u] = j;
+    }
+}
+
+// 点u所属的重链的顶点为t
+void dfs2(int u, int t) {
+    dfn[u] = ++ts, new_a[ts] = a[u], top[u] = t;
+    if (!son[u]) return; // u为叶结点
+    dfs2(son[u], t); // 重儿子
+    // 处理轻儿子
+    for (int i = h[u]; ~i; i = ne[i]) {
+        int j = e[i];
+        if (j == fa[u] || j == son[u]) continue;
+        dfs2(j, j); // 轻儿子所处重链的顶点就是自己 
+    }
+}
+
+void pushup(int u) {
+    tr[u].sum = tr[u << 1].sum + tr[u << 1 | 1].sum;
+}
+
+void pushdown(int u) {
+    if (tr[u].add) {
+        tr[u << 1].add += tr[u].add, tr[u << 1 | 1].add += tr[u].add;
+        tr[u << 1].sum += tr[u].add * (tr[u << 1].r - tr[u << 1].l + 1);
+        tr[u << 1 | 1].sum += tr[u].add * (tr[u << 1 | 1].r - tr[u << 1 | 1].l + 1);
+        tr[u].add = 0;
+    }
+}
+
+void build(int u, int l, int r) {
+    if (l == r) {
+        tr[u] = {l, r, 0, new_a[r]};
+    } else {
+        tr[u] = {l, r, 0};
+        int mid = l + r >> 1;
+        build(u << 1, l, mid), build(u << 1 | 1, mid + 1 , r);
+        pushup(u);
+    }
+}
+
+// 线段树[l,r]区间加上x
+void update(int u, int l, int r, int x) {
+    if (tr[u].l >= l && tr[u].r <= r) {
+        tr[u].add += x;
+        tr[u].sum += x * (tr[u].r - tr[u].l + 1);
+    } else {
+        pushdown(u);
+        int mid = tr[u].l + tr[u].r >> 1;
+        if (l <= mid) update(u << 1, l, r, x);
+        if (r > mid) update(u << 1 | 1, l, r, x);
+        pushup(u);
+    }
+}
+
+// 树上u->v路径上点权都加上x
+void update_path(int u, int v, int x) {
+    while (top[u] != top[v]) {
+        if (dep[top[u]] < dep[top[v]]) swap(u, v);
+        update(1, dfn[top[u]], dfn[u], x);
+        u = fa[top[u]];
+    }
+    if (dep[u] < dep[v]) swap(u, v);
+    update(1, dfn[v], dfn[u], x);
+}
+
+// 求线段树单点查询
+LL query(int u, int x) {
+    if (tr[u].l == x && tr[u].r == x) {
+        return tr[u].sum;
+    } else {
+        pushdown(u);
+        int mid = tr[u].l + tr[u].r >> 1;
+        if (x <= mid) return query(u << 1, x);
+        else return query(u << 1 | 1, x);
+    }
+}
+
+int main() {
+    while (cin >> n >> m >> p) {
+        for (int i = 1; i <= n; i++) {
+            scanf("%d", &a[i]);
+            h[i] = -1, dfn[i] = son[i] = 0;
+        }
+        idx = ts = 0;
+        while (m--) {
+            int a, b;
+            scanf("%d%d", &a, &b);
+            add(a, b), add(b, a);
+        }
+        dfs1(1, -1, 1);
+        dfs2(1, 1);
+        build(1, 1, n);
+        while (p--) {
+            char op[2]; int x, y, k;
+            scanf("%s", op);
+            if (*op == 'I') {
+                scanf("%d%d%d", &x, &y, &k);
+                update_path(x, y, k);
+            } else if (*op == 'D') {
+                scanf("%d%d%d", &x, &y, &k);
+                update_path(x, y, -k);
+            } else {
+                scanf("%d", &x);
+                printf("%lld\n", query(1, dfn[x]));
+            }
+        }
+    }
+    return 0;
+}
+```
 
 ## POJ2763 Housewife Wind 
 
+分析：边权化点权基本套路，线段树维护区间和，查询两点距离不能算上 LCA 的点权。
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <cstdio>
+#include <cstring>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+typedef long long LL;
+
+const int N = 100010, M = N << 1;
+
+int n, q, s;
+int h[N], e[M], w[M], ne[M], idx;
+struct Tree {
+    int l, r;
+    LL sum;
+} tr[N << 2];
+int dfn[N], ts; 
+int dep[N], sz[N], top[N], fa[N], son[N];
+
+void add(int a, int b, int c) {
+    e[idx] = b, w[idx] = c, ne[idx] = h[a], h[a] = idx++;
+}
+
+void dfs1(int u, int father, int depth) {
+    dep[u] = depth, fa[u] = father, sz[u] = 1;
+    for (int i = h[u]; ~i; i = ne[i]) {
+        int j = e[i];
+        if (j == father) continue;
+        dfs1(j, u, depth + 1);
+        sz[u] += sz[j];
+        if (sz[son[u]] < sz[j]) son[u] = j;
+    }
+}
+
+void dfs2(int u, int t) {
+    dfn[u] = ++ts, top[u] = t;
+    if (!son[u]) return;
+    dfs2(son[u], t);
+    for (int i = h[u]; ~i; i = ne[i]) {
+        int j = e[i];
+        if (j == fa[u] || j == son[u]) continue;
+        dfs2(j, j);
+    }
+}
+
+void pushup(int u) {
+    tr[u].sum = tr[u << 1].sum + tr[u << 1 | 1].sum;
+}
+
+void build(int u, int l, int r) {
+    if (l == r) {
+        tr[u].l = l, tr[u].r = r, tr[u].sum = 0;
+    } else {
+        tr[u].l = l, tr[u].r = r;
+        int mid = l + r >> 1;
+        build(u << 1, l, mid), build(u << 1 | 1, mid + 1 , r);
+    }
+}
+
+// 将x位置修改成y
+void update(int u, int x, int y) {
+    if (tr[u].l == x && tr[u].r == x) {
+        tr[u].sum = y;
+    } else {
+        int mid = tr[u].l + tr[u].r >> 1;
+        if (x <= mid) update(u << 1, x, y);
+        else update(u << 1 | 1, x, y);
+        pushup(u);
+    }
+}
+
+// 求线段树中[l,r]区间和
+LL query(int u, int l, int r) {
+    if (tr[u].l >= l && tr[u].r <= r) {
+        return tr[u].sum;
+    } else {
+        LL res = 0;
+        int mid = tr[u].l + tr[u].r >> 1;
+        if (l <= mid) res += query(u << 1, l, r);
+        if (r > mid) res += query(u << 1 | 1, l, r);
+        return res;
+    }
+}
+
+// 求树上u-v之间的路径和
+LL query_path(int u, int v) {
+    LL res = 0;
+    while (top[u] != top[v]) {
+        if (dep[top[u]] < dep[top[v]]) swap(u, v);
+        res += query(1, dfn[top[u]], dfn[u]);
+        u = fa[top[u]];
+    }
+    if (u == v) return res;
+    if (dep[u] < dep[v]) swap(u, v);
+    res += query(1, dfn[son[v]], dfn[u]);
+    return res;
+}
+
+int main() {
+    cin >> n >> q >> s;
+    memset(h, -1, sizeof h);
+    for (int i = 0; i < n - 1; i++) {
+        int a, b, c;
+        scanf("%d%d%d", &a, &b, &c);
+        add(a, b, c), add(b, a, c);
+    }
+    dfs1(1, -1, 1);
+    dfs2(1, 1);
+    build(1, 1, n);
+    for (int i = 0; i < idx; i += 2) {
+        int u = e[i], v = e[i ^ 1];
+        if (dep[u] > dep[v]) swap(u, v);
+        update(1, dfn[v], w[i]);
+    }
+    while (q--) {
+        int type, x, y;
+        scanf("%d", &type);
+        if (type == 0) {
+            scanf("%d", &x);
+            printf("%d\n", query_path(s, x));
+            s = x;
+        } else {
+            scanf("%d%d", &x, &y);
+            int v = e[2 * x - 2], u = e[2 * x - 1];
+            if (dep[u] > dep[v]) swap(u, v);
+            update(1, dfn[v], y);
+        }
+    }
+    return 0;
+}
+```
+
 ## POJ3237 Tree
+
+分析：树剖，边权化点权，线段树维护区间 `minv` 和 `maxv`，懒标记 `flag` 标记是否取相反数。`pushdown` 的时候只要思考一下 `minv` 和 `maxv` 的转化。
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <cstdio>
+#include <cstring>
+#include <climits>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+typedef long long LL;
+
+const int N = 100010, M = N << 1;
+
+int n, T;
+int h[N], e[M], w[M], ne[M], idx;
+struct Tree {
+    int l, r;
+    int flag;  // flag=1表示需要变成相反数
+    int minv, maxv;
+} tr[N << 2];
+int dfn[N], ts; 
+int dep[N], sz[N], top[N], fa[N], son[N];
+
+void add(int a, int b, int c) {
+    e[idx] = b, w[idx] = c, ne[idx] = h[a], h[a] = idx++;
+}
+
+void dfs1(int u, int father, int depth) {
+    dep[u] = depth, fa[u] = father, sz[u] = 1;
+    for (int i = h[u]; ~i; i = ne[i]) {
+        int j = e[i];
+        if (j == father) continue;
+        dfs1(j, u, depth + 1);
+        sz[u] += sz[j];
+        if (sz[son[u]] < sz[j]) son[u] = j;
+    }
+}
+
+void dfs2(int u, int t) {
+    dfn[u] = ++ts, top[u] = t;
+    if (!son[u]) return;
+    dfs2(son[u], t);
+    for (int i = h[u]; ~i; i = ne[i]) {
+        int j = e[i];
+        if (j == fa[u] || j == son[u]) continue;
+        dfs2(j, j);
+    }
+}
+
+void pushup(int u) {
+    tr[u].maxv = max(tr[u << 1].maxv, tr[u << 1 | 1].maxv);
+    tr[u].minv = min(tr[u << 1].minv, tr[u << 1 | 1].minv);
+}
+
+void pushdown(int u) {
+    if (tr[u].flag) {
+        tr[u << 1].flag ^= tr[u].flag;
+        tr[u << 1 | 1].flag ^= tr[u].flag; // 这里直接写成等号调的人傻了
+        int t = tr[u << 1].maxv;
+        tr[u << 1].maxv = -tr[u << 1].minv, tr[u << 1].minv = -t;
+        t = tr[u << 1 | 1].maxv;
+        tr[u << 1 | 1].maxv = -tr[u << 1 | 1].minv, tr[u << 1 | 1].minv = -t;
+        tr[u].flag = 0;
+    } 
+}
+
+void build(int u, int l, int r) {
+    tr[u].l = l, tr[u].r = r, tr[u].flag = 0;
+    if (l == r) return;
+    int mid = l + r >> 1;
+    build(u << 1, l, mid), build(u << 1 | 1, mid + 1 , r);
+}
+
+void update_dot(int u, int x, int y) {
+    if (tr[u].l == x && tr[u].r == x) {
+        tr[u].flag = 0;
+        tr[u].maxv = tr[u].minv = y;
+    } else {
+        pushdown(u);
+        int mid = tr[u].l + tr[u].r >> 1;
+        if (x <= mid) update_dot(u << 1, x, y);
+        else update_dot(u << 1 | 1, x, y);
+        pushup(u);
+    }
+}
+
+// 将[l,r]区间都置为相反数
+void update(int u, int l, int r) {
+    if (tr[u].l >= l && tr[u].r <= r) {
+        tr[u].flag ^= 1;
+        int t = tr[u].maxv;
+        tr[u].maxv = -tr[u].minv, tr[u].minv = -t;
+    } else {
+        pushdown(u);
+        int mid = tr[u].l + tr[u].r >> 1;
+        if (l <= mid) update(u << 1, l, r);
+        if (r > mid) update(u << 1 | 1, l, r);
+        pushup(u);
+    }
+}
+
+void update_path(int u, int v) {
+    while (top[u] != top[v]) {
+        if (dep[top[u]] < dep[top[v]]) swap(u, v);
+        update(1, dfn[top[u]], dfn[u]);
+        u = fa[top[u]];
+    }
+    if (u == v) return;
+    if (dep[u] < dep[v]) swap(u, v);
+    update(1, dfn[son[v]], dfn[u]);
+}
+
+// 求线段树中[l,r]区间最大值
+int query(int u, int l, int r) {
+    if (tr[u].l >= l && tr[u].r <= r) {
+        return tr[u].maxv;
+    } else {
+        pushdown(u);
+        int res = INT_MIN;
+        int mid = tr[u].l + tr[u].r >> 1;
+        if (l <= mid) res = max(res, query(u << 1, l, r));
+        if (r > mid) res = max(res, query(u << 1 | 1, l, r));
+        return res;
+    }
+}
+
+// 求树上u-v之间的路径最大值
+int query_path(int u, int v) {
+    if (u == v) return 0;
+    int res = INT_MIN;
+    while (top[u] != top[v]) {
+        if (dep[top[u]] < dep[top[v]]) swap(u, v);
+        res = max(res, query(1, dfn[top[u]], dfn[u]));
+        u = fa[top[u]];
+    }
+    if (u == v) return res;
+    if (dep[u] < dep[v]) swap(u, v);
+    res = max(res, query(1, dfn[son[v]], dfn[u]));
+    return res;
+}
+
+int main() {
+    for (cin >> T; T--; ) {
+        cin >> n;
+        for (int i = 1; i <= n; i++) {
+            h[i] = -1, son[i] = 0;
+        }
+        idx = ts = 0;
+        for (int i = 0; i < n - 1; i++) {
+            int a, b, c;
+            scanf("%d%d%d", &a, &b, &c);
+            add(a, b, c), add(b, a, c);
+        }
+        dfs1(1, -1, 1);
+        dfs2(1, 1);
+        build(1, 1, n);
+        for (int i = 0; i < idx; i += 2) {
+            int u = e[i], v = e[i ^ 1];
+            if (dep[u] > dep[v]) swap(u, v);
+            update_dot(1, dfn[v], w[i]);
+        }
+        char op[10]; int x, y;
+        while (scanf("%s", op)) {
+            if (*op == 'D') break;
+            scanf("%d%d", &x, &y);
+            if (*op == 'C') {
+                int v = e[2 * x - 2], u = e[2 * x - 1];
+                if (dep[u] > dep[v]) swap(u, v);
+                update_dot(1, dfn[v], y);
+            } else if (*op == 'N') {
+                update_path(x, y);
+            } else {
+                printf("%d\n", query_path(x, y));
+            }
+        }
+    }
+    return 0;
+}
+```
 
 ## SPOJQTREE4 Query on a tree IV
