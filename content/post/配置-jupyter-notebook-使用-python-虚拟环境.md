@@ -40,7 +40,7 @@ pip install tensorflow
 
 ## 安装 ipykernel
 
-在 jupyter notebook 中使用虚拟环境需要安装 ipykernel.
+在 jupyter notebook 中添加内核需要安装 ipykernel.
 
 在虚拟环境 `env4tf` 中：
 
@@ -72,9 +72,9 @@ jupyter notebook
 
 {{< img src="jupyter-notebook-kernel.png" >}}
 
-## 在 jupyter notebook 中删除虚拟环境
+## 在 jupyter notebook 中删除内核
 
-查看已经添加到 jupyter notebook 中的虚拟环境
+查看已经添加到 jupyter notebook 中的内核
 
 ```powershell
 jupyter kernelspec list
@@ -88,7 +88,7 @@ Available kernels:
   python3    c:\users\yuhi\scoop\apps\python\3.7.9\share\jupyter\kernels\python3
 ```
 
-如果你想要删除 `env4tf`（从 jupyter notebook 中删除这个虚拟环境并不影响原来的）
+如果你想要删除 `env4tf`（从 jupyter notebook 中删除这个内核并不删除原来的虚拟环境）
 
 ```
 jupyter kernelspec uninstall env4tf
