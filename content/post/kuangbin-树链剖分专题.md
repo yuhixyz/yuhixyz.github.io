@@ -645,5 +645,3 @@ int main() {
     return 0;
 }
 ```
-
-## SPOJQTREE4 Query on a tree IV
