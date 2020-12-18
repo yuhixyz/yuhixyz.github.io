@@ -187,19 +187,19 @@ uglyURLs = false
     #     post = "home"
     [[menu.main]]
         url = "/post/"
-        name = "文章"
+        name = "Post"
         weight = 1
         pre = "internal"
         # post = "archive"
     [[menu.main]]
         url = "/categories/"
-        name = "分类"
+        name = "Cat"
         weight = 2
         pre = "internal"
         # post = "th"
     [[menu.main]]
         url = "/tags/"
-        name = "标签"
+        name = "Tag"
         weight = 3
         pre = "internal"
         # post = "tags"
@@ -210,18 +210,18 @@ uglyURLs = false
     #     pre = "internal"
     [[menu.main]]
     url = "/algorithms/"
-    name = "算法"
+    name = "Algo"
     weight = 5
     pre = "internal"
     [[menu.main]]
         url = "/links/"
-        name = "友链"
+        name = "Link"
         weight = 6
         pre = "internal"
         # post = "tags"
     [[menu.main]]
         url = "/about/"
-        name = "关于"
+        name = "About"
         weight = 7
         pre = "internal"
         # post = "user-circle"
@@ -248,15 +248,15 @@ uglyURLs = false
     
     # 关于页面的极简页脚
     [[menu.socials]]
-        # url = "https://codeforces.com/profile/ketchuppp"
-        # weight = 3
-        # pre = "external"
-        # name = ""
-        # identifier = "codeforces"
-        # post = "codeforces"
+        url = "https://github.com/yuhixyz?tab=followers"
+        weight = 3
+        pre = "external"
+        name = ""
+        identifier = "github"
+        post = "github"
     [[menu.socials]]
         url = "mailto:byh668972@gmail.com"
-        weight = 3
+        weight = 4
         pre = "external"
         name = ""
         identifier = "envelope"
