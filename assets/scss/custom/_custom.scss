@@ -198,12 +198,24 @@ code {
     top: -27%;
     position: relative;
     padding: 0px 0px !important;
-    animation: search-block .8s;
-    -webkit-animation: search-block .8s;
+    // animation: search-block .8s;
+    // -webkit-animation: search-block .8s;
+    animation: fadeInAnimation ease 1.5s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
 }
 
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+    } 
+} 
 
-.ex1 .modal{
+
+.ex1 .modal {
     padding: 0px 0px;
 }
 
@@ -234,7 +246,7 @@ code {
   transition: .2s;
   font-family: "Noto Serif SC", "Montserrat", sans-serif;
   box-shadow: 2px 2px 0 rgba(241, 241, 241, 0.35);
-  font-size: 12px;
+  font-size: 14px;
   box-sizing: border-box;
   color: #333;
   -webkit-appearance: none;
@@ -270,7 +282,7 @@ code {
   width: 300px;
   margin-top: 10px;
   box-shadow: 2px 2px 0 rgba(241, 241, 241, 0.35);
-  font-size: 11px;
+  font-size: 13px;
   border-radius: 4px;
   box-sizing: border-box;
 }
