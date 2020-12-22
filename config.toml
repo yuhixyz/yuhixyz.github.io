@@ -248,7 +248,7 @@ uglyURLs = false
     
     # 关于页面的极简页脚
     [[menu.socials]]
-        url = "https://github.com/yuhixyz?tab=followers"
+        url = "https://github.com/yuhixyz"
         weight = 3
         pre = "external"
         name = ""
@@ -258,7 +258,7 @@ uglyURLs = false
         url = "mailto:byh668972@gmail.com"
         weight = 4
         pre = "external"
-        name = ""
+        name = "" 
         identifier = "envelope"
         post = "envelope"
     # [[menu.links]]
