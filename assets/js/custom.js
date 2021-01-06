@@ -36,6 +36,7 @@ document.onkeyup = function(event) {
     }
 };
 
+
 /* 顶部阅读进度条 */
 document.addEventListener('DOMContentLoaded', function () {
     var winHeight = window.innerHeight,
