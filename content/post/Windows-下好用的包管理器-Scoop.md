@@ -43,12 +43,40 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 然后可以在 `Powershell` 中通过 `scoop help` 命令查看使用帮助
 
-{{< img src="scoop_help.png" >}}
-
-上面列出了一些常用命令，以及 `scoop` 命令的基本形式
-
 ```powershell
-scoop <command> [<args>]
+# Yuhi at SURFACE in ~ [12:51:26]
+% scoop help
+Usage: scoop <command> [<args>]
+
+Some useful commands are:
+
+alias       Manage scoop aliases
+bucket      Manage Scoop buckets
+cache       Show or clear the download cache
+checkup     Check for potential problems
+cleanup     Cleanup apps by removing old versions
+config      Get or set configuration values
+create      Create a custom app manifest
+depends     List dependencies for an app
+export      Exports (an importable) list of installed apps
+help        Show help for a command
+hold        Hold an app to disable updates
+home        Opens the app homepage
+info        Display information about an app
+install     Install apps
+list        List installed apps
+prefix      Returns the path to the specified app
+reset       Reset an app to resolve conflicts
+search      Search available apps
+status      Show status and check for new app versions
+unhold      Unhold an app to enable updates
+uninstall   Uninstall an app
+update      Update apps, or Scoop itself
+virustotal  Look for app's hash on virustotal.com
+which       Locate a shim/executable (similar to 'which' on Linux)
+
+
+Type 'scoop help <command>' to get help for a specific command.
 ```
 
 ## Scoop 的常用命令
@@ -62,6 +90,7 @@ scoop search <query>
 scoop install <app> [options]
 scoop uninstall <app>
 scoop bucket add|list|known|rm [<args>]
+scoop reset <app>
 ```
 
 + `scoop update` 不加参数，就是更新 `scoop` 自身，参数为 `app` 名称。
@@ -70,10 +99,9 @@ scoop bucket add|list|known|rm [<args>]
 + `scoop search <app>` 命令会在已知的 `bucket`（注意是已知的即 `scoop bucket known` 中出现的）中查找该 `app`，`scoop` 会告知你它处于哪个 `bucket` ，如果你需要安装该 `app` 那么首先你需要添加其所属于的 `bucket`，即 `scoop bucket add <bucket name>` （如果已经添加过了就不需要了）再执行 `scoop install <app>`。
 + `scoop install <app>` 就是安装 `app`，比如 `scoop install git`。
 + `scoop uninstall <app>` 就是卸载 `app`，比如 `scoop uninstall everything`。
++ `scoop reset <app>` 用于切换不同版本。
 
-### 配置 Http 代理
-
-`scoop` 不配置代理其实还是挺慢的，挂代理之后就起飞了嘿嘿。
+### 配置 http 代理
 
 ```powershell
 scoop config proxy 127.0.0.1:10809
@@ -108,43 +136,87 @@ scoop install aria2
 scoop config aria2-enabled false 
 ```
 
-在此之后我先添加了一些我常用的 `bucket`，也就是 `extras`，`versions`，`nerd-fonts`...
+**添加常用的 `bucket`**
 
 ```powershell
 scoop bucket add extras
 scoop bucket add versions
-scoop bucket add nerd-fonts
 ```
 
-安装特定版本的应用
+**查看目前有的 `bucket`**
 
 ```powershell
-scoop install hugo-extended@0.72.0
+scoop bucket list
 ```
 
-然后就是一些常用软件的安装 （就不解释它们干啥用的了，应该都比较著名 qwq）
+**安装特定版本的应用**
 
-{{% admonition note "常用软件" "true" %}}
+```powershell
+scoop install hugo-extended@0.72.0  # 安装特定版本的 hugo-extended
+scoop install python@3.7.9  # 安装特定版本的 python
+scoop install python@3.8.7
+```
 
-建议安装应用之前先 `scoop search <app>`，可以通过 `app` 名字模糊搜索得到其在 `scoop bucket` 收录的名称。
+**切换应用的不同版本**
 
-+ `wox`
-+ `everything`
-+ `typora`
-+ `vscode`
-+ `sublime-text`
-+ `sudo`
-+ `opensssl`
-+ `nodejs`
-+ `geekuninstaller`
-+ `screentogif`
-+ `potplayer`
-+ `snipaste`
-+ `quicklook`
+比如上面同时安装了 `python3.7.9` 以及 `python3.8.7`。
+
+此时在目录 `~/scoop/apps/python` 目录下可见如下结构：
+
+```powershell
+d-----        2020/12/3     20:09        1   3.7.9
+d-----        2021/1/29     12:21        1   3.8.7
+d-r--l        2021/1/29     12:26        1   current
+```
+
+由于 `python3.8.7` 后安装，因此此时在终端使用 `python` 命令，用的版本是 `3.8.7`，如果要切换版本，只需要如下命令
+
+```powershell
+scoop reset python@3.7.9  # 切换到3.7.9
+scoop reset python@3.8.7  # 切换到3.8.7
+```
+
+**常用软件**
+
+{{% admonition note "我的常用软件" "true" %}}
+
+建议安装应用之前先 `scoop search <app>`，可以通过 `app` 名字模糊搜索得到其在 `scoop bucket` 收录的名称，再用正确的 `app` 名字进行安装 `scoop install <app>`。
 
 下面是我的 `scoop list`
 
-{{< img src="scoop_list.png" >}}
+```powershell
+# Yuhi at SURFACE in ~ [12:32:28]
+% scoop list
+Installed apps:
+
+  7zip 19.00 [main]
+  aria2 1.35.0-1 [main]
+  curl 7.74.0_2 [main]
+  dark 3.11.2 [main]
+  gcc 9.3.0-2 [main]
+  geekuninstaller 1.4.7.142 [extras]
+  git 2.30.0.windows.2 [main]
+  grep 2.5.4 [main]
+  hugo-extended 0.72.0 [C:\Users\Yuhi\scoop\workspace\hugo-extended.json]
+  innounp 0.50 [main]
+  lessmsi 1.8.1 [main]
+  lxrunoffline 3.5.0 [extras]
+  nodejs 15.7.0 [main]
+  openssl 1.1.1i [main]
+  potplayer 201209 [extras]
+  python 3.8.7 [C:\Users\Yuhi\scoop\workspace\python.json]
+  qimgv 0.9.1 [extras]
+  quicklook 3.6.10 [extras]
+  screentogif 2.27.3 [extras]
+  snipaste 1.16.2 [extras]
+  sublime-text 3.2.2-3211 [extras]
+  sudo 0.2020.01.26 [main]
+  translucenttb 2020.2 [extras]
+  typora 0.9.98 [extras]
+  vscode 1.52.1 [extras]
+  windows-terminal 1.4.3243.0 [extras]
+  win-dynamic-desktop 4.4.0 [extras]
+```
 
 {{% /admonition %}}
 
