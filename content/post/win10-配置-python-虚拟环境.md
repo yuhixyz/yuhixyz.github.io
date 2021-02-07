@@ -74,7 +74,7 @@ pip install virtualenvwrapper-win
     
     先找到原来的 `workon` 命令即 `workon.bat` 文件。我的在 `python\3.7.9\Scripts` 路径下。
 
-    在 `Script` 文件夹下，只有 `workon.bat` 脚本，而没有 `workon.ps1` 脚本，前者执行时会调用 `cmd` 进行环境的激活，然后运行结束再回到 `powershell`，子进程并没有对父进程造成影响，因此在 `powershell` 并没有激活虚拟环境。
+    在 `Scripts` 文件夹下，只有 `workon.bat` 脚本，而没有 `workon.ps1` 脚本，前者执行时会调用 `cmd` 进行环境的激活，然后运行结束再回到 `powershell`，子进程并没有对父进程造成影响，因此在 `powershell` 并没有激活虚拟环境。
 
     在同目录下新建 `workon.ps1` 脚本，添加以下内容即可：
     
