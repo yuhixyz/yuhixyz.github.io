@@ -124,6 +124,15 @@ scoop install 7zip
 scoop install git
 ```
 
+推荐安装 `scoop-search`（比原生搜索更快，搜索结果基本秒出），然后按照提示将 `Invoke-Expression (&scoop-search --hook)` 添加到 powershell 配置文件中，仍然使用原命令 `scoop search <app>`。
+
+```powershell
+scoop install scoop-search
+# 打开 powershell 配置文件
+notepad $profile
+# 将 Invoke-Expression (&scoop-search --hook) 命令添加进去
+```
+
 安装 `aria2` 后会自动开启多线程下载
 
 ```powershell
