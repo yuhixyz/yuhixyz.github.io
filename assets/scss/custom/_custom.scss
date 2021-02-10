@@ -30,10 +30,10 @@
     transition-duration: .2s;
 }
 pre, sup, .post-meta, .updated-badge, .post-gitinfo, .minimal-footer, .minimal-footer-about, .copy-button {
-    font-family: "glyph-correction","Source Code Pro", "Fira Mono", "Noto Serif SC",monospace;
+    font-family: "Fira Mono", "glyph-correction","Source Code Pro", "Noto Serif SC",monospace;
 }
 code {
-    font-family: "Source Code Pro", "glyph-correction", Consolas, "Fira Mono", "Noto Serif SC",monospace;
+    font-family: "Fira Mono", "Source Code Pro", "glyph-correction", Consolas, "Noto Serif SC",monospace;
     border-radius: 4px;
 }
 .nav-toggle span {
@@ -122,15 +122,12 @@ code {
     background-color: transparent;
     color: hsl(39, 95%, 74%);
 }
-
 #content_progress::-webkit-progress-bar {
     background-color: transparent;
 }
-
 #content_progress::-webkit-progress-value {
     background-color: var(--color-contrast-higher);
 }
-
 #content_progress::-moz-progress-bar {
     background-color: hsl(39, 95%, 74%);
 }
@@ -148,7 +145,15 @@ code {
         font-size: larger;
     }
     code {
-        font-size: 15.5px !important;
+        font-size: 14.5px !important;
+    }
+}
+@media (max-width: 599px) {
+    .post-nav-next {
+        font-size: medium;
+    }
+    code {
+        font-size: 13.5px !important;
     }
 }
 

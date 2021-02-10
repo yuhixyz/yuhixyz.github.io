@@ -50,7 +50,11 @@ jobs:
           username: ${{ secrets.ALIYUN_USERNAME }}
           key: ${{ secrets.ALIYUN_KEY }}
           port: ${{ secrets.ALIYUN_PORT }}
+          timeout: 30m
+          command_timeout: 30m
+          script_stop: true
           script: |
             cd /opt/yuhixyz/yuhixyz.github.io
-            git pull
-            exit
+            ls -al
+            # git pull
+            # exit
