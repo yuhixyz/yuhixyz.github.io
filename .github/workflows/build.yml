@@ -53,3 +53,4 @@ jobs:
           script: |
             cd /opt/yuhixyz/yuhixyz.github.io
             git pull
+            exit
