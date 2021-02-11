@@ -43,18 +43,16 @@ jobs:
           publish_branch: build
           force_orphan: true
  
-      - name: Connect Aliyun ECS & pull code from github-branch-build
+      - name: Connect Aliyun ECS & pull code from gitee
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.ALIYUN_HOST }}
           username: ${{ secrets.ALIYUN_USERNAME }}
           key: ${{ secrets.ALIYUN_KEY }}
           port: ${{ secrets.ALIYUN_PORT }}
-          timeout: 30m
-          command_timeout: 30m
+          timeout: 10m
+          command_timeout: 10m
           script_stop: true
           script: |
-            cd /opt/yuhixyz/yuhixyz.github.io
-            ls -al
-            # git pull
-            # exit
+            cd /opt/yuhi.xyz
+            git pull

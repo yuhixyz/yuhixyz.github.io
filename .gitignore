@@ -6,3 +6,4 @@ resources
 package.json
 package-lock.json
 sw-template.js
+deploy.bat
