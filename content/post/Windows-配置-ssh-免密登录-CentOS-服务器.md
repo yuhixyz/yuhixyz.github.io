@@ -46,7 +46,10 @@ chmod 600 ~/.ssh/authorized_keys
 最后重启 ssh 服务
 
 ```
+# CentOS6，如果不行 sshd 改成 ssh
 service sshd restart
+# CentOS7
+systemctl restart sshd
 ```
 
 我们退出服务器后再次尝试连接服务器，就能免密登录上了。
