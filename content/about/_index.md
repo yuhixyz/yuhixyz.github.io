@@ -8,6 +8,7 @@ comments: false
 toc: false
 displayCopyright: false
 meta: false
+gitinfo: false
 draft: false
 ---
 
@@ -32,4 +33,4 @@ draft: false
 
 博客使用 [`MemE`](https://github.com/reuixiy/hugo-theme-meme) 主题，通过 `Github Action` 部署于 `Github Pages` 以及 `Aliyun ECS`。
 
-如要评论，请使用 `github issues` 的方式，每篇文章下面都有相关链接。
+如要评论，请使用 `github issues` 的方式，即文章下的 `Feedback`。

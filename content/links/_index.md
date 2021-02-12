@@ -8,6 +8,7 @@ comments: true
 toc: false
 displayCopyright: false
 meta: false
+gitinfo: false
 draft: false
 ---
 
