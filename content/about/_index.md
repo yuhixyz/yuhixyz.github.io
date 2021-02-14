@@ -31,6 +31,6 @@ draft: false
 
 ## 博客
 
-博客使用 [`MemE`](https://github.com/reuixiy/hugo-theme-meme) 主题，通过 `Github Action` 部署于 `Github Pages` 以及 `Aliyun ECS`。
+博客使用 [`Hugo-MemE`](https://github.com/reuixiy/hugo-theme-meme) 主题，通过 `Github Action` 部署于 `Github Pages` 以及 `Aliyun ECS`，此外本站点支持 `PWA`。
 
 如要评论，请使用 `github issues` 的方式，即文章下的 `Feedback`。
