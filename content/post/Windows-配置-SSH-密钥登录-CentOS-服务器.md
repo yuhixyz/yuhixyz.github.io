@@ -3,7 +3,7 @@ title: "Windows 配置 SSH 密钥登录 CentOS 服务器"
 date: 2021-02-13T22:38:28+08:00
 weight: 
 description: 腾讯云 Lighthouse，CentOS7.6
-tags: [ssh]
+tags: [SSH]
 categories: [Tools]
 series: []
 algorithms: []
