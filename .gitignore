@@ -1,9 +1,9 @@
 node_modules
-*.bat
-public
-gulpfile.js
-resources
 package.json
 package-lock.json
-sw-template.js
+*.bat
+public
+resources
+# gulpfile.js
+# sw-template.js
 deploy.bat
