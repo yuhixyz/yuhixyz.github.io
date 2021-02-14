@@ -2,7 +2,7 @@
 title: "Windows 配置 SSH 免密登录 CentOS 服务器"
 date: 2020-10-11T16:34:35+08:00
 weight: 
-description:
+description: Win10, CentOS6.9
 tags: [SSH]
 categories: [Tools]
 series: []
