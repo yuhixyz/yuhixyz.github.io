@@ -1,9 +1,5 @@
 /* MemE主题配置覆盖 */
 .header-wrapper {
-    // padding: 1em 0;
-    -webkit-backdrop-filter: saturate(180%) blur(1em);
-    backdrop-filter: saturate(180%) blur(1em);
-    // background: linear-gradient(90deg, rgba(230, 230, 230, 0) 0, rgba(230,230,230,0.102) 15%, rgba(230,230,230,0.102) 30%, rgba(230,230,230,0.102) 44%, rgba(230,230,230,0.102) 58%, rgba(230,230,230,0.102) 72%, rgba(230,230,230,0.102) 86%, rgba(230,230,230,0.102) 100%);
     background: linear-gradient(90deg, #a18c641a, #6aadca1a, #7d88bd18, #a067c50e, #c268a011);
 }
 .minimal-footer-about a {
@@ -115,9 +111,9 @@ code {
     z-index: 1000;
     width: 100%;
     height: 2px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // appearance: none;
     border: none;
     background-color: transparent;
     color: hsl(39, 95%, 74%);
@@ -129,7 +125,7 @@ code {
     background-color: var(--color-contrast-higher);
 }
 #content_progress::-moz-progress-bar {
-    background-color: hsl(39, 95%, 74%);
+    background-color: var(--color-contrast-higher);
 }
 
 /* valine */
@@ -211,12 +207,8 @@ code {
 }
 
 @keyframes fadeInAnimation { 
-    0% { 
-        opacity: 0; 
-    } 
-    100% { 
-        opacity: 1; 
-    } 
+    0% {opacity: 0;} 
+    100% {opacity: 1;} 
 } 
 
 
@@ -229,34 +221,34 @@ code {
 }
 
 @keyframes search-block {
-    0%{top: -50%;}
-    100%{top: -27%;}
+    0% {top: -50%;}
+    100% {top: -27%;}
 }
 
 // @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
 .aa-input-container {
-  display: inline-block;
-  position: relative;
-  width: 100%;
+    display: inline-block;
+    position: relative;
+    width: 100%;
 }
 .aa-input-container span,.aa-input-container input {
     width: inherit;
 }
 .aa-input-search {
-  width: 300px;
-  padding: 12px 28px 12px 12px;
-  border: 2px solid #e4e4e4;
-  border-radius: 4px;
-  -webkit-transition: .2s;
-  transition: .2s;
-  font-family: "Noto Serif SC", "Montserrat", sans-serif;
-  box-shadow: 2px 2px 0 rgba(241, 241, 241, 0.35);
-  font-size: 14px;
-  box-sizing: border-box;
-  color: #333;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+    width: 300px;
+    padding: 12px 28px 12px 12px;
+    border: 2px solid #e4e4e4;
+    border-radius: 4px;
+    -webkit-transition: .2s;
+    transition: .2s;
+    font-family: "Noto Serif SC", "Montserrat", sans-serif;
+    box-shadow: 2px 2px 0 rgba(241, 241, 241, 0.35);
+    font-size: 14px;
+    box-sizing: border-box;
+    color: #333;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 .aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button, .aa-input-search::-webkit-search-results-button, .aa-input-search::-webkit-search-results-decoration {
     display: none;
@@ -267,45 +259,45 @@ code {
     box-shadow: 4px 4px 0 rgba(58, 150, 207, 0.1);
 }
 .aa-input-icon {
-  height: 16px;
-  width: 16px;
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  fill: #e4e4e4;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    fill: #e4e4e4;
 }
 .aa-hint {
-  color: #e4e4e4;
+    color: #e4e4e4;
 }
 .aa-dropdown-menu {
-  background-color: #fff;
-  border: 2px solid rgba(228, 228, 228, 0.6);
-  border-top-width: 1px;
-  font-family: "Montserrat", sans-serif;
-  width: 300px;
-  margin-top: 10px;
-  box-shadow: 2px 2px 0 rgba(241, 241, 241, 0.35);
-  font-size: 13px;
-  border-radius: 4px;
-  box-sizing: border-box;
+    background-color: #fff;
+    border: 2px solid rgba(228, 228, 228, 0.6);
+    border-top-width: 1px;
+    font-family: "Montserrat", sans-serif;
+    width: 300px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 0 rgba(241, 241, 241, 0.35);
+    font-size: 13px;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 .aa-suggestion {
-  padding: 12px;
-  border-top: 1px solid rgba(228, 228, 228, 0.6);
-  cursor: pointer;
-  -webkit-transition: 0;
-  transition: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    padding: 12px;
+    border-top: 1px solid rgba(228, 228, 228, 0.6);
+    cursor: pointer;
+    -webkit-transition: 0;
+    transition: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .aa-suggestion:hover, .aa-suggestion.aa-cursor {
     background-color: #f7f7f7f7;
@@ -319,10 +311,10 @@ code {
     font-family: "Noto Serif SC", serif;
 }
 .aa-suggestion > span:first-child em, .aa-suggestion > span:last-child em {
-  font-weight: 700;
-  font-style: normal;
-  background-color: rgba(8, 78, 143, 0.1);
-  padding: 2px 0 2px 2px;
+    font-weight: 700;
+    font-style: normal;
+    background-color: rgba(8, 78, 143, 0.1);
+    padding: 2px 0 2px 2px;
 }
 
 /* admonition 从even主题搬运*/
