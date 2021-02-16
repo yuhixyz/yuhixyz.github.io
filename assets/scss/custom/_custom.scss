@@ -507,3 +507,45 @@ details.admonition[open]>summary:after {
     -ms-transform: rotate(180deg);
     transform: rotate(180deg)
 }
+
+// 测试
+.sidebar {
+    display: none;
+}
+
+@media (min-width: 996px) {
+    .old-toc {
+        display: none;
+    }
+    .header-inner {
+        max-width: 48em;
+    }
+    .main.single {
+        display: flex;
+        width: 48em;
+        margin: 0 auto;
+    }
+    .main-inner {
+        width: 36em;
+    }
+    .sidebar {
+        flex-grow:1;
+        padding-right: 2em;
+        display: block;
+        max-width: 10em;
+        margin-top: 5em;
+    }
+    .new-toc {
+        position: sticky;
+        top: 20px;
+    }
+    .toc > li > ol {
+        text-indent: -1em;
+    }
+    .toc > li > ol > li > ol {
+        text-indent: -2em;
+    }
+    .toc > li > ol > li > ol > li > ol {
+        text-indent: -3em;
+    }
+}

@@ -299,7 +299,7 @@ uglyURLs = false
     # 说明：居中布局（center）或弹性布局（flex）
 
     # 顶栏宽度的回退值
-    headerFallbackWidth = "36em"
+    headerFallbackWidth = "48em"
     # 说明：默认情况，MemE 使用 main-inner 元素
     #      的宽度作为顶栏宽度，但是在一些页面（比
     #      如「诗意人生」和「视频片段」布局的首页），
@@ -816,12 +816,12 @@ uglyURLs = false
     displayTOCTitle = true
 
     # 是否显示数字（全局设置）
-    displayTOCNum = true
+    displayTOCNum = false
     # 说明：文章的 Front Matter 中的 `tocNum`
     #      的优先级高于此处
 
     # 是否链接文章的分节标题到目录
-    linkHeadingsToTOC = true
+    linkHeadingsToTOC = false
 
 
     ######################################
