@@ -514,9 +514,11 @@ details.admonition[open]>summary:after {
 }
 
 @media (min-width: 996px) {
+    // 隐藏原有目录
     .old-toc {
         display: none;
     }
+    // 顶栏宽度
     .header-inner {
         max-width: 48em;
     }
@@ -528,17 +530,35 @@ details.admonition[open]>summary:after {
     .main-inner {
         width: 36em;
     }
+    // 侧栏
     .sidebar {
-        flex-grow:1;
+        flex-grow: 1;
         padding-right: 2em;
         display: block;
         max-width: 10em;
-        margin-top: 5em;
+        margin-top: 3.6em;
     }
+    // 头像
+    .avatar img {
+        width: 170px;
+        height: 170px;
+        border: 1px solid #ddd;
+        padding: 2px;
+        // background-color: #fff;
+    }
+    .myicon {
+        margin-right: 1.5em;
+    }
+    .motto, .me {
+        text-align: center;
+    }
+    // 新目录 吸顶效果
     .new-toc {
         position: sticky;
         top: 20px;
+        line-height: 2em;
     }
+    // 减小目录各级缩进以显示更多内容
     .toc > li > ol {
         text-indent: -1em;
     }

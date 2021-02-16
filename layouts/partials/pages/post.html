@@ -1,8 +1,26 @@
 <main class="main single" id="main">
     <div class="sidebar">
         <div class="info">
-            🎉 qwq 这里是留的坑<br/>
-            还没想好怎么设计🎉
+            <div class="avatar">
+                <img src="/images/links/Yuhi.png" alt="丝之鸽">
+            </div>
+            <div class="motto">
+                <span>{{ .Site.Author.name }}</span><br/>
+                <span>{{ .Site.Author.motto }}</span>
+            </div>
+            <div class="me" id="me">
+                <a id="github" class="myicon" href="{{ .Site.Author.github }}" target="_blank"></a>
+                <a id="email" class="myicon" href="mailto:{{ .Site.Author.email }}" target="_blank"></a>
+                <a id="netdisk" class="myicon" href="{{ .Site.Author.netdisk }}" target="_blank"></a>
+                <script>
+                    let github = document.getElementById('github');
+                    github.innerHTML = '{{ .Site.Data.SVG.github }}';
+                    let email = document.getElementById('email');
+                    email.innerHTML = '{{ .Site.Data.SVG.email }}';
+                    let netdisk = document.getElementById('netdisk');
+                    netdisk.innerHTML = '{{ .Site.Data.SVG.netdisk }}';
+                </script>
+            </div>
         </div>
         <div class="new-toc">
             {{ $enableTOC := .Params.toc | default .Site.Params.enableTOC -}}

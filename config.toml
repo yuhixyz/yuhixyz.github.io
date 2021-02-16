@@ -100,13 +100,16 @@ uglyURLs = false
     # 邮箱
     email = "byh668972@gmail.com"
     # 座右铭或简介
-    # motto = "Viva La Vida"
+    motto = "Great hopes make everything great possible."
     # 头像
     avatar = "/icons/apple-icon.png"
     # 网站（默认值：baseURL）
     website = "https://yuhi.xyz/"
     # 推特
     # twitter = "reuixiy"
+    github = "https://github.com/yuhixyz/"
+    netdisk = "https://pan.yuhi.xyz/"
+    
 
 # 相关文章
 [related]
@@ -261,6 +264,13 @@ uglyURLs = false
         name = "" 
         identifier = "envelope"
         post = "envelope"
+    [[menu.socials]]
+        url = "https://pan.yuhi.xyz"
+        weight = 5
+        pre = "external"
+        name = "" 
+        identifier = "netdisk"
+        post = "netdisk"
     # [[menu.links]]
     #     url = ""
     #     weight = 3
