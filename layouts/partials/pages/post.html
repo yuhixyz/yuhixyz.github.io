@@ -98,4 +98,23 @@
         {{ partial "components/comments.html" . }}
 
     </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        const tocHeight = $(".new-toc .toc").height();
+        function tocAutoScroll() {
+            let height = window.innerHeight; 
+            let toc = $(".new-toc .toc");
+            if (tocHeight > height - 200) {
+                toc.css('height', height - 200);
+            }
+        }
+        $(function() {
+            tocAutoScroll();
+        })
+        $(window).resize(function() {
+            setTimeout(function () {
+               tocAutoScroll();
+            }, 100);
+        });
+    </script>
 </main>

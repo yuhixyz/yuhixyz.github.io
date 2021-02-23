@@ -572,6 +572,9 @@ details.admonition[open]>summary:after {
         top: 20px;
         line-height: 2em;
     }
+    .toc {
+        overflow: auto !important;
+    }
     // 减小目录各级缩进以显示更多内容
     .toc > li > ol {
         text-indent: -1em;
