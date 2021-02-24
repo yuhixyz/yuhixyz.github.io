@@ -20,7 +20,7 @@ draft: false
 
 首先，安装 `python3`。可以在官网安装（记得配置环境变量），或者使用 `scoop` 进行安装。
 
-以下操作在 `powershell` 下运行，或者你也可以使用 `cmd` 。
+以下操作在 `powershell` 下运行。
 
 如果想要安装特定的版本，比如 `python3.7.9`，需要在 `scoop` 中添加名为 `versions` 的 `bucket`。
 
@@ -58,17 +58,17 @@ pip install virtualenvwrapper-win
 
 以上成功进入虚拟环境 `env4test`。但 `powershell` 下 `workon` 命令并不能生效，而 `cmd` 下没有这个问题。
 
-{{% admonition type="warning" title="在 powershell 下 workon 命令无效解决方案" details="true" open="open" %}}
+{{% admonition type="warning" title="在 powershell 下 `workon` 命令无效解决方案" details="true" open="open" %}}
 
 三种解决方案如下：
-1. 在 `cmd` 下运行。
+1. 在 cmd 下运行。
 2. 使用 `~\Envs\env4test\Scripts\activate.ps1` 激活环境
 
     即进入该虚拟环境 `Scripts` 文件夹下，用 `activate.ps1` 激活
 
     {{% img src="activate.png" title="activate.ps1" %}}
 
-3. 为 `powershell` 重写 `workon.ps1` 脚本
+3. 为 powershell 重写 `workon.ps1` 脚本
 
     参考链接：[workon command doesn't work in Windows PowerShell to activate virtualenv](https://stackoverflow.com/questions/38944525/workon-command-doesnt-work-in-windows-powershell-to-activate-virtualenv)
     
@@ -78,7 +78,7 @@ pip install virtualenvwrapper-win
 
     在同目录下新建 `workon.ps1` 脚本，添加以下内容即可：
     
-    ```ps1
+    ```powershell
     if (-not (Test-Path env:WORKON_HOME))
     {
         $WORKON_HOME = '~\Envs'
@@ -123,7 +123,7 @@ pip install virtualenvwrapper-win
 
     然后新建 `cdproject.ps1` 脚本（不要改动原来的 `cdproject.bat`），添加以下内容：
     
-    ```ps1
+    ```powershell
     function Show-Usage {
         echo ""
         echo  "switches to the project dir of the activated virtualenv"
@@ -159,6 +159,7 @@ pip install virtualenvwrapper-win
 
     这样我们在 `powershell` 中使用 `workon` 命令或者是 `cdproject` 命令，都会使用 `.ps1` 脚本，而不是 `.bat`；而在 `cmd` 则是使用 `.bat` 脚本。
     
+
 {{% /admonition %}}
 
 使用 `deactivate` 退出虚拟环境。

@@ -67,7 +67,7 @@ There were X failed login attempts since the last successful login.
 
 在本地，执行以下命令，来赋予私钥文件仅本人可读权限[^4]。
 
-在 powershell 或 cmd 中：
+在 powershell 中：
 
 ```
 # 文档
@@ -81,7 +81,7 @@ icacls ~/OneDive/secret/test /inheritancelevel:r
 
 然后就可以通过如下命令登录服务器。
 
-在 powershell 或者 cmd 中，执行：
+在 powershell 中，执行：
 
 ```powershell
 # 文档
