@@ -10,7 +10,7 @@ algorithms: []
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 本博客已通过 `Github Action` 部署于 `Github Pages`，而博客的搜索功能依托 `Algolia` 进行，每次更新文章后，都需要在本地生成 `json` 格式的文件并上传到 `Algolia` 云端，本文将探讨如何这一麻烦的步骤集成到 `Github Action` 中。

@@ -3,8 +3,8 @@ title: "Win10 配置 Python 虚拟环境"
 date: 2020-11-11T21:04:59+08:00
 weight: 
 description: Win10, Python3.7.9
-tags: [python, virtualenvwrapper]
-categories: [Project]
+tags: [Python, virtualenvwrapper]
+categories: [Python, Tutorials]
 series: []
 algorithms: []
 comments: true
@@ -14,7 +14,7 @@ gitinfo: true
 draft: false
 ---
 
-前两周的算法设计实践周刚刚过去，用 `django` 写了个小工具 http://calc.yuhi.xyz，期间学习了使用 `virtualenvwrapper-win` 进行 `python` 虚拟环境管理，在此记录一下用法。
+本文介绍如何在 windows10 上使用 `virtualenvwrapper-win` 进行 `python` 虚拟环境管理，在此记录一下用法。
 
 <!--more-->
 

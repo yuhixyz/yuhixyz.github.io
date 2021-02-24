@@ -3,8 +3,8 @@ title: "配置 Jupyter Notebook 使用 Python 虚拟环境"
 date: 2020-12-03T22:15:09+08:00
 weight:
 description: 环境：win10, python3
-tags: [jupyter notebook, python, virtualenvwrapper]
-categories: [Tools]
+tags: [Jupyter Notebook, Python, virtualenvwrapper]
+categories: [Python, Tutorials]
 series: []
 algorithms: []
 comments: true
@@ -13,7 +13,7 @@ toc: true
 draft: false
 ---
 
-心血来潮，想入门一波机器学习，因此在这里配置一下 `tensorflow` 虚拟环境，并配置到 jupyter notebook 中。
+心血来潮，想入门一波机器学习，因此在这里配置一下 `tensorflow` 虚拟环境，并配置到 Jupyter Notebook 中。
 
 <!--more-->
 
@@ -40,7 +40,7 @@ pip install tensorflow
 
 ## 安装 ipykernel
 
-在 jupyter notebook 中添加内核需要安装 ipykernel.
+在 Jupyter Notebook 中添加内核需要安装 ipykernel.
 
 在虚拟环境 `env4tf` 中：
 
@@ -48,7 +48,7 @@ pip install tensorflow
 pip install ipykernel
 ```
 
-安装完成后，将当前的虚拟环境添加到 jupyter notebook 的 kernel 中：
+安装完成后，将当前的虚拟环境添加到 Jupyter Notebook 的 kernel 中：
 
 ```powershell
 python -m ipykernel install --user --name env4tf
@@ -56,7 +56,7 @@ python -m ipykernel install --user --name env4tf
 
 注意上面的 `env4tf` 改成你的虚拟环境名称。
 
-## 启动 jupyter notebook
+## 启动 Jupyter Notebook
 
 这里在不在虚拟环境中无所谓。
 
@@ -72,9 +72,9 @@ jupyter notebook
 
 {{< img src="jupyter-notebook-kernel.png" >}}
 
-## 在 jupyter notebook 中删除内核
+## 在 Jupyter Notebook 中删除内核
 
-查看已经添加到 jupyter notebook 中的内核
+查看已经添加到 Jupyter Notebook 中的内核
 
 ```powershell
 jupyter kernelspec list
@@ -88,7 +88,7 @@ Available kernels:
   python3    c:\users\yuhi\scoop\apps\python\3.7.9\share\jupyter\kernels\python3
 ```
 
-如果你想要删除 `env4tf`（从 jupyter notebook 中删除这个内核并不删除原来的虚拟环境）
+如果你想要删除 `env4tf`（从 Jupyter Notebook 中删除这个内核并不删除原来的虚拟环境）
 
 ```
 jupyter kernelspec uninstall env4tf
