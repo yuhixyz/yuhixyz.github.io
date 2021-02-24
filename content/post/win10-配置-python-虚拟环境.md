@@ -4,7 +4,7 @@ date: 2020-11-11T21:04:59+08:00
 weight: 
 description: Win10, Python3.7.9
 tags: [Python, virtualenvwrapper]
-categories: [Python, Tutorials]
+categories: [Python]
 series: []
 algorithms: []
 comments: true

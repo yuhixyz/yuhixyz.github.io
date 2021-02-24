@@ -4,7 +4,7 @@ date: 2021-02-24T20:34:16+08:00
 weight: 
 description:
 tags: [Git]
-categories: [Git, Notes]
+categories: [Git]
 series: []
 algorithms: []
 comments: true

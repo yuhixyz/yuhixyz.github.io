@@ -4,7 +4,7 @@ date: 2020-12-03T22:15:09+08:00
 weight:
 description: 环境：win10, python3
 tags: [Jupyter Notebook, Python, virtualenvwrapper]
-categories: [Python, Tutorials]
+categories: [Python]
 series: []
 algorithms: []
 comments: true
