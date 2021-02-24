@@ -372,7 +372,7 @@ uglyURLs = false
     ## 「诗意人生」
     # 诗句，支持 Markdown
     # homePoetry = ["<p>茕茕白兔 东走西顾</p><p>衣不如新 人不如故</p><p>—乐府《古艳歌》</p>"]
-    homePoetry = ["<p>But every once in a while, </p><p>you find someone who's iridescent.</p><p>And when you do,</p><p>nothing will ever compare.</p>"] 
+    homePoetry = ["<p>But every once in a while</p><p>you find someone who's iridescent,</p><p>and when you do,</p><p>nothing will ever compare.</p>"] 
     # 底部链接的内间距，单位：em
     homeLinksPadding = 1
 
