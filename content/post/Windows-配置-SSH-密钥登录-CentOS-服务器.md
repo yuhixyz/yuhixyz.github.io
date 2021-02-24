@@ -76,8 +76,8 @@ icacls <已下载的与实例关联的私钥文件的路径> /grant <Windows 系
 icacls <已下载的与实例关联的私钥文件的路径> /inheritancelevel:r
 
 # example
-icacls ~/OneDive/secret/test /grant zhangsan:F
-icacls ~/OneDive/secret/test /inheritancelevel:r
+icacls ~/OneDrive/secret/test /grant zhangsan:F
+icacls ~/OneDrive/secret/test /inheritancelevel:r
 ```
 
 然后就可以通过如下命令登录服务器。
