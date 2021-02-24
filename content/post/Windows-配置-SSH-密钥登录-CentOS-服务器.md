@@ -49,6 +49,7 @@ There were X failed login attempts since the last successful login.
 然后我们在“密钥”管理界面为刚才生成的公钥绑定实例，即服务器。
 
 {{% admonition type="warning" title="警告" details="true" open="open" %}}
+
 一旦为服务器实例绑定密钥，腾讯云将会为你自动关闭该服务器实例的 SSH 密码登录，如果你丢失了密钥，你会发现自己连接不上服务器了。
 
 补救措施 1：再新建一个密钥，绑定该服务器实例，然后使用新的密钥登录。
@@ -69,7 +70,7 @@ There were X failed login attempts since the last successful login.
 
 在 powershell 中：
 
-```
+```powershell
 # 文档
 icacls <已下载的与实例关联的私钥文件的路径> /grant <Windows 系统用户帐户>:F
 icacls <已下载的与实例关联的私钥文件的路径> /inheritancelevel:r

@@ -23,6 +23,8 @@ draft: false
 
 ## 具体操作
 
+将本地公钥 `id_rsa.pub` 添加到服务器上的 `authorized_keys` 文件中。
+
 首先找到 Windows 本地的公钥 `~/.ssh/id_rsa.pub` 文件
 
 打开 powershell 跑命令：
@@ -44,7 +46,7 @@ chmod 600 ~/.ssh/authorized_keys
 
 最后重启 SSH 服务
 
-```
+```bash
 # CentOS6
 service sshd restart
 # CentOS7
@@ -53,19 +55,19 @@ systemctl restart sshd
 
 我们退出服务器后再次尝试连接服务器，就能免密登录上了。
 
-```
+```powershell
 ssh <username>@<ip> -p <port>
 ```
 
 如果你需要登录以后再执行多个命令，可以通过以下命令在远程服务器上执行 command1,2,3。
 
-```
+```powershell
 ssh <username>@<ip> -p <port> "command1; command2; command3"
 ```
 
 举个栗子
 
-```
+```powershell
 ssh root@11.22.33.44 -p 22 "cd / ; ls -l ; echo '-----Logout-----'"
 ```
 
