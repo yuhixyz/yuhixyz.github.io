@@ -566,6 +566,12 @@ details.admonition[open]>summary:after {
     .motto, .me {
         text-align: center;
     }
+    .motto {
+        border-top: 1px dashed var(--color-contrast-low); 
+        border-bottom: 1px dashed var(--color-contrast-low); 
+        margin-bottom: 4px;
+        padding-bottom: 5px;
+    }
     // 新目录 吸顶效果
     .new-toc {
         position: sticky;

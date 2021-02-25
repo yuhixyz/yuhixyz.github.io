@@ -5,13 +5,14 @@
                 <img src="/images/links/Yuhi.png" alt="丝之鸽">
             </div>
             <div class="motto">
-                <span>{{ .Site.Author.name }}</span><br/>
+                <span><strong>{{ .Site.Author.name }}</h2></strong><br/>
                 <span>{{ .Site.Author.motto }}</span>
             </div>
             <div class="me" id="me">
                 <a id="github" class="myicon" href="{{ .Site.Author.github }}" target="_blank"></a>
                 <a id="email" class="myicon" href="mailto:{{ .Site.Author.email }}" target="_blank"></a>
                 <a id="netdisk" class="myicon" href="{{ .Site.Author.netdisk }}" target="_blank"></a>
+                <!-- <a id="acwing" class="myicon" href="{{ .Site.Author.acwing }}" target="_blank"></a> -->
                 <script>
                     let github = document.getElementById('github');
                     github.innerHTML = '{{ .Site.Data.SVG.github }}';
@@ -19,6 +20,8 @@
                     email.innerHTML = '{{ .Site.Data.SVG.email }}';
                     let netdisk = document.getElementById('netdisk');
                     netdisk.innerHTML = '{{ .Site.Data.SVG.netdisk }}';
+                    // let acwing = document.getElementById('acwing');
+                    // acwing.innerHTML = '{{ .Site.Data.SVG.acwing }}';
                 </script>
             </div>
         </div>

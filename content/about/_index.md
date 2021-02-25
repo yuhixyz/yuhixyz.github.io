@@ -2,7 +2,7 @@
 title: "关于「我」"
 date: 2020-01-15T23:35:45+08:00
 tags: []
-description: 以不懈努力追赶先行之人，希望在算法竞赛的道路上有所成绩。
+description: 算法竞赛败犬，心有不甘，考研 ing
 badge: false
 comments: false
 toc: false
