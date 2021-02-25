@@ -124,6 +124,12 @@
                 $('.a-active').removeClass('a-active');  // 取消高亮原来的
                 $a.addClass('a-active');  // 高亮新的
             }
+            // 目录自动滚动
+            if ($a.length > 0) {
+                $('.toc').scrollTop($a[0].offsetTop - 300);
+            } else {
+                $('.toc').scrollTop(0);
+            }
         };
         $(() => {
             tocAutoScroll();
