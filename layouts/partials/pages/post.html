@@ -100,19 +100,40 @@
     </div>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        const tocHeight = $(".new-toc .toc").height();
-        function tocAutoScroll() {
+        const tocHeight = $('.new-toc .toc').height();
+        const tocAutoScroll = () => {
             let height = window.innerHeight; 
-            let toc = $(".new-toc .toc");
+            let $toc = $('.new-toc .toc');
             if (tocHeight > height - 200) {
-                toc.css('height', height - 200);
+                $toc.css('height', height - 200);
             }
         }
-        $(function() {
+        const catalogTrack = () => {
+            let $currentHeading = $('h1');
+            for (let heading of $('h1, h2, h3, h4, h5, h6')) {
+                const $heading = $(heading);
+                if ($heading.offset().top - $(document).scrollTop() > 150) break;
+                $currentHeading = $heading;
+            }
+            const anchorId = $currentHeading.attr('id');
+            // console.log(anchorId);
+            let $toc = $('.new-toc .toc');
+            let $a = $toc.find(`a[href="#${anchorId}"]`)  // 找到href='#'+anchorId的a标签元素
+            // console.log($a[0]);
+            if (!$a.hasClass('a-active')) {  // 如何当前a标签没有被高亮
+                $('.a-active').removeClass('a-active');  // 取消高亮原来的
+                $a.addClass('a-active');  // 高亮新的
+            }
+        };
+        $(() => {
             tocAutoScroll();
-        })
-        $(window).resize(function() {
-            setTimeout(function () {
+            catalogTrack();
+        });
+        $(document).scroll(() => {
+            catalogTrack();
+        });
+        $(window).resize(() => {
+            setTimeout(() => {
                tocAutoScroll();
             }, 100);
         });

@@ -585,4 +585,10 @@ details.admonition[open]>summary:after {
     .toc > li > ol > li > ol > li > ol {
         text-indent: -3em;
     }
+    // 目录滚动高亮
+    .a-active {
+        color: var(--color-primary);
+        font-size: larger;
+        transition: 0s !important;
+    }
 }
