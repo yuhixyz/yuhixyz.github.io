@@ -10,7 +10,7 @@ algorithms: []
 comments: true
 displayCopyright: true
 toc: true
-draft: true
+draft: false
 ---
 
 本文是一篇学习笔记，虽然 Yuhi 已经使用 Git 一年多了，但对其工作原理一直没有深入理解，部分命令也常常忘记，因此在这里整理 Git 的相关工作原理以及常用命令，以备查阅，本文会随着学习的深入不断更新。
@@ -19,17 +19,23 @@ draft: true
 
 ## 工作原理
 
-### 文件状态变化
+### 文件状态
 
 在 Git 仓库中，文件分为 **已跟踪（tracked）**或**未跟踪（untracked）** 两种状态。
 
-已跟踪的文件指已经受 Git 版本控制的文件，只要被 `git add` 过的文件，状态就会从 untracked 变成 tracked；未跟踪的文件，一般是在仓库目录下，但没有参与版本控制的文件，比如刚刚新建的文件，或者是从来没有 `git add` 的文件。
+已跟踪的文件指已经受 Git 版本控制的文件，只要被 `git add` 过的文件，状态就会从未跟踪变成已跟踪；未跟踪的文件，一般是在仓库目录下，但没有参与版本控制的文件，比如刚刚新建的文件，或者是从来没有 `git add` 的文件。
 
 一旦某一文件被跟踪，那么它就会处于 **未修改（unmodified）、已修改（modified）、已暂存（staged）** 状态中的一种。
 
+下图为 Git 仓库中文件的状态变化示意图[^1]。
+
 {{< img src="file_life_cycle.png" title="文件的状态变化周期">}}
 
-上图来源[^1] 
+### 分支
+
+还没写完诶
+
+---
 
 ## Git 配置
 
@@ -89,19 +95,29 @@ git init <local_repo_name>  # 在当前目录下新建文件 local_repo_name 并
 git clone <url>
 ```
 
+还没写完诶
 
+---
 
 ### 撤销操作
 
+**命令：`git commit --amend`**
+
 ```powershell
+# 两种使用场景举例
 # init commit 后发现忘记将文件 forget.md 加入暂存区
 git commit -m "init"
 git add forget.md
-git commit --amend  # 重新提交 commit 信息仍使用 "init"
+git commit --amend  # 重新 commit，commit 信息仍使用 "init"
 
 # commit 信息写错了
 git commit -m "wrong commit info"
-git commit -m "correct commit info" --amend
+git commit -m "correct commit info" --amend  # 覆盖上一次提交（只是修改了提交信息）
+```
+
+**命令：`git restore <file>`**
+
+```powershell
 
 ```
 
