@@ -3,7 +3,7 @@ title: "配置 Jupyter Notebook 使用 Python 虚拟环境"
 date: 2020-12-03T22:15:09+08:00
 weight:
 description: 环境：win10, python3
-tags: [Jupyter Notebook, Python, virtualenvwrapper]
+tags: [Python, virtualenvwrapper]
 categories: [Python]
 series: []
 algorithms: []
