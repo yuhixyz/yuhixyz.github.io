@@ -10,7 +10,7 @@ algorithms: []
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 本文是一篇学习笔记，虽然 Yuhi 已经使用 Git 一年多了，但对其工作原理一直没有深入理解，部分命令也常常忘记，因此在这里整理 Git 的相关工作原理以及常用命令，以备查阅，本文会随着学习的深入不断更新。
