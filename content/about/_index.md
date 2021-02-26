@@ -2,7 +2,7 @@
 title: "关于「我」"
 date: 2020-01-15T23:35:45+08:00
 tags: []
-description: 算法竞赛败犬，心有不甘，考研 ing
+description: 算法竞赛败犬，考研 ing
 badge: false
 comments: false
 toc: false
