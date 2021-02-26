@@ -3,7 +3,7 @@
     "short_name": "Yuhi",
     "icons": [
         {
-            "src": "./icons/android-chrome-512x512.png",
+            "src": "./icons/icon.png",
             "sizes": "512x512",
             "type": "image/png"
         }
