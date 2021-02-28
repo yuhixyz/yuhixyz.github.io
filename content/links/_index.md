@@ -27,7 +27,7 @@ draft: false
 {{< link name="Jaubert" url="https://jaubert.gitee.io/" logo="/images/links/Aurorasar.png" word="一个 CTFer 半吊子的生活" >}}
 {{< link name="Matrix72" url="https://www.matrix72.top/" logo="/images/links/J.C.png" word="Matrix72 的万事屋" >}}
 {{< link name="Purple4pur" url="https://www.purple4pur.com/" logo="/images/links/Purple4pur.png" word="Adobe 学徒 / 敲敲代码 / 做做视频" >}}
-{{< link name="青い記憶" url="https://xjzsq.ren/" logo="/images/links/Xjzsq.png" word="珂学家的代码日常" >}}
+{{< link name="青い記憶" url="https://www.xjdesyxx.top/" logo="/images/links/Xjzsq.png" word="珂学家的代码日常" >}}
 {{< link name="无相" url="https://blog.csdn.net/weixin_45080867/" logo="/images/links/wuxiang.png" word="一个算法萌新的进阶之路" >}}
 
 ---
