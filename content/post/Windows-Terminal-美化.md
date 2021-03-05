@@ -2,7 +2,7 @@
 title: "Windows Terminal 美化"
 date: 2020-01-19T13:48:09+08:00
 weight: 
-description: 🎉好看是第一生产力
+description: 🎉 powershell7.1.2，oh-my-posh3
 tags: [Windows Terminal]
 categories: [Tools]
 series: []
@@ -13,91 +13,104 @@ toc: true
 draft: false
 ---
 
-本文包含 Windows Terminal 以及 Powershell 的美化。
+本文包含 Powershell7 以及 Windows Terminal 的美化。
 
 <!--more-->
 
-> 主要是因为最近 Surface 送修，回来之和全要重新配置，于是开始陆续整理一些工具的简明使用教程，以便到时快速复原工作环境。
-
 ## 写在前面
 
-先来效果图
+{{% admonition type="warning" title="注意" %}}
 
-{{< img src="windows_terminal美化1.png" >}}
+本文现使用 oh-my-posh3 美化 powershell，但本文的历史版本基于 oh-my-posh2，可在 github 上参考本文的历史版本。
 
-{{< img src="windows_terminal美化2.png" >}}
+{{% /admonition %}}
 
-## PowerShell 美化
+效果图
 
-### 安装 oh-my-posh
+{{< img src="terminal美化.png" >}}
 
-首先以管理员身份启动 Windows Terminal，新建 powershell 窗口，执行提下命令安装 posh-git
+## PowerShell7 美化
 
-```powershell
-Install-Module posh-git -Scope CurrentUser
-```
-
-执行下面的命令安装 oh-my-posh
+### 安装 oh-my-posh3
 
 ```powershell
-Install-Module oh-my-posh -Scope CurrentUser
+scoop install oh-my-posh3
 ```
 
-新建或打开 powershell 的配置文件
+新建或打开 powershell 的配置文件 `$profile`。
 
-执行`$profile`查看路径
+执行 `notepad $profile` 或  `code $profile` 或 `subl $profile` 编辑配置文件
 
-{{< img src="profile.png" >}}
+向其中添加以下内容，其中第 15 行（ oh-my-posh.exe ）和 17 行（设置主题）需要修改成正确的路径。
 
-执行`notepad $profile`编辑文件
-
-{{< img src="notepad_profile.png" >}}
-
-向其中添加以下内容，其中第三行为设置主题
-
-```ps1
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme Avit
+```powershell
+[ScriptBlock]$Prompt = {
+    $lastCommandSuccess = $?
+    $realLASTEXITCODE = $global:LASTEXITCODE
+    $errorCode = 0
+    if ($lastCommandSuccess -eq $false) {
+        #native app exit code
+        if ($realLASTEXITCODE -is [int]) {
+            $errorCode = $realLASTEXITCODE
+        }
+        else {
+            $errorCode = 1
+        }
+    }
+    $startInfo = New-Object System.Diagnostics.ProcessStartInfo
+    $startInfo.FileName = "C:\Files\scoop\apps\oh-my-posh3\current\bin\oh-my-posh.exe"
+    $cleanPWD = $PWD.ProviderPath.TrimEnd("\")
+    $startInfo.Arguments = "-config=""C:\Files\scoop\apps\oh-my-posh3\current\themes\zash.omp.json"" -error=$errorCode -pwd=""$cleanPWD"""
+    $startInfo.Environment["TERM"] = "xterm-256color"
+    $startInfo.CreateNoWindow = $true
+    $startInfo.StandardOutputEncoding = [System.Text.Encoding]::UTF8
+    $startInfo.RedirectStandardOutput = $true
+    $startInfo.UseShellExecute = $false
+    if ($PWD.Provider.Name -eq 'FileSystem') {
+      $startInfo.WorkingDirectory = $PWD.ProviderPath
+    }
+    $process = New-Object System.Diagnostics.Process
+    $process.StartInfo = $startInfo
+    $process.Start() | Out-Null
+    $standardOut = $process.StandardOutput.ReadToEnd()
+    $process.WaitForExit()
+    $standardOut
+    $global:LASTEXITCODE = $realLASTEXITCODE
+    #remove temp variables
+    Remove-Variable realLASTEXITCODE -Confirm:$false
+    Remove-Variable lastCommandSuccess -Confirm:$false
+}
+Set-Item -Path Function:prompt -Value $Prompt -Force
 ```
 
-使用 `$ThemeSettings`查看主题存放位置 CurrentThemeLocation，同目录下有其他主题可供选择。
-
-{{< img src="themesettings.png" >}}
+所有主题的 `json` 文件都在 oh-my-posh3 安装目录中的 themes 文件夹中。
 
 ### 美化 ls 命令
 
-使用 [Get-ChildItem](https://github.com/joonro/Get-ChildItemColor) 美化`ls`命令，首先需要安装，在 powershell （管理员身份）执行以下命令
+使用 [Get-ChildItem](https://github.com/joonro/Get-ChildItemColor) 美化 `ls` 命令，首先需要安装，在 powershell 执行以下命令（没有 `sudo` 就用管理员方式运行）
 
 ```powershell
-Install-Module -AllowClobber Get-ChildItemColor
+sudo Install-Module -AllowClobber Get-ChildItemColor
 ```
 
-执行 `notepad $profile`，将下列内容添加进去
+执行 `code $profile`，将下列内容追加进去
 
-```ps1
-If (-Not (Test-Path Variable:PSise)) {  # Only run this in the console and not in the ISE
-    Import-Module Get-ChildItemColor
-    
-    Set-Alias l Get-ChildItem -option AllScope
-    Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
-}
+```powershell
+Import-Module Get-ChildItemColor
+Set-Alias ll Get-ChildItem -option AllScope  # ll
+Set-Alias ls Get-ChildItemColorFormatWide -option AllScope  # ls
 ```
 
-[Get-ChildItem](https://github.com/joonro/Get-ChildItemColor) 还提供了一些个性化的颜色设置，可以参看官方 Github 的 README 说明。
-
-美化ls命令后效果如下
-
-{{< img src="美化ls命令.png" >}}
+可以在 terminal 中尝试一下 `ls` 和 `ll` 命令。
 
 ## Windows Terminal 美化
 
 
 打开 Windows Terminal 的 Settings，即 settings.json 文件。
 
-下面配置可供参考，依样画葫芦即可。
+下面我的配置可供参考。
 
-其中`guid`可以用命令生成`[Guid]::NewGuid()`生成。
+其中 `guid` 可以在 powershell 中用命令生成 `[Guid]::NewGuid()` 生成。
 
 ```json
 // This file was initially generated by Windows Terminal 1.3.2651.0
@@ -110,14 +123,14 @@ If (-Not (Test-Path Variable:PSise)) {  # Only run this in the console and not i
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
 
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "defaultProfile": "{d26dae7e-9f65-4c0b-982f-21dca5115e77}",
 
     // You can add more global application settings here.
     // To learn more about global settings, visit https://aka.ms/terminal-global-settings
 
     // If enabled, selections are automatically copied to your clipboard.
     "copyOnSelect": false,
-
+    
     // If enabled, formatted data is also copied to your clipboard
     "copyFormatting": false,
 
@@ -125,38 +138,65 @@ If (-Not (Test-Path Variable:PSise)) {  # Only run this in the console and not i
     // Each one of them will appear in the 'New Tab' dropdown,
     //   and can be invoked from the commandline with `wt.exe -p xxx`
     // To learn more about profiles, visit https://aka.ms/terminal-profile-settings
+
+    "initialCols": 110,           //终端窗口初始宽度
+    "initialRows": 30,            //终端窗口初始高度
+
     "profiles":
     {
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
-            "fontFace": "YaHei Monaco Hybird",
+            "fontFace": "JetBrainsMono NF",  // 等距更纱黑体 SC / Courier Prime
+            "fontSize": 13,
+            "fontWeight": "normal",
             "cursorShape": "vintage",
-            "colorScheme": "Nord",
+            "colorScheme": "gugugu",
             "useAcrylic": true,
-            "acrylicOpacity": 0.9
+            "acrylicOpacity": 0.9,
+            "cursorColor": "#7975e6",
+            "experimental.retroTerminalEffect": false  // 有趣
         },
         "list":
-        [
+        [   
             {
-                // Make changes here to the powershell.exe profile.
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "name": "Windows PowerShell",
-                "commandline": "powershell.exe",
+                "guid": "{d26dae7e-9f65-4c0b-982f-21dca5115e77}",
+                "name": "PowerShell7",
+                "commandline": "C:/Files/pwsh/pwsh.exe -WorkingDirectory ~",
+                "icon": "C:/Users/yuhixyz/Pictures/terminal/pwsh.png",
                 "hidden": false
             },
             {
-                // Make changes here to the cmd.exe profile.
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "PowerShell5",
+                "commandline": "powershell.exe",
+                "hidden": true
+            },
+            {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "name": "命令提示符",
+                "name": "Command",
                 "commandline": "cmd.exe",
-                "hidden": false
+                "hidden": true
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{3e87d0d7-4025-451e-a03e-21952a86cd79}",
+                "name": "Aliyun-yuhixyz",
+                "commandline": "ssh root@yuhi.xyz -p 22",
+                "icon": "C:/Users/yuhixyz/Pictures/terminal/aliyun.png",
+                "hidden": false
+            },
+            {
+                "guid": "{7eae62b5-4044-43ca-b4e7-3be3b09ad75f}",
+                "name": "Tencent-yuhixyz",
+                "commandline": "ssh -i ~/OneDrive/secret/surface root@b.yuhi.xyz -p 8972",
+                "hidden": false,
+                "icon": "C:/Users/yuhixyz/Pictures/terminal/tencent.png"
             }
         ]
     },
@@ -165,7 +205,7 @@ If (-Not (Test-Path Variable:PSise)) {  # Only run this in the console and not i
     // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
     "schemes": [
         {
-            "name": "Nord",
+            "name": "gugugu",
             "background": "#2e3440",
             "foreground": "#eceff4",
             "brightBlack":  "#3f68b9",
@@ -195,7 +235,7 @@ If (-Not (Test-Path Variable:PSise)) {  # Only run this in the console and not i
         // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
         // These two lines additionally bind them to Ctrl+C and Ctrl+V.
         // To learn more about selection, visit https://aka.ms/terminal-selection
-        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+        { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+c" },
         { "command": "paste", "keys": "ctrl+v" },
 
         // Press Ctrl+Shift+F to open the search box
@@ -210,9 +250,23 @@ If (-Not (Test-Path Variable:PSise)) {  # Only run this in the console and not i
         // 自定义
         { "command": "closeTab", "keys": "ctrl+w" },
         { "command": "newTab", "keys": "ctrl+q" },
-        // { "command": { "action": "splitPane", "split": "vertical" }, "keys": "alt+shift+=" }, 默认就有了
-        // { "command": { "action": "splitPane", "split": "horizontal" }, "keys": "alt+shift+-" }, // 默认就有了
-        { "command": "closePane", "keys": "alt+shift+w" } // 默认为ctrl+shift_w
+        { "command": "closePane", "keys": "alt+shift+w" } // 默认为ctrl+shift+w
     ]
 }
 ```
+
+其中用到的字体可以使用 `scoop` 安装
+
+```powershell
+sudo scoop install JetBrainsMono-NF
+```
+
+
+
+更详细的美化推荐看下面的参考资料。
+
+## 参考资料
+
+1. [Introduction | Oh my Posh](https://ohmyposh.dev/docs/)
+2. [一份简单的 PowerShell 美化指南 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/321855109)
+3. [Oh my Posh 3——易于自定义主题的Powershell美化工具 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/308481493)
