@@ -89,16 +89,18 @@ scoop update <app> [options]
 scoop search <query>
 scoop install <app> [options]
 scoop uninstall <app>
+scoop cache show|rm <app>
 scoop bucket add|list|known|rm [<args>]
 scoop reset <app>
 ```
 
 + `scoop update` 不加参数，就是更新 `scoop` 自身，参数为 `app` 名称。
-+ `scoop bucket list` 会显示当前已经添加的 `bucket`（最初只有一个 `main bucket`），这里的 `bucket` 可以认为是一个 `git` 仓库，里面收录了一些 `app` 的下载信息。我们想要安装的 `app` 必须被当前已经添加的 `bucket` 中收录。
++ `scoop bucket list` 会显示当前已经添加的 `bucket`（最初只有一个 `main bucket`），这里的 `bucket` 可以认为是一个仓库，里面收录了一些 `app` 的下载信息。我们想要安装的 `app` 必须被当前已经添加的 `bucket` 中收录。
 + `scoop bucket known` 会显示当前 `scoop` 已知的一些 `bucket`，比如 `main`，`extras`, `versions`, `nerd-fonts`...这是我常用的几个（其他也没用到过）。对于这些 `bucket` 我们可以通过 `scoop bucket add <bucket name>` 来添加。
 + `scoop search <app>` 命令会在已知的 `bucket`（注意是已知的即 `scoop bucket known` 中出现的）中查找该 `app`，`scoop` 会告知你它处于哪个 `bucket` ，如果你需要安装该 `app` 那么首先你需要添加其所属于的 `bucket`，即 `scoop bucket add <bucket name>` （如果已经添加过了就不需要了）再执行 `scoop install <app>`。
 + `scoop install <app>` 就是安装 `app`，比如 `scoop install git`。
 + `scoop uninstall <app>` 就是卸载 `app`，比如 `scoop uninstall everything`。
++ `scoop cache show <app>`，查看下载缓存，`scoop cache rm <app>`，清楚 `app` 的下载缓存。
 + `scoop reset <app>` 用于切换不同版本。
 
 ### 配置 http 代理
