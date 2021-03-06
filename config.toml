@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://yuhi.xyz"
-title = "Yuhi"
+title = "故心人不见"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -96,7 +96,7 @@ uglyURLs = false
 # 作者信息
 [author]
     # 名字
-    name = "Yuhi"
+    name = "故心人不见"
     # 邮箱
     email = "byh668972@gmail.com"
     # 座右铭或简介
@@ -191,19 +191,19 @@ uglyURLs = false
     #     post = "home"
     [[menu.main]]
         url = "/post/"
-        name = "Post"
+        name = "文章"
         weight = 1
         pre = "internal"
         # post = "archive"
     [[menu.main]]
         url = "/categories/"
-        name = "Cat"
+        name = "分类"
         weight = 2
         pre = "internal"
         # post = "th"
     [[menu.main]]
         url = "/tags/"
-        name = "Tag"
+        name = "标签"
         weight = 3
         pre = "internal"
         # post = "tags"
@@ -214,18 +214,18 @@ uglyURLs = false
     #     pre = "internal"
     [[menu.main]]
     url = "/algorithms/"
-    name = "Algo"
+    name = "算法"
     weight = 5
     pre = "internal"
     [[menu.main]]
         url = "/links/"
-        name = "Link"
+        name = "友链"
         weight = 6
         pre = "internal"
         # post = "tags"
     [[menu.main]]
         url = "/about/"
-        name = "About"
+        name = "「我」"
         weight = 7
         pre = "internal"
         # post = "user-circle"
@@ -941,7 +941,7 @@ uglyURLs = false
     #      SVG，则可留空（""）品牌栏字体。
 
     # 品牌栏
-    fontFamilySiteBrand = "'EB Garamond', cursive" # 'Liu Jian Mao Cao', 
+    fontFamilySiteBrand = "'Liu Jian Mao Cao', 'EB Garamond', cursive" 
     # 菜单栏
     fontFamilyMenu = ""
     # 文章标题、文章副标题、列表标题、列表的年份和月份标题、相关文章标题、文章上下篇标题、表格的表头、定义列表中的术语
@@ -963,7 +963,7 @@ uglyURLs = false
 
     # 网络字体链接
     # fontsLink = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Cinzel+Decorative&family=Fira+Mono" # &family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Liu+Jian+Mao+Cao&family=Zhi+Mang+Xing&display=swap&subset=chinese-simplified
-    fontsLink = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative&family=Fira+Mono&family=Courier+Prime"
+    fontsLink = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Cinzel+Decorative&family=Courier+Prime&family=Liu+Jian+Mao+Cao"
     # 说明：要想读者一定体验到你设置的字体，最好
     #      采用网络字体。MemE 主题目前仅支持
     #      Google Fonts 的链接，请前往
