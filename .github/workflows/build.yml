@@ -56,5 +56,5 @@ jobs:
           command_timeout: 10m
           script_stop: true
           script: |
-            cd /opt/yuhixyz
+            cd /www/wwwroot/yuhixyz
             git pull

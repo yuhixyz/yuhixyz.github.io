@@ -106,7 +106,7 @@ uglyURLs = false
     # 网站（默认值：baseURL）
     website = "https://yuhi.xyz/"
     # 推特
-    # twitter = "reuixiy"
+    # twitter = ""
     github = "https://github.com/yuhixyz/"
     netdisk = "https://pan.yuhi.xyz/"
     acwing = "https://www.acwing.com/"
