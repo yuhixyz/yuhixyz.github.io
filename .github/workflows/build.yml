@@ -45,7 +45,7 @@ jobs:
           publish_branch: build
           force_orphan: true
  
-      - name: Connect Aliyun ECS & pull code from gitee
+      - name: Connect Aliyun ECS & pull code from github
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.ALIYUN_HOST }}
