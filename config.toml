@@ -109,7 +109,7 @@ uglyURLs = false
     # twitter = ""
     github = "https://github.com/yuhixyz/"
     netdisk = "https://pan.yuhi.xyz/"
-    acwing = "https://www.acwing.com/"
+    acwing = "https://www.acwing.com/user/myspace/index/6828/"
     
 
 # 相关文章
@@ -407,7 +407,7 @@ uglyURLs = false
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
-    # siteTwitter = "reuixiy"
+    siteTwitter = ""
     # 说明：用于 Twitter Cards
 
 
@@ -1191,19 +1191,19 @@ uglyURLs = false
     enablePostNav = true
 
     # 是否仅限于相同的文章分区
-    postNavInSection = true
+    postNavInSection = false
     ######################################
     # 极简页脚
 
     # 是否开启
     enableMinimalFooter = true
-    enableVerticalBarStructure = true
+    enableVerticalBarStructure = false
     # 说明：如果开启此项，显示在右边的部类或分区
     #      将会包含全部的第一级部类或分区，并且
     #      以竖线（|）分隔开来。
 
     # 是否开启关于页面的极简页脚
-    enableAboutPageMinimalFooter = true
+    enableAboutPageMinimalFooter = false
 
 
     ######################################
@@ -1216,7 +1216,7 @@ uglyURLs = false
     enableBackToTopAutoHide = true
 
     # 是否在首页显示
-    displayBackToTopInHome = true
+    displayBackToTopInHome = false
 
     # 按钮图标
     backToTopIcon = "arrow-up"
@@ -1242,7 +1242,7 @@ uglyURLs = false
     # 图标颜色
     iconColor = "#f06292"
     # 是否开启图标的跳动效果
-    iconAnimation = true
+    iconAnimation = false
 
     # 是否显示 Hugo 和 MemE 的链接
     displayPoweredBy = false

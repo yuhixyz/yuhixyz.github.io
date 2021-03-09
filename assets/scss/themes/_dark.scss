@@ -10,6 +10,7 @@
     @include defineColorHSL(--color-contrast-medium, 80, 2%, 69%);
     @include defineColorHSL(--color-contrast-high, 69, 9%, 84%);
     @include defineColorHSL(--color-contrast-higher, 60, 6%, 90%);
+    @include defineColorHSL(--color-myicon, 233, 5%, 16%);
     .theme-icon-light {
         display: none;
     }

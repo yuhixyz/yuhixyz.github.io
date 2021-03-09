@@ -5,16 +5,6 @@
 .minimal-footer-about a {
     padding: 3px;
 }
-.myname {
-    font-family: 'Liu Jian Mao Cao', 'EB Garamond', cursive;
-}
-.card {
-    transition: border .5s;
-    border-bottom: 1px dashed var(--color-contrast-low);
-}
-.card:hover {
-    border-bottom-color: var(--color-primary);
-}
 .nav-curtain {
     background: linear-gradient(90deg, rgba(230, 230, 230, 0.102) 0, rgba(230, 230, 230, 0.102) 15%, rgba(230, 230, 230, 0.102) 30%, rgba(230, 230, 230, 0.102) 44%, rgba(230, 230, 230, 0.102) 58%, rgba(230, 230, 230, 0.102) 72%, rgba(230, 230, 230, 0.102) 86%, rgba(230, 230, 230, 0.102) 100%);
 }
@@ -561,10 +551,28 @@ details.admonition[open]>summary:after {
         height: 170px;
         border: 1px solid #ddd;
         padding: 2px;
-        // background-color: #fff;
+    }
+    .myname {
+        font-family: 'Liu Jian Mao Cao', 'EB Garamond', cursive;
+    }
+    .mycopyright {
+        text-align: center;
+        margin-top: 5px;
+        border-bottom: 1px dashed var(--color-contrast-low);
     }
     .myicon {
-        margin: 1em;
+        display: inline-block;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        width: 88px;
+    }
+    .myicon:hover {
+        color: var(--color-contrast-high);
+        background: var(--color-myicon);
+        border-radius: 5px;
+    }
+    #github svg, #email svg, #netdisk svg, #acwing svg {
+        padding-bottom: 5px;
     }
     .motto, .me {
         text-align: center;
