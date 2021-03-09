@@ -95,8 +95,8 @@ git init <repo>  # 在当前目录下新建文件夹 repo 并初始化为 git �
 
 ```powershell
 git clone <url>  # 克隆远程仓库
-git clone <url> <name> # 仓库名改为 name
-# 克隆的远程仓库的默认名为 origin
+git clone <url> <repo_name> # 仓库名改为 repo_name（克隆下的仓库文件夹名）
+git clone -b <branch_name> <url> <repo_name>  # -b 指定分支
 ```
 
 **远程仓库**
