@@ -574,6 +574,9 @@ details.admonition[open]>summary:after {
     #github svg, #email svg, #netdisk svg, #acwing svg {
         padding-bottom: 5px;
     }
+    #github, #email, #netdisk, #acwing {
+        padding-right: 3px;
+    }
     .motto, .me {
         text-align: center;
     }
