@@ -20,13 +20,12 @@ draft: false
 
 社交网站常用名字：故心人不见，Yuhi，番茄酱。
 
-
-## 状态
-
-废物大学生感觉即将失学失业，焦虑拉满。
-
 ## 博客
 
-博客使用 [`Hugo-MemE`](https://github.com/reuixiy/hugo-theme-meme) 主题，通过 `Github Action` 部署于 `Github Pages` 以及 `Aliyun ECS`，此外本站点支持 `PWA`。
+博客使用 [Hugo-MemE](https://github.com/reuixiy/hugo-theme-meme) 主题，通过 Github Action 部署于 [Github Pages](https://yuhixyz.github.io) 以及 [Aliyun ECS](https://yuhi.xyz)。
 
-评论使用 `github issues` 的方式，即文章下的 `Feedback`，或者发邮件。
+评论或纠错使用 Github issues 的方式，即每篇文章下的 Feedback 链接，或者邮件联系，也可通过 AcWing 的私信联系。
+
+## 许可
+
+[CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
