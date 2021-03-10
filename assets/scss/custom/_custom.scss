@@ -28,7 +28,7 @@ span.lnt {
     margin-top: .3em;
 }
 .post-title,.list-title,.term-title,.list-year,.list-month {
-    font-family: 'glyph-correction', 'Cinzel Decorative', 'Noto Serif SC', serif;
+    font-family: 'glyph-correction', 'Noto Serif SC', serif;
 }
 .category-item {
     color: var(--color-contrast-high);
@@ -140,11 +140,8 @@ span.lnt {
     }
 }
 @media (max-width: 599px) {
-    .post-nav-next {
-        font-size: medium;
-    }
-    .post-nav-prev {
-        font-size: medium;
+    html, body {
+        font-size: 16px;
     }
     code {
         font-size: 13.5px !important;
@@ -156,7 +153,7 @@ span.lnt {
         font-size: larger;
     }
     .contents-title {
-        font-size: larger;
+        font-size: x-large;
     }
 }
 
