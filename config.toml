@@ -723,7 +723,7 @@ uglyURLs = false
     # 文章设置
 
     # 超链接的颜色变化持续时间（单位：秒）
-    duration = 0.5
+    duration = 0.2
 
     # 浅色模式的主色
     primaryColorLight = "220, 90%, 56%"
