@@ -219,7 +219,7 @@ uglyURLs = false
     pre = "internal"
     [[menu.main]]
         url = "/links/"
-        name = "友链"
+        name = "友人"
         weight = 6
         pre = "internal"
         # post = "tags"
