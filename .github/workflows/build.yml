@@ -45,18 +45,19 @@ jobs:
           publish_branch: build
           force_orphan: true
  
-      - name: Connect Aliyun ECS & pull code from github
+      - name: SSH to Tencent Lighthouse & pull code from github
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.ALIYUN_HOST }}
-          username: ${{ secrets.ALIYUN_USERNAME }}
-          key: ${{ secrets.ALIYUN_KEY }}
-          port: ${{ secrets.ALIYUN_PORT }}
+          host: ${{ secrets.TENCENT_HOST }}
+          username: ${{ secrets.TENCENT_USERNAME }}
+          key: ${{ secrets.TENCENT_KEY }}
+          port: ${{ secrets.TENCENT_PORT }}
           timeout: 10m
           command_timeout: 10m
           script_stop: true
           script: |
-            cd /www/wwwroot
-            sudo rm -rf yuhi.xyz
-            git clone -b build https://github.com.cnpmjs.org/yuhixyz/yuhixyz.github.io.git yuhi.xyz
+            echo testtesttest
+            # cd /www/wwwroot
+            # sudo rm -rf yuhi.xyz
+            # git clone -b build https://github.com.cnpmjs.org/yuhixyz/yuhixyz.github.io.git yuhi.xyz
             
