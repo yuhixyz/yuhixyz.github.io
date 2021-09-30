@@ -2,7 +2,7 @@
 title: "关于「我」"
 date: 2020-01-15T23:35:45+08:00
 tags: []
-description: 破铜烂铁acm选手，躺平ing
+description: 破铜烂铁算法竞赛选手，躺平ing
 badge: false
 comments: false
 toc: false
@@ -14,9 +14,7 @@ draft: false
 
 ## 「我」
 
-南京邮电大学大四，准推免至东南网安。
-
-社交网站常用名字：故心人不见，Yuhi，番茄酱。
+南京邮电大学大四，推免至东南网安。
 
 ## 博客
 
