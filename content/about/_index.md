@@ -18,7 +18,7 @@ draft: false
 
 ## 博客
 
-博客使用 [Hugo-MemE](https://github.com/reuixiy/hugo-theme-meme) 主题，通过 Github Action 部署于 [Github Pages](https://yuhixyz.github.io) 以及 [Aliyun ECS](https://yuhi.xyz)。
+博客使用 [Hugo-MemE](https://github.com/reuixiy/hugo-theme-meme) 主题，通过 Github Action 部署于 [Github Pages](https://yuhixyz.github.io) 以及 [腾讯云轻量应用服务器](https://yuhi.xyz)。
 
 联系方式： Github issues，即每篇文章下的 Feedback 链接，或者邮件。
 
