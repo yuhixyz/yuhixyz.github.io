@@ -56,8 +56,7 @@ jobs:
           command_timeout: 10m
           script_stop: true
           script: |
-            echo testtesttest
-            # cd /www/wwwroot
-            # sudo rm -rf yuhi.xyz
-            # git clone -b build https://github.com.cnpmjs.org/yuhixyz/yuhixyz.github.io.git yuhi.xyz
+            cd /www/wwwroot
+            sudo rm -rf yuhi.xyz
+            git clone -b build https://github.com.cnpmjs.org/yuhixyz/yuhixyz.github.io.git yuhi.xyz
             
