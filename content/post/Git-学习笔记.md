@@ -2,7 +2,7 @@
 title: "Git 学习笔记"
 date: 2021-02-24T20:34:16+08:00
 weight: 
-description: 环境：win10, git@2.30.1.windows.1
+description:
 tags: [Git]
 categories: [Git]
 series: []
@@ -13,7 +13,7 @@ toc: true
 draft: false
 ---
 
-本文是一篇学习笔记，虽然 Yuhi 已经使用 Git 一年多了，但对其工作原理一直没有深入理解，部分命令也常常忘记，因此在这里整理 Git 的相关工作原理以及常用命令，以备查阅。
+本文是一篇学习笔记，虽然 yuhixyz 已经使用 Git 一年多了，但对其工作原理一直没有深入理解，部分命令也常常忘记，因此在这里整理 Git 的相关工作原理以及常用命令，以备查阅。
 
 <!--more-->
 
@@ -42,7 +42,7 @@ draft: false
 
 **各级配置文件**
 
-```powershell
+```shell
 Config file location
     --global              use global config file
     --system              use system config file
@@ -62,7 +62,7 @@ local 的优先级高于 global，优先级高的配置项会覆盖优先级低�
 
 **配置用户名和邮箱**
 
-```powershell
+```shell
 # global 级别
 git config --global user.name "yuhixyz"
 git config --global user.email "example@yuhi.xyz"
@@ -74,7 +74,7 @@ git config user.email "example@gugugu.com"
 
 **查看配置信息**
 
-```powershell
+```shell
 # 查看所有配置项信息，可选参数 [--global] 或 [--local] 等
 git config --list
 # 查看特定项，无参数则按照优先级依次查询的结果，可选参数 [--global] 或 [--local] 等
@@ -86,14 +86,14 @@ git config user.name
 
 **初始化**
 
-```powershell
+```shell
 git init  # 初始化当前目录为 git 仓库
 git init <repo>  # 在当前目录下新建文件夹 repo 并初始化为 git 仓库
 ```
 
 **克隆仓库**
 
-```powershell
+```shell
 git clone <url>  # 克隆远程仓库
 git clone <url> <repo_name> # 仓库名改为 repo_name（克隆下的仓库文件夹名）
 git clone -b <branch_name> <url> <repo_name>  # -b 指定分支
@@ -101,7 +101,7 @@ git clone -b <branch_name> <url> <repo_name>  # -b 指定分支
 
 **远程仓库**
 
-```powershell
+```shell
 # 查看所有远程仓库
 git remote -v  # 可选参数 -v，会列出远程仓库 URL
 
@@ -125,37 +125,93 @@ git remote rm bbb
 git push bbb master
 ```
 
-**暂存修改**
+**查看仓库状态**
 
-```powershell
+```shell
+git status
+```
+
+**将修改后的文件加入暂存区**
+
+```shell
 git add <file1> <file2>  # 将 file1, file2 加入暂存区
 git add <dir>  # 将目录 dir 下所有文件加入暂存区
 git add .  # 将当前目录下所有文件加入暂存区
 ```
 
-**提交更新**
+**提交暂存区的内容到版本库**
 
-```powershell
+```shell
 git commit -m "commit message"  # 提交暂存区的文件
 git commit -a -m "commit message"  # 提交所有已跟踪的文件（跳过暂存的步骤）
 ```
 
-**移除文件**
+**查看当前分支的提交历史**
 
-```powershell
-# 从目录中移除并从 Git 中移除
+```shell
+git log [--pretty=oneline]  # []表示可选
+```
+
+**查看 HEAD 指针的跳转历史**
+
+```shell
+git reflog
+```
+
+**查看文件相对于暂存区的修改**
+
+```shell
+git diff <file> 
+```
+
+**撤销尚未加入暂存区的文件的修改**
+
+文件被修改了，但是目前还没有 add 到暂存区中，使用如下命令可以撤回到上一次 commit 时该文件的状态。
+
+```shell
+git restore <file>  # 或者
+git checkout -- <file>
+```
+
+**将已加入暂存区且之后未修改过的文件移除暂存区**
+
+```shell
+git reset HEAD <file>
+```
+
+**修改上一次的 commit 信息**
+
+当暂存区的内容已经 commit 到版本库但是发现提交信息写错了。
+
+```shell
+git commit -m "wrong commit msg"   # 这里表示上一次的提交信息写错了
+git commit -m "correct commit msg" --amend  # 用正确的提交信息能直接覆盖上一次提交信息
+```
+
+**刚 commit 完发现之前忘记将某个文件加入暂存区**
+
+```shell
+git commit -m "xxx"  # 这里表示上一次将暂存区提交到版本库时的命令
+git add forget.md  # 将文件 add 到暂存区
+git commit --amend  # 重新 commit，将 forget.md 合并到上一次 commit 中，仍然使用上一次的提交信息
+```
+
+**移除文件（两种情况）**
+
+```shell
+# 从目录中移除并从 git 中移除
 rm <file>  # 直接从目录中删除
 git rm <file>  # 然后在 git 中记录此次移除操作，后面提交时该文件不会再被纳入 Git 管理
 # 如果要删除的文件已经修改过，或已经放入暂存区，则需要 -f 参数
 git rm -f <file>
 
-# 在目录中保留而从 Git 中移除
+# 在目录中保留而从 git 中移除
 git rm --cached <file>
 ```
 
-**移动文件**
+**重命名文件**
 
-```powershell
+```shell
 git mv <file1> <file2>  # 重命名
 
 # 等价于下面三条
@@ -164,45 +220,17 @@ git rm <file1>
 git add <file2>
 ```
 
-**查看提交历史**
+**版本回滚**
 
-```powershell
-git log [--pretty=oneline]  # []为可选
-```
-
-**撤销提交**
-
-```powershell
-# 两种使用场景举例
-
-# 上一次 commit 信息写错了
-git commit -m "wrong commit msg"
-git commit -m "correct commit msg" --amend  # 覆盖上一次提交（只是修改了提交信息）
-
-# 刚 commit 完发现忘记将文件 forget.md 加入暂存区
-git commit -m "xxx"
-git add forget.md
-git commit --amend  # 重新 commit，将 forget.md 加入上次 commit 中
-```
-
-**撤销修改**
-
-```powershell
-# 将 file 恢复到上一次提交时的状态，两条命令都可以
-git restore <file>
-git checkout -- <file>
-```
-
-**取消暂存文件**
-
-```powershell
-# file 已暂存且之后没有修改，如下命令将 file 移出暂存区
-git reset HEAD <file>
+```shell
+git reset --hard HEAD^  # 表示将代码回滚到上个版本
+git reset --hard HEAD^^^  # 有几个^表示向前回滚几次
+git reset --hard <版本号>   # 版本号取对应哈希值的前几位即可
 ```
 
 **标签**
 
-```powershell
+```shell
 # 列出所有标签
 git tag
 
@@ -233,7 +261,7 @@ git checkout -b <branch_name> <tag_name>
 
 **分支**
 
-```powershell
+```shell
 # 列出所有本地和远程分支
 git branch -a
 
