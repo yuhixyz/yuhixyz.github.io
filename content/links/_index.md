@@ -25,7 +25,7 @@ draft: false
 {{< link name="Duinomaker" url="https://duinomaker.top/" logo="/images/links/Duinomaker.png" word="有待提高的 OIer / 函数式编程初探者" >}}
 {{< link name="Eregerm" url="https://4eay7lab.com/" logo="/images/links/Eregerm.png" word="code / game / otaku / art / physics / philosophy" >}}
 {{< link name="胡图图" url="https://hututuqwq.github.io/" logo="/images/links/Hututu.png" word="算法爱好者 / 即将面对社会的辣鸡带学生" >}}
-{{< link name="Jaubert" url="https://jaubert.gitee.io/" logo="/images/links/Aurorasar.png" word="一个 CTFer 半吊子的生活" >}}
+{{< link name="Jaubert" url="http://jaubert.pro/" logo="/images/links/Aurorasar.png" word="一个 CTFer 半吊子的生活" >}}
 {{< link name="Matrix72" url="https://www.matrix72.top/" logo="/images/links/J.C.png" word="Matrix72 的万事屋" >}}
 {{< link name="Purple4pur" url="https://www.purple4pur.com/" logo="/images/links/Purple4pur.png" word="Adobe 学徒 / 敲敲代码 / 做做视频" >}}
 {{< link name="青い記憶" url="https://www.xjdesyxx.top/" logo="/images/links/Xjzsq.png" word="珂学家的代码日常" >}}
