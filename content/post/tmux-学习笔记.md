@@ -83,7 +83,7 @@ tmux switch -t <session_name>
 
 ```sh
 <leader> + d  # 分离会话
-<leader> + s  # 列出所有会话，可用上下方向键切换
+<leader> + s  # 列出所有会话，可用上下或者jk切换，使用左右或者hl收起或者展开
 <leader> + $  # 重命名会话
 ```
 
@@ -97,7 +97,8 @@ tmux switch -t <session_name>
 <leader> + n  # 切换到后一个窗口
 <leader> + <number>  # 切换到指定编号的窗口
 <leader> + ,  # 重命名窗口
-<leader> + w  # 列出所有窗口（不限于同一会话），可用上下方向键切换
+<leader> + w  # 列出所有窗口（不限于同一会话），可用上下或者jk切换，使用左右或者hl收起或者展开
+<leader> + &  # 关闭当前窗口，需要y确认，也可使用命令exit
 ```
 
 ### 3. 窗格
@@ -107,16 +108,42 @@ tmux switch -t <session_name>
 ```sh
 <leader> + %  # 左右切分出2个窗格
 <leader> + "  # 上下切分出2个窗格"
-<leader> + <arrow_key>  # 切换光标到其他窗口
+<leader> + <arrow_key>  # 切换光标到其他窗格
 <leader> + z  # 最大化当前窗格，再执行则恢复
 <leader> + x  # 关闭当前窗格，需要y确认，也使用命令exit
 <leader> + !  # 将当前窗格分离出去，成为窗口
 <leader> + ctrl + <arrow_key>  # 调整窗格大小
 ```
 
+### 4. 其他
+
+```sh
+tmux source-file ~/.tmux.conf  # 使配置文件生效
+<leader> + ?  # 查看帮助
+```
+
+## tmux 配置
+
+tmux 的配置文件在 `~/.tmux.conf`。
+
+添加以下配置就可以使用 `<leader>` + `hjkl` 移动光标到其他窗格。
+
+```conf
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+```
+
+添加以下配置使用可以使用鼠标操作窗格，包括切换光标所在窗格，调整窗格大小。
+
+```conf
+set-option -g mouse on
+```
 
 
 ## 参考资料
 
 1. [Tmux 使用教程 by 阮一峰](https://www.ruanyifeng.com/blog/2019/10/tmux.html)
 2. [Linux 下的终端神器 by 喷气式蜗牛](https://www.bilibili.com/video/BV1da4y1p7e1?from=search&seid=17038472467815571019&spm_id_from=333.337.0.0)
+3. [优雅地使用命令行：Tmux 终端复用 by lakeone](https://www.cnblogs.com/lakeone/p/5424609.html)
