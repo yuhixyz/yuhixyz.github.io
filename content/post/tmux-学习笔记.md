@@ -141,6 +141,11 @@ bind-key l select-pane -R
 set-option -g mouse on
 ```
 
+添加以下配置可以使用 `<leader> + r` 重载配置。
+
+```conf
+bind r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
+```
 
 ## 参考资料
 
