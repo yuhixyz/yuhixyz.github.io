@@ -126,6 +126,14 @@ tmux source-file ~/.tmux.conf  # 使配置文件生效
 
 tmux 的配置文件在 `~/.tmux.conf`。
 
+修改默认前缀键为 `<C-a>`。
+
+```conf
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+```
+
 添加以下配置就可以使用 `<leader>` + `hjkl` 移动光标到其他窗格。
 
 ```conf
