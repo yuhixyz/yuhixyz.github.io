@@ -12,7 +12,7 @@ copyright = "[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.
 theme = "meme"
 
 # `hugo new` 新建文章自动打开的文本编辑器
-newContentEditor = "code" # code / typora
+newContentEditor = "nvim" # code / typora
 
 # i18n
 defaultContentLanguage = "zh"

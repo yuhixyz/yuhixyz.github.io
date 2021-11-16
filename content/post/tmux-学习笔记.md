@@ -126,7 +126,7 @@ tmux source-file ~/.tmux.conf  # 使配置文件生效
 
 tmux 的配置文件在 `~/.tmux.conf`。
 
-修改默认前缀键为 `<C-a>`。
+添加以下配置修改默认前缀键为 `<C-a>`。
 
 ```conf
 unbind C-b
@@ -155,8 +155,102 @@ set-option -g mouse on
 bind r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
 ```
 
+## tmux plugin manager
+
+tmux 可以使用 [tpm](https://github.com/tmux-plugins/tpm) 安装插件。
+
+首先 clone tpm:
+```git
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+然后将下列内容添加到 `~/.tmux.conf` 文件的最底部。
+
+```conf
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'github_username/plugin_name#branch'
+# set -g @plugin 'git@github.com:user/plugin'
+# set -g @plugin 'git@bitbucket.com:user/plugin'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+```
+
+然后使用 `<leader> + r` 重载配置。
+
+```
+# tpm快捷键
+<leader> + I  # 安装插件
+<leader> + U  # 更新插件 
+```
+
+
+上面有 examples 告诉你如何添加插件，下面推荐几个我常用的。
+
+### 1. tmux 保存和恢复插件
+
+当运行 tmux 服务的计算机关闭或者重启时，tmux 中的会话无法保存下来。使用 [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) 插件可以在关机前执行 `<leader> + <C-s>` 保存会话，下次进入 tmux 后执行 `<leader> + <C-r>` 恢复会话。 
+
+使用 [tmux-continuum](https://github.com/tmux-plugins/tmux-continuum) 插件就可以自动保存，进入 tmux 后自动恢复。
+
+添加以下插件到 `~/.tmux.conf` 中，并重载配置文件。
+
+```conf
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+# restore neovim session
+set -g @resurrect-strategy-nvim 'session'
+set -g @resurrect-capture-pane-contents 'on'
+set -g @continuum-restore 'on'  # 注释掉这行就可以关闭进入tmux就自动恢复会话
+```
+
+```
+# resurrect快捷键
+<leader> + <C-s>  # 保存会话
+<leader> + <C-r>  # 恢复会话
+```
+
+### 2. vim-tmux 导航统一快捷键
+
+插件：[vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+
+tmux 插件安装，添加以下到 `~/.tmux.conf` 中。
+
+```
+set -g @plugin 'christoomey/vim-tmux-navigator'
+```
+
+然后执行
+
+```
+<leader> + r  # 重载配置
+<leader> + I  # 安装插件 
+```
+
+vim 插件安装（如使用 vim-plug)，添加以下到 vim 配置文件中。
+```
+Plug 'christoomey/vim-tmux-navigator'
+```
+
+然后执行
+
+```
+:PlugInstall
+```
+
+**使用方式**
+
+通过 `<C-h/j/k/l>` 导航 vim 中的分屏窗格和 tmux 窗格，并且支持直接从 vim 导航到 tmux 中，对于在 tmux 中的导航也无需再按繁琐的前缀键。
+
 ## 参考资料
 
 1. [Tmux 使用教程 by 阮一峰](https://www.ruanyifeng.com/blog/2019/10/tmux.html)
 2. [Linux 下的终端神器 by 喷气式蜗牛](https://www.bilibili.com/video/BV1da4y1p7e1?from=search&seid=17038472467815571019&spm_id_from=333.337.0.0)
 3. [优雅地使用命令行：Tmux 终端复用 by lakeone](https://www.cnblogs.com/lakeone/p/5424609.html)
+4. [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+5. [Tmux Plugin Manager使用及具体插件 by hongda](https://www.cnblogs.com/hongdada/p/13528984.html) 。
+
