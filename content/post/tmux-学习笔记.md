@@ -61,13 +61,13 @@ exit  # 或者 ctrl+d
 tmux ls 
 
 # 新建会话，指定名称
-tmux new -s <session_name>
+tmux new-session -s <session_name>
 
 # 分离会话，会话仍然在后台运行
 tmux detach
 
 # 接入某个会话
-tmux attach -t <session_name>  # attch 也可简写为 a
+tmux attach-session -t <session_name> 
 
 # 杀死某个会话
 tmux kill-session -t <session_name>
@@ -75,8 +75,8 @@ tmux kill-session -t <session_name>
 # 杀死所有会话
 tmux kill-server
 
-# 切换会话
-tmux switch -t <session_name>
+# 会话内切换会话
+tmux switch-client -t <session_name>
 ```
 
 **会话相关快捷键**
@@ -134,7 +134,7 @@ set -g prefix C-a
 bind C-a send-prefix
 ```
 
-添加以下配置就可以使用 `<leader>` + `hjkl` 移动光标到其他窗格。
+(optional 后文有vim-tmux导航插件能更好的替代这条配置)添加以下配置就可以使用 `<leader>` + `hjkl` 移动光标到其他窗格。
 
 ```conf
 bind-key h select-pane -L
@@ -252,5 +252,5 @@ Plug 'christoomey/vim-tmux-navigator'
 2. [Linux 下的终端神器 by 喷气式蜗牛](https://www.bilibili.com/video/BV1da4y1p7e1?from=search&seid=17038472467815571019&spm_id_from=333.337.0.0)
 3. [优雅地使用命令行：Tmux 终端复用 by lakeone](https://www.cnblogs.com/lakeone/p/5424609.html)
 4. [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
-5. [Tmux Plugin Manager使用及具体插件 by hongda](https://www.cnblogs.com/hongdada/p/13528984.html) 。
-
+5. [Tmux Plugin Manager使用及具体插件 by hongda](https://www.cnblogs.com/hongdada/p/13528984.html) 
+6. [The Tao of tmux by Tony Narlock](https://leanpub.com/the-tao-of-tmux/read#thinking-tmux)
