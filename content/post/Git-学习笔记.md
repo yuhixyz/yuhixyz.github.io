@@ -196,17 +196,16 @@ git add forget.md  # 将文件 add 到暂存区
 git commit --amend  # 重新 commit，将 forget.md 合并到上一次 commit 中，仍然使用上一次的提交信息
 ```
 
-**移除文件（两种情况）**
+**在 git 中移除文件（两种情况）**
 
 ```shell
-# 从目录中移除并从 git 中移除
-rm <file>  # 直接从目录中删除
-git rm <file>  # 然后在 git 中记录此次移除操作，后面提交时该文件不会再被纳入 Git 管理
-# 如果要删除的文件已经修改过，或已经放入暂存区，则需要 -f 参数
+# 情况一：从目录中移除并从 git 版本库中移除
+git rm <file> 
+# 如果要删除的文件在上一次涉及它的 commit 以后还修改过，或者当前文件正处于暂存区，则需要 -f 参数
 git rm -f <file>
 
-# 在目录中保留而从 git 中移除
-git rm --cached <file>
+# 情况二：在目录中保留而只从 git 版本库中移除
+git rm --cached <file>  # 之后使用 git status 查看, file 处于 untracked 状态
 ```
 
 **重命名文件**
