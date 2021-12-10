@@ -1,11 +1,7 @@
 .DS_Store
-*/.DS_Store
 node_modules
 package.json
 package-lock.json
 *.bat
-public
-resources
-# gulpfile.js
-# sw-template.js
-deploy.bat
+/public
+/resources
