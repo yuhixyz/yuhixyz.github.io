@@ -17,7 +17,7 @@ draft: false
 
 ---
 
-{{< link name="0x46" url="http://headwindfu.xyz/" logo="/images/links/0x46.png" word="真的废物（fake）" >}}
+<!-- {{< link name="0x46" url="http://headwindfu.xyz/" logo="/images/links/0x46.png" word="真的废物（fake）" >}} -->
 {{< link name="0xfaner" url="https://0xfaner.top/" logo="/images/links/0xfaner.png" word="现役 ACMer 的代码日常" >}}
 {{< link name="Brethland" url="http://yuki.systems/" logo="/images/links/Brethland.png" word="PLT / Mathematics / Literature / Otaku" >}}
 {{< link name="Byc_404" url="https://www.bycsec.top/" logo="/images/links/Byc_404.png" word="CTF WEB Dog" >}}
@@ -28,7 +28,7 @@ draft: false
 {{< link name="Jaubert" url="http://jaubert.pro/" logo="/images/links/Aurorasar.png" word="一个 CTFer 半吊子的生活" >}}
 {{< link name="Matrix72" url="https://www.matrix72.top/" logo="/images/links/J.C.png" word="Matrix72 的万事屋" >}}
 {{< link name="Purple4pur" url="https://www.purple4pur.com/" logo="/images/links/Purple4pur.png" word="Adobe 学徒 / 敲敲代码 / 做做视频" >}}
-{{< link name="青い記憶" url="https://www.xjdesyxx.top/" logo="/images/links/Xjzsq.png" word="珂学家的代码日常" >}}
+{{< link name="青い記憶" url="https://xjzsq.cn" logo="/images/links/Xjzsq.png" word="珂学家的代码日常" >}}
 {{< link name="无相" url="https://blog.csdn.net/weixin_45080867/" logo="/images/links/wuxiang.png" word="一个算法萌新的进阶之路" >}}
 
 ---
