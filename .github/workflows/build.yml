@@ -46,18 +46,18 @@ jobs:
           cname: yuhi.xyz 
           force_orphan: true
  
-      - name: SSH to Tencent Lighthouse & pull code from github
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.TENCENT_HOST }}
-          username: ${{ secrets.TENCENT_USERNAME }}
-          key: ${{ secrets.TENCENT_KEY }}
-          port: ${{ secrets.TENCENT_PORT }}
-          timeout: 10m
-          command_timeout: 10m
-          script_stop: true
-          script: |
-            cd /www/wwwroot
-            sudo rm -rf yuhi.xyz
-            git clone -b build https://github.com.cnpmjs.org/yuhixyz/yuhixyz.github.io.git yuhi.xyz
+      # - name: SSH to Tencent Lighthouse & pull code from github
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.TENCENT_HOST }}
+      #     username: ${{ secrets.TENCENT_USERNAME }}
+      #     key: ${{ secrets.TENCENT_KEY }}
+      #     port: ${{ secrets.TENCENT_PORT }}
+      #     timeout: 10m
+      #     command_timeout: 10m
+      #     script_stop: true
+      #     script: |
+      #       cd /www/wwwroot
+      #       sudo rm -rf yuhi.xyz
+      #       git clone -b build https://github.com.cnpmjs.org/yuhixyz/yuhixyz.github.io.git yuhi.xyz
             
