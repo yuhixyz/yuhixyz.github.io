@@ -13,14 +13,14 @@
                     <span id="github" class="icon"></span>
                     <span class="github-info">Github</span>
                 </a>
-                <a class="myicon" href="{{ .Site.Author.acwing }}" target="_blank">
-                    <span id="acwing"></span>
-                    <span>AcWing</span>
-                </a>
-                <a class="myicon" href="{{ .Site.Author.netdisk }}" target="_blank">
-                    <span id="netdisk"></span>
-                    <span>Netdisk</span>
-                </a>
+                <!-- <a class="myicon" href="{{ .Site.Author.acwing }}" target="_blank"> -->
+                <!--     <span id="acwing"></span> -->
+                <!--     <span>AcWing</span> -->
+                <!-- </a> -->
+                <!-- <a class="myicon" href="{{ .Site.Author.netdisk }}" target="_blank"> -->
+                <!--     <span id="netdisk"></span> -->
+                <!--     <span>Netdisk</span> -->
+                <!-- </a> -->
                 <a class="myicon" href="mailto:{{ .Site.Author.email }}" target="_blank">
                     <span id="email"></span>
                     <span>Email</span>
@@ -30,10 +30,6 @@
                     github.innerHTML = '{{ .Site.Data.SVG.github }}';
                     let email = document.getElementById('email');
                     email.innerHTML = '{{ .Site.Data.SVG.email }}';
-                    let netdisk = document.getElementById('netdisk');
-                    netdisk.innerHTML = '{{ .Site.Data.SVG.netdisk }}';
-                    let acwing = document.getElementById('acwing');
-                    acwing.innerHTML = '{{ .Site.Data.SVG.acwing }}';
                 </script>
             </div>
             <div class="mycopyright">

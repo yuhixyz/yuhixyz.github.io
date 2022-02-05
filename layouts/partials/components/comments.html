@@ -1,5 +1,5 @@
 {{ if .Site.Params.enableComments }}
-    {{ if .Params.comments (eq hugo.Environment "production") }}
+    {{ if and (.Params.comments) (eq hugo.Environment "production") }}
         {{ if or (in .Site.Params.mainSections .Section) .Params.comments }}
 
             <div class="load-comments">

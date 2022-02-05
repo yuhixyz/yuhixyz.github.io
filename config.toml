@@ -100,7 +100,7 @@ uglyURLs = false
     # 邮箱
     email = "byh668972@gmail.com"
     # 座右铭或简介
-    motto = "Great hopes make everything great possible."
+    motto = "Great Hopes Make Everything Great Possible."
     # 头像
     avatar = "/icons/apple-icon.png"
     # 网站（默认值：baseURL）
@@ -265,13 +265,13 @@ uglyURLs = false
         name = "" 
         identifier = "envelope"
         post = "envelope"
-    [[menu.socials]]
-        url = "https://pan.yuhi.xyz"
-        weight = 5
-        pre = "external"
-        name = "" 
-        identifier = "netdisk"
-        post = "netdisk"
+    # [[menu.socials]]
+    #     url = "https://pan.yuhi.xyz"
+    #     weight = 5
+    #     pre = "external"
+    #     name = "" 
+    #     identifier = "netdisk"
+    #     post = "netdisk"
     # [[menu.links]]
     #     url = ""
     #     weight = 3
@@ -337,7 +337,7 @@ uglyURLs = false
     # 如果否，则会使用你的站点标题作为默认值，并
     # 以文字的形式显示，下方可配置字号和字色。字
     # 体请到底部的字体部分配置。单位：em。
-    siteBrandFontSize = 1.4
+    siteBrandFontSize = 1.2
     siteBrandFontColor = "var(--color-contrast-high)"
 
 
@@ -650,7 +650,7 @@ uglyURLs = false
     # 说明：仅在生产环境（production）下渲染
 
     # 是否开启（全局设置）
-    enableComments = false 
+    enableComments = true 
     # 修改后的逻辑：false为全局优先级第一，一篇文章的评论开启，必须开启全局评论的情况下，再开启对应文章 Front Matter 中的 `comments` 为true
 
     ## Disqus
@@ -677,11 +677,11 @@ uglyURLs = false
     # 说明：https://valine.js.org/
 
     ## Utterances
-    enableUtterances = false    
-    utterancesRepo = ""
-    utterancesIssueTerm = "pathname"
+    enableUtterances = true    
+    utterancesRepo = "yuhixyz/yuhixyz.github.io"
+    utterancesIssueTerm = "title"
     utterancesTheme = "github-light"
-    utterancesThemeDark = "photon-dark"
+    utterancesThemeDark = "github-dark-orange"
     utterancesLabel = ""
     # 说明：https://utteranc.es/
 
@@ -1238,11 +1238,11 @@ uglyURLs = false
     displaySiteCreatedYear = true
 
     # 年份与作者之间的图标，留空（""）则无
-    iconBetweenYearAndAuthor = "" # heart
+    iconBetweenYearAndAuthor = "heart" # heart
     # 图标颜色
     iconColor = "#f06292"
     # 是否开启图标的跳动效果
-    iconAnimation = false
+    iconAnimation = true
 
     # 是否显示 Hugo 和 MemE 的链接
     displayPoweredBy = false
@@ -1251,9 +1251,10 @@ uglyURLs = false
     displaySiteCopyright = false
 
     # 自定义页脚（支持 Markdown）
-    customFooter = "[苏ICP备19054878号-2](https://beian.miit.gov.cn)"
+    customFooter = ""
+    # customFooter = "[苏ICP备19054878号-2](https://beian.miit.gov.cn)"
 
-    displayBusuanziSiteUVAndPV = false
+    displayBusuanziSiteUVAndPV = true
     busuanziSiteUVText = ""
     busuanziSiteUVIcon = "user"
     busuanziSitePVText = ""

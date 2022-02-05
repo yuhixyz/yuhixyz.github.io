@@ -9,7 +9,7 @@
     background: linear-gradient(90deg, rgba(230, 230, 230, 0.102) 0, rgba(230, 230, 230, 0.102) 15%, rgba(230, 230, 230, 0.102) 30%, rgba(230, 230, 230, 0.102) 44%, rgba(230, 230, 230, 0.102) 58%, rgba(230, 230, 230, 0.102) 72%, rgba(230, 230, 230, 0.102) 86%, rgba(230, 230, 230, 0.102) 100%);
 }
 .menu-item a {
-    font-size: 1.3em;
+    font-size: 1.2em;
     padding-bottom: 3px;
 }
 .home .poetry {
@@ -95,30 +95,30 @@ span.lnt {
 }
 
 /* 顶部阅读进度条 */
-#content_progress {
-    /* Positioning */
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    height: 2px;
-    // -webkit-appearance: none;
-    // -moz-appearance: none;
-    // appearance: none;
-    border: none;
-    background-color: transparent;
-    color: hsl(39, 95%, 74%);
-}
-#content_progress::-webkit-progress-bar {
-    background-color: transparent;
-}
-#content_progress::-webkit-progress-value {
-    background-color: var(--color-contrast-higher);
-}
-#content_progress::-moz-progress-bar {
-    background-color: var(--color-contrast-higher);
-}
+// #content_progress {
+//     /* Positioning */
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     z-index: 1000;
+//     width: 100%;
+//     height: 2px;
+//     // -webkit-appearance: none;
+//     // -moz-appearance: none;
+//     // appearance: none;
+//     border: none;
+//     background-color: transparent;
+//     color: hsl(39, 95%, 74%);
+// }
+// #content_progress::-webkit-progress-bar {
+//     background-color: transparent;
+// }
+// #content_progress::-webkit-progress-value {
+//     background-color: var(--color-contrast-higher);
+// }
+// #content_progress::-moz-progress-bar {
+//     background-color: var(--color-contrast-higher);
+// }
 
 /* valine */
 .v .vbtn, .vinput, .veditor {

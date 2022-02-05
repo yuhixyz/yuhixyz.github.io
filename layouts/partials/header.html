@@ -1,7 +1,7 @@
 {{ if or (or (and .IsHome .Site.Params.displayHeaderInHome) (eq .Site.Params.headerLayout "flex")) (and (not .IsHome) .Site.Params.enableHeader) }}
     <header class="header"{{ if and (eq .Site.Params.headerLayout "flex") .Site.Params.enableSmoothScroll }} data-scroll-header{{ end }}>
         {{ if eq .Site.Params.headerLayout "flex" }}
-            <progress id="content_progress" value="0"></progress>
+            <!-- <progress id="content_progress" value="0"></progress> -->
             <div class="header-wrapper">
                 <div class="header-inner">
                     {{ template "site-brand" . }}
