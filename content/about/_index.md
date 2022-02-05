@@ -2,9 +2,9 @@
 title: "关于「我」"
 date: 2020-01-15T23:35:45+08:00
 tags: []
-description: 破铜烂铁算法竞赛选手，躺平中
+description:
 badge: false
-comments: false
+comments: true
 toc: false
 displayCopyright: false
 meta: false
@@ -12,18 +12,17 @@ gitinfo: false
 draft: false
 ---
 
-## 「我」
+目前南邮大四，被算法竞赛打过，收集了一些破铜烂铁，推免至东南网安。
 
-南邮大四学生，推免至东南网安，平时写写代码，摸摸鱼这样子。
+下面写点近况吧：
 
-## 博客
+最近从 Windows 转向 MacOS，入了 vim 的坑，慢慢从被折磨到养成了 vim 强迫症。
 
-博客基于 [Hugo-MemE](https://github.com/reuixiy/hugo-theme-meme) 主题小改出一个侧栏，通过 Github Action 部署于 [Github Pages](https://yuhixyz.github.io) 以及 [腾讯云轻量应用服务器](https://yuhi.xyz)。
++ 平铺式窗口管理器：yabai + skhd + sketchybar
++ 终端和Shell：kitty + zsh
++ 终端复用器：tmux
++ 代码编辑器：neovim
++ 改键工具：karabiner-elements
++ Chrome 插件：Vimium
 
-联系方式： Github issues，即每篇文章下的 Feedback 链接，或者[邮件](mailto:byh668972@gmail.com)。
-
-
-
-## 许可
-
-[CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+我的配置文件：[https://github.com/yuhixyz/dotfiles](https://github.com/yuhixyz/dotfiles)

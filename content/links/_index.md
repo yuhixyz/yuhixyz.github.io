@@ -2,7 +2,7 @@
 title: "友链"
 date: 2020-04-28T23:35:45+08:00
 tags: []
-description: 向大佬们学习😀
+description:
 badge: false
 comments: true
 toc: false
