@@ -54,6 +54,7 @@ document.onkeyup = function(event) {
 
 window.onload = function () {
     /* 默认加载评论 */
+    const commentsToggle = document.getElementById('load-comments');
     if (commentsToggle !== null) {
         loadComments();
         commentsToggle.style = "display: none";
