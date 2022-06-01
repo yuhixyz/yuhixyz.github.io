@@ -18,7 +18,7 @@ draft: false
 ---
 
 <!-- {{< link name="0x46" url="http://headwindfu.xyz/" logo="/images/links/0x46.png" word="真的废物（fake）" >}} -->
-{{< link name="0xfaner" url="https://0xfaner.top/" logo="/images/links/0xfaner.jpg" word="退役 ACMer 的代码日常" >}}
+{{< link name="0xfaner" url="https://blog.0xfaner.top/" logo="/images/links/0xfaner.jpg" word="退役 ACMer 的代码日常" >}}
 {{< link name="Brethland" url="http://yuki.systems/" logo="/images/links/Brethland.png" word="PLT / Mathematics / Literature / Otaku" >}}
 {{< link name="Byc_404" url="https://www.bycsec.top/" logo="/images/links/Byc_404.png" word="CTF WEB Dog" >}}
 {{< link name="Cfzhao" url="http://www.cfzhao.com/" logo="/images/links/Cfzhao.png" word="「南京邮电大学不学无术的学生」" >}}
