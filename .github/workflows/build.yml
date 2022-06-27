@@ -33,7 +33,7 @@ jobs:
         run: |
           git config --global core.quotepath false         
           hugo --gc --minify --cleanDestinationDir
-          gulp build
+          # gulp build
           hugo-algolia -s
         env:
           ALGOLIA_WRITE_KEY: ${{ secrets.ALGOLIA_WRITE_KEY }}  # algolia adminkey
