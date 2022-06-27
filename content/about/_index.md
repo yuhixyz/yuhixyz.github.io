@@ -12,7 +12,7 @@ gitinfo: false
 draft: false
 ---
 
-<p><center>南邮大四刚毕业，推免至东南网安。</center></p>
+南邮大四刚毕业，推免至东南网安。
 
-<p><center>一名收集了破铜烂铁的 ACMer，一名 Vimer。</center></p>
+一名收集了破铜烂铁的 ACMer，一名 Vimer。
 
