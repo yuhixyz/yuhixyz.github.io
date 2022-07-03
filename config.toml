@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://yuhi.xyz"
-title = "故心人不见"
+title = "Yuhi's Blog"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -12,7 +12,7 @@ copyright = "[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.
 theme = "meme"
 
 # `hugo new` 新建文章自动打开的文本编辑器
-newContentEditor = "nvim" # code / typora
+newContentEditor = "lvim" # code / typora
 
 # i18n
 defaultContentLanguage = "zh"
@@ -96,7 +96,7 @@ uglyURLs = false
 # 作者信息
 [author]
     # 名字
-    name = "故心人不见"
+    name = "Yuhi"
     # 邮箱
     email = "byh668972@gmail.com"
     # 座右铭或简介
@@ -108,8 +108,8 @@ uglyURLs = false
     # 推特
     # twitter = ""
     github = "https://github.com/yuhixyz/"
-    netdisk = "https://pan.yuhi.xyz/"
     acwing = "https://www.acwing.com/user/myspace/index/6828/"
+    codeforces = "https://codeforces.com/profile/Yuhixyz"
     
 
 # 相关文章
@@ -303,6 +303,8 @@ uglyURLs = false
 
     # 背景
     headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
+    # headerBackground = "linear-gradient(90deg, #a18c641a, #6aadca1a, #7d88bd18, #a067c50e, #c268a011)"
+
     # 说明：https://developer.mozilla.org/zh-CN/docs/Web/CSS/background
 
     # 顶栏布局
@@ -659,8 +661,8 @@ uglyURLs = false
 
     ## Valine
     enableValine = false
-    valineAppId = "7SH2FyjOHBufTmDSJEbt4vYg-gzGzoHsz"
-    valineAppKey = "4sVNtk1z4zYXxFfE4bGfM8Vr"
+    valineAppId = ""
+    valineAppKey = ""
     valinePlaceholder = "Suggestions are welcome."
     valineNotify = true
     valineVerify = false
@@ -941,15 +943,15 @@ uglyURLs = false
     #      SVG，则可留空（""）品牌栏字体。
 
     # 品牌栏
-    fontFamilySiteBrand = "'Liu Jian Mao Cao', 'EB Garamond', cursive" 
+    fontFamilySiteBrand = "'Cinzel Decorative', 'EB Garamond', cursive"  # 'Liu Jian Mao Cao',
     # 菜单栏
     fontFamilyMenu = ""
     # 文章标题、文章副标题、列表标题、列表的年份和月份标题、相关文章标题、文章上下篇标题、表格的表头、定义列表中的术语
-    fontFamilyTitle = "'Noto Serif SC', 'EB Garamond', serif"
+    fontFamilyTitle = "'Cinzel Decorative', 'Noto Serif SC', serif"
     # 分节标题、目录标题
-    fontFamilyHeadings = "'Noto Serif SC', 'EB Garamond', serif"
+    fontFamilyHeadings = "'Noto Serif SC', serif"
     # 代码、上标、文章元信息、文章更新徽章、文章的 Git 版本信息、极简页脚、不蒜子站点浏览计数
-    fontFamilyCode = "'Courier Prime', 'Fira Mono', 'Source Code Pro', 'glyph-correction', Consolas,'Noto Serif SC', monospace" # 'Source Code Pro', 
+    fontFamilyCode = "'Courier Prime', 'Fira Mono', 'Source Code Pro', 'glyph-correction', Consolas, 'Noto Serif SC', monospace" # 'Source Code Pro', 
     # 引用
     fontFamilyQuote = ""
     # 文章目录
@@ -963,7 +965,7 @@ uglyURLs = false
 
     # 网络字体链接
     # fontsLink = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Cinzel+Decorative&family=Fira+Mono" # &family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Liu+Jian+Mao+Cao&family=Zhi+Mang+Xing&display=swap&subset=chinese-simplified
-    fontsLink = "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Courier+Prime&family=Liu+Jian+Mao+Cao"
+    fontsLink = "https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Courier+Prime"
     # 说明：要想读者一定体验到你设置的字体，最好
     #      采用网络字体。MemE 主题目前仅支持
     #      Google Fonts 的链接，请前往
@@ -973,7 +975,7 @@ uglyURLs = false
     ######################################
     ## 字号（单位：px）
 
-    fontSize = 18
+    fontSize = 17
 
     ######################################
     ## 制表符的宽度
@@ -1252,7 +1254,6 @@ uglyURLs = false
 
     # 自定义页脚（支持 Markdown）
     customFooter = ""
-    # customFooter = "[苏ICP备19054878号-2](https://beian.miit.gov.cn)"
 
     displayBusuanziSiteUVAndPV = true
     busuanziSiteUVText = ""
@@ -1326,7 +1327,7 @@ uglyURLs = false
     # 平滑滚动
 
     # 是否开启
-    enableSmoothScroll = true
+    enableSmoothScroll = false
     # 说明：https://github.com/cferdinandi/smooth-scroll
 
 
