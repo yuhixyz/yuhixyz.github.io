@@ -27,14 +27,12 @@ jobs:
       - name: Install Packages  # 安装各种依赖
         run: |
           npm install hugo-algolia -g
-          npm install workbox-build gulp gulp-uglify readable-stream uglify-es --save-dev
+          npm install workbox-build gulp gulp-shell --save-dev
 
       - name: Build # hugo生成public
         run: |
           git config --global core.quotepath false         
-          hugo --gc --minify --cleanDestinationDir
-          # gulp build
-          hugo-algolia -s
+          gulp build
         env:
           ALGOLIA_WRITE_KEY: ${{ secrets.ALGOLIA_WRITE_KEY }}  # algolia adminkey
 
