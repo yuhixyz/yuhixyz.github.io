@@ -13,23 +13,27 @@
                     <span id="github" class="icon"></span>
                     <span class="github-info">Github</span>
                 </a>
-                <!-- <a class="myicon" href="{{ .Site.Author.acwing }}" target="_blank"> -->
-                <!--     <span id="acwing"></span> -->
-                <!--     <span>AcWing</span> -->
-                <!-- </a> -->
-                <!-- <a class="myicon" href="{{ .Site.Author.netdisk }}" target="_blank"> -->
-                <!--     <span id="netdisk"></span> -->
-                <!--     <span>Netdisk</span> -->
-                <!-- </a> -->
                 <a class="myicon" href="mailto:{{ .Site.Author.email }}" target="_blank">
-                    <span id="email"></span>
+                    <span id="email" class="icon"></span>
                     <span>Email</span>
+                </a>
+                <a class="myicon acwing" href="{{ .Site.Author.acwing }}" target="_blank">
+                    <span id="acwing" class="icon"></span>
+                    <span id="acwing-info">AcWing</span>
+                </a>
+                <a class="myicon codeforces" href="{{ .Site.Author.codeforces }}" target="_blank">
+                    <span id="codeforces" class="icon"></span>
+                    <span id="codeforces-info">Codeforces</span>
                 </a>
                 <script>
                     let github = document.getElementById('github');
                     github.innerHTML = '{{ .Site.Data.SVG.github }}';
                     let email = document.getElementById('email');
                     email.innerHTML = '{{ .Site.Data.SVG.email }}';
+                    let acwing = document.getElementById('acwing');
+                    acwing.innerHTML = '{{ .Site.Data.SVG.home }}';
+                    let codeforces = document.getElementById('codeforces');
+                    codeforces.innerHTML = '{{ .Site.Data.SVG.codeforces }}';
                 </script>
             </div>
             <div class="mycopyright">

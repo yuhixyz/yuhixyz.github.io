@@ -1,34 +1,13 @@
 /* MemE主题配置覆盖 */
-.header-wrapper {
-    background: linear-gradient(90deg, #a18c641a, #6aadca1a, #7d88bd18, #a067c50e, #c268a011);
-}
-.minimal-footer-about a {
-    padding: 3px;
-}
-.nav-curtain {
-    background: linear-gradient(90deg, rgba(230, 230, 230, 0.102) 0, rgba(230, 230, 230, 0.102) 15%, rgba(230, 230, 230, 0.102) 30%, rgba(230, 230, 230, 0.102) 44%, rgba(230, 230, 230, 0.102) 58%, rgba(230, 230, 230, 0.102) 72%, rgba(230, 230, 230, 0.102) 86%, rgba(230, 230, 230, 0.102) 100%);
-}
 .menu-item a {
     font-size: 1.2em;
-    padding-bottom: 3px;
-}
-.home .poetry {
-    padding-top: 14em;
-}
-.toc a {
-    transition-duration: .2s;
 }
 code {
     border-radius: 4px;
+    padding-top: 4px;
 }
-span.lnt {
-    display: inline;
-}
-.nav-toggle span {
-    margin-top: .3em;
-}
-.post-title,.list-title,.term-title,.list-year,.list-month {
-    font-family: 'glyph-correction', 'Noto Serif SC', serif;
+.home .poetry {
+    padding-top: 14em;
 }
 .category-item {
     color: var(--color-contrast-high);
@@ -46,27 +25,6 @@ span.lnt {
 }
 .copy-button:hover {
     background: var(--color-bg);
-}
-
-/* music */
-.aplayer.aplayer-withlrc .aplayer-info {
-    background: var(--color-bg);
-}
-.aplayer .aplayer-lrc:before {
-    background: var(--color-bg) !important;
-}
-.aplayer .aplayer-lrc:after {
-    background: var(--color-bg) !important;
-}
-.aplayer .aplayer-list ol li {
-    background: var(--color-bg);
-}
-.aplayer .aplayer-list ol li.aplayer-list-light {
-    background: var(--color-bg) !important;
-}
-.aplayer .aplayer-list ol li:hover {
-    color: var(--color-primary) !important;
-    background: var(--color-bg) !important;
 }
 
 /* service worker */
@@ -92,40 +50,6 @@ span.lnt {
 }
 .app-refresh-show {
     height: 3em;
-}
-
-/* 顶部阅读进度条 */
-// #content_progress {
-//     /* Positioning */
-//     position: fixed;
-//     left: 0;
-//     top: 0;
-//     z-index: 1000;
-//     width: 100%;
-//     height: 2px;
-//     // -webkit-appearance: none;
-//     // -moz-appearance: none;
-//     // appearance: none;
-//     border: none;
-//     background-color: transparent;
-//     color: hsl(39, 95%, 74%);
-// }
-// #content_progress::-webkit-progress-bar {
-//     background-color: transparent;
-// }
-// #content_progress::-webkit-progress-value {
-//     background-color: var(--color-contrast-higher);
-// }
-// #content_progress::-moz-progress-bar {
-//     background-color: var(--color-contrast-higher);
-// }
-
-/* valine */
-.v .vbtn, .vinput, .veditor {
-    font-family: inherit;
-}
-.v .vempty {
-    display: none !important; /* 加了!more之后优先级比内联高 */
 }
 
 @media (min-width: 600px) {
@@ -196,129 +120,6 @@ span.lnt {
 }
 .frienddiv a {
     text-decoration:none;
-}
-
-/************** search **************/
-.modal {
-    top: -27%;
-    position: relative;
-    padding: 0px 0px !important;
-    // animation: search-block .8s;
-    // -webkit-animation: search-block .8s;
-    animation: fadeInAnimation ease 1.5s; 
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards; 
-}
-
-@keyframes fadeInAnimation { 
-    0% {opacity: 0;} 
-    100% {opacity: 1;} 
-} 
-
-
-.ex1 .modal {
-    padding: 0px 0px;
-}
-
-.modal a.close-modal {
-    visibility: hidden;
-}
-
-@keyframes search-block {
-    0% {top: -50%;}
-    100% {top: -27%;}
-}
-
-// @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
-.aa-input-container {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-}
-.aa-input-container span,.aa-input-container input {
-    width: inherit;
-}
-.aa-input-search {
-    width: 300px;
-    padding: 12px 28px 12px 12px;
-    border: 2px solid #e4e4e4;
-    border-radius: 4px;
-    -webkit-transition: .2s;
-    transition: .2s;
-    font-family: "Noto Serif SC", "Montserrat", sans-serif;
-    box-shadow: 2px 2px 0 rgba(241, 241, 241, 0.35);
-    font-size: 14px;
-    box-sizing: border-box;
-    color: #333;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-.aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button, .aa-input-search::-webkit-search-results-button, .aa-input-search::-webkit-search-results-decoration {
-    display: none;
-}
-.aa-input-search:focus {
-    outline: 0;
-    border-color: #b5ccf7;
-    box-shadow: 4px 4px 0 rgba(58, 150, 207, 0.1);
-}
-.aa-input-icon {
-    height: 16px;
-    width: 16px;
-    position: absolute;
-    top: 50%;
-    right: 16px;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    fill: #e4e4e4;
-}
-.aa-hint {
-    color: #e4e4e4;
-}
-.aa-dropdown-menu {
-    background-color: #fff;
-    border: 2px solid rgba(228, 228, 228, 0.6);
-    border-top-width: 1px;
-    font-family: "Montserrat", sans-serif;
-    width: 300px;
-    margin-top: 10px;
-    box-shadow: 2px 2px 0 rgba(241, 241, 241, 0.35);
-    font-size: 13px;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-.aa-suggestion {
-    padding: 12px;
-    border-top: 1px solid rgba(228, 228, 228, 0.6);
-    cursor: pointer;
-    -webkit-transition: 0;
-    transition: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-.aa-suggestion:hover, .aa-suggestion.aa-cursor {
-    background-color: #f7f7f7f7;
-}
-.aa-suggestion > span:first-child {
-    color: #333;
-}
-.aa-suggestion > span:last-child {
-    text-transform: uppercase;
-    color: #2592ff;
-    font-family: "Noto Serif SC", serif;
-}
-.aa-suggestion > span:first-child em, .aa-suggestion > span:last-child em {
-    font-weight: 700;
-    font-style: normal;
-    background-color: rgba(8, 78, 143, 0.1);
-    padding: 2px 0 2px 2px;
 }
 
 /* admonition 从even主题搬运*/
@@ -524,11 +325,11 @@ details.admonition[open]>summary:after {
     }
     // 顶栏宽度
     .header-inner {
-        max-width: 48em;
+        max-width: 50em;
     }
     .main.single {
         display: flex;
-        width: 48em;
+        width: 50em;
         margin: 0 auto;
     }
     .main-inner {
@@ -539,7 +340,7 @@ details.admonition[open]>summary:after {
         flex-grow: 1;
         padding-right: 2em;
         display: block;
-        max-width: 10em;
+        max-width: 12em;
         margin-top: 3.6em;
     }
     // 头像
@@ -548,10 +349,10 @@ details.admonition[open]>summary:after {
         height: 130px;
         border: 1px solid #ddd;
         padding: 2px;
-        margin-left: 23px;
+        margin-left: 37px;
     }
     .myname {
-        font-family: 'Liu Jian Mao Cao', 'EB Garamond', cursive;
+        font-family: 'EB Garamond', cursive;
     }
     .mycopyright {
         text-align: center;
@@ -562,7 +363,7 @@ details.admonition[open]>summary:after {
         display: inline-block;
         padding-top: 2px;
         padding-bottom: 2px;
-        width: 88px;
+        width: 100px;
     }
     .myicon:hover {
         color: var(--color-contrast-high);
@@ -575,14 +376,15 @@ details.admonition[open]>summary:after {
     #github, #email, #netdisk, #acwing {
         padding-right: 3px;
     }
-    .motto, .me {
-        text-align: center;
-    }
     .motto {
         border-top: 1px dashed var(--color-contrast-low); 
         border-bottom: 1px dashed var(--color-contrast-low); 
         margin-bottom: 4px;
         padding-bottom: 5px;
+        text-align: center;
+    }
+    .me {
+        text-align: center;
     }
     // 新目录 吸顶效果
     .new-toc {
