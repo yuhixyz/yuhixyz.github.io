@@ -10,7 +10,7 @@ algorithms: [并查集, DFS]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces659E](https://codeforces.com/problemset/problem/659/E)

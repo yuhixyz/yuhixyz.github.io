@@ -10,7 +10,7 @@ algorithms: [高精度]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 鉴于上次用 py 写高精度 T 掉之后，决定自己整理一份 cpp 的高精度模板。于是学习了各方代码思路，但好像几乎找不到支持负数的板子，只好自己手撸了一个比较顺手的高精度板子，支持负数，目前不支持除法。代码细节有待完善，可能有未知 bug。  

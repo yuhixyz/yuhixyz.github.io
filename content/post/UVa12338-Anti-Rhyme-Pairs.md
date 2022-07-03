@@ -10,7 +10,7 @@ algorithms: [字符串哈希, 二分, 字符串]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[UVa12338](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3760)

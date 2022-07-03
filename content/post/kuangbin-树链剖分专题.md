@@ -10,7 +10,7 @@ algorithms: [树链剖分, 线段树]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 树链剖分专题。

@@ -10,7 +10,7 @@ algorithms: [DP, GCD, Trie]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 解题以及补题报告。

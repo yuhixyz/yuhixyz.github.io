@@ -10,7 +10,7 @@ algorithms: [后缀数组, 字符串]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces427D](https://codeforces.com/contest/427/problem/D)

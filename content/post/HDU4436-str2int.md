@@ -10,7 +10,7 @@ algorithms: [后缀自动机, 拓扑排序, DP, 字符串]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[HDU4436](http://acm.hdu.edu.cn/showproblem.php?pid=4436)

@@ -10,7 +10,7 @@ algorithms: [并查集, 贪心]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces731C](https://codeforces.com/problemset/problem/731/C)

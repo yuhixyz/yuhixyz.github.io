@@ -10,7 +10,7 @@ algorithms: [BFS, 搜索]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[POJ2251](<http://poj.org/problem?id=2251&lang=zh-CN&change=true>)

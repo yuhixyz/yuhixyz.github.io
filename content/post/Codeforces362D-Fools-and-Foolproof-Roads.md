@@ -10,7 +10,7 @@ algorithms: [并查集, 贪心]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces362D](https://codeforces.com/contest/362/problem/D)

@@ -10,7 +10,7 @@ algorithms: [数位DP, DP]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[UVa12670](https://vjudge.net/problem/UVA-12670)

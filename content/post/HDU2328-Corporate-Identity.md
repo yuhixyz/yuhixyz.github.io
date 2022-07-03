@@ -10,7 +10,7 @@ algorithms: [后缀数组, 字符串]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true 
 ---
 
 原题链接：[HDU2328](https://acm.njupt.edu.cn/problem/HDU2328)

@@ -10,7 +10,7 @@ algorithms: [字符串]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces1187B](https://codeforces.com/contest/1187/problem/B )

@@ -10,7 +10,7 @@ algorithms: [背包, DP]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces730J](https://codeforces.ml/problemset/problem/730/J)

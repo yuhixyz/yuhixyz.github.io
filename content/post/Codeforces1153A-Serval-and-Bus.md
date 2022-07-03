@@ -10,7 +10,7 @@ algorithms: [推公式]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces1153A](https://codeforces.com/contest/1153/problem/A )

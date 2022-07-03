@@ -10,7 +10,7 @@ algorithms: [贪心, 二分]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces1156C](https://codeforces.com/contest/1156/problem/C )

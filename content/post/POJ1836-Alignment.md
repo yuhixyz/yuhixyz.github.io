@@ -10,7 +10,7 @@ algorithms: [LIS, DP]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[POJ1836](https://acm.njupt.edu.cn/problem/POJ1836 )

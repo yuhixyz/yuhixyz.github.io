@@ -10,7 +10,7 @@ algorithms: [状压DP, DP]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[POJ3254](http://poj.org/problem?id=3254)

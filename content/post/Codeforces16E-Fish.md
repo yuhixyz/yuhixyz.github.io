@@ -10,7 +10,7 @@ algorithms: [状压DP, 概率DP, DP]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces16E](https://codeforces.com/problemset/problem/16/E)

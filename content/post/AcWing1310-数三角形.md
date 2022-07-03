@@ -10,7 +10,7 @@ algorithms: [组合计数, 容斥原理, GCD]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[AcWing1310](https://www.acwing.com/problem/content/1312/)

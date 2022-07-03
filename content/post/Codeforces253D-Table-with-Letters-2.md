@@ -10,7 +10,7 @@ algorithms: [前缀和, 双指针]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces253D](https://codeforces.com/problemset/problem/253/D)

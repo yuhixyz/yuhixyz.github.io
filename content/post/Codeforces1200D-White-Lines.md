@@ -10,7 +10,7 @@ algorithms: [前缀和, 差分]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces1200D](<https://codeforces.com/problemset/problem/1200/E>)

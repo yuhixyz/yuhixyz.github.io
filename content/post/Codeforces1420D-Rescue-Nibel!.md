@@ -10,7 +10,7 @@ algorithms: [组合计数]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true 
 ---
 
 题目链接：[Codeforces1420D](https://codeforces.ml/contest/1420/problem/D)

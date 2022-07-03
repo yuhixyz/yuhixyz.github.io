@@ -10,7 +10,7 @@ algorithms: [ST表, 二分]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces475D](https://codeforces.com/problemset/problem/475/D)

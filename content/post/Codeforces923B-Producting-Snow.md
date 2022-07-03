@@ -10,7 +10,7 @@ algorithms: [前缀和, 差分, 二分]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces923B](http://codeforces.com/contest/923/problem/B )

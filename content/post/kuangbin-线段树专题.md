@@ -10,7 +10,7 @@ algorithms: [线段树, 扫描线]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 以前并没有刷过 kuangbin 专题，ICPC 南京站赛前 20 天系统刷两三个专题吧，这篇是线段树。

@@ -10,7 +10,7 @@ algorithms: [DP, 换根DP, 树形DP]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[牛客OI周赛14 普及组 C Tree](https://ac.nowcoder.com/acm/contest/4479/C)

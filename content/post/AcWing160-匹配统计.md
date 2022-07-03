@@ -10,7 +10,7 @@ algorithms: [KMP, 字符串, 二分, 字符串哈希]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[AcWing160](https://www.acwing.com/problem/content/162/)

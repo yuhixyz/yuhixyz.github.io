@@ -10,7 +10,7 @@ algorithms: [组合计数, Lucas, 隔板法]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[AcWing1312](https://www.acwing.com/problem/content/1314/)

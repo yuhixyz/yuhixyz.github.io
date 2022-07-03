@@ -10,7 +10,7 @@ algorithms: [DP, LICS]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces10D](https://codeforces.com/problemset/problem/10/D)

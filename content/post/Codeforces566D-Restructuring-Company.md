@@ -10,7 +10,7 @@ algorithms: [并查集]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces566D](https://codeforces.com/contest/566/problem/D)

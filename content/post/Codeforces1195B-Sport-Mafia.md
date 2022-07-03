@@ -10,7 +10,7 @@ algorithms: [二分]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces1195B](https://codeforces.com/contest/1195/problem/B )

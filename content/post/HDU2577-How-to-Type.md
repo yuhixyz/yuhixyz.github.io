@@ -10,7 +10,7 @@ algorithms: [DP]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true 
 ---
 
 原题链接：[HDU2577](http://acm.hdu.edu.cn/showproblem.php?pid=2577 )

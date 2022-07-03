@@ -10,7 +10,7 @@ algorithms: [后缀自动机, 拓扑排序, 字符串]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[HYSBZ3998](http://www.lydsy.com/JudgeOnline/problem.php?id=3998)

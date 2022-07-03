@@ -10,7 +10,7 @@ algorithms: [后缀数组, 字符串, 最小表示法, ST表]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[UVa719](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=660)

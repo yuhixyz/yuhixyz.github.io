@@ -10,7 +10,7 @@ algorithms: [状态压缩, 递推]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[POJ3279](<http://poj.org/problem?id=3279&lang=zh-CN&change=true>)

@@ -10,7 +10,7 @@ algorithms: [二分, 前缀和]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces655C](https://codeforces.com/problemset/problem/655/C)

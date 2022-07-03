@@ -10,7 +10,7 @@ algorithms: [排序, 贪心, 思维]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces1175D](https://codeforces.com/contest/1175/problem/D)

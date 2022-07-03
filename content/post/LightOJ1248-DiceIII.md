@@ -10,7 +10,7 @@ algorithms: [DP, 数学期望]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[LightOJ1248](http://lightoj.com/login_main.php?url=volume_showproblem.php?problem=1248)

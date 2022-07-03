@@ -10,7 +10,7 @@ algorithms: [贪心, DP]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces484D](https://codeforces.com/problemset/problem/484/D)

@@ -10,7 +10,7 @@ algorithms: [DFS, 搜索]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces961C](http://codeforces.com/contest/961/problem/C )

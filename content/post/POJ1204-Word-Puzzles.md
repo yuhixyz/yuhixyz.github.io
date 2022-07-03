@@ -10,7 +10,7 @@ algorithms: [AC自动机, 搜索]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[POJ1204](http://poj.org/problem?id=1204)

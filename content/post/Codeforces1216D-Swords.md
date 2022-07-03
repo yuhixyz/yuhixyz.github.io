@@ -10,7 +10,7 @@ algorithms: [GCD, 贪心]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces1216D](https://codeforces.com/problemset/problem/1216/D)

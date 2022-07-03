@@ -10,7 +10,7 @@ algorithms: [区间DP, DP, 前缀和]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces245H](https://codeforces.com/problemset/problem/245/H)

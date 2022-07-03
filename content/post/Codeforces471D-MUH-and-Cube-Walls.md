@@ -10,7 +10,7 @@ algorithms: [KMP, 字符串, 思维]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces471D](https://codeforces.com/problemset/problem/471/D)

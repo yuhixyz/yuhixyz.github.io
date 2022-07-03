@@ -10,7 +10,7 @@ algorithms: [字符串哈希, 双哈希, 字符串]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces727E](https://codeforces.com/contest/727/problem/E)

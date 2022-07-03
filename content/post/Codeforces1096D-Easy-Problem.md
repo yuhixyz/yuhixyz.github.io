@@ -10,7 +10,7 @@ algorithms: [DP, 字符串]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces1096D](https://codeforces.com/contest/1096/problem/D)

@@ -10,7 +10,7 @@ algorithms: [DP]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[POJ3356](http://poj.org/problem?id=3356)

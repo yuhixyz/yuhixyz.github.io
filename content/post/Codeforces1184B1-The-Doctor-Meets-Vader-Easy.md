@@ -10,7 +10,7 @@ algorithms: [排序]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces1184B1](https://codeforces.com/contest/1184/problem/B1 )

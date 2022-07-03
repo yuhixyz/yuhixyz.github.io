@@ -10,7 +10,7 @@ algorithms: [字符串哈希, STL]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[POJ3690](http://poj.org/problem?id=3690)

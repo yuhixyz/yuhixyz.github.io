@@ -10,7 +10,7 @@ algorithms: [STL]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces1121B](https://codeforces.com/contest/1121/problem/B )

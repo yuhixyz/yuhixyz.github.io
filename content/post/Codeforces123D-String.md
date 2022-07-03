@@ -10,7 +10,7 @@ algorithms: [后缀数组, 单调栈, 字符串]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces123D](https://codeforces.com/problemset/problem/123/D)

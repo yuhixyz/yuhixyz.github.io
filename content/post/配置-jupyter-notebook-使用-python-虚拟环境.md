@@ -10,7 +10,7 @@ algorithms: []
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 心血来潮，想入门一波机器学习，因此在这里配置一下 `tensorflow` 虚拟环境，并配置到 Jupyter Notebook 中。

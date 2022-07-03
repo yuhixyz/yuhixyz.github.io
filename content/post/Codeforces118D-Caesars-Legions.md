@@ -10,7 +10,7 @@ algorithms: [DP, 计数DP]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces118D](https://codeforces.com/problemset/problem/118/D)

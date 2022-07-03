@@ -10,7 +10,7 @@ algorithms: [二分]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces772A](https://codeforces.com/contest/772/problem/A )

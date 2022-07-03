@@ -10,7 +10,7 @@ algorithms: [思维]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces190C](https://codeforces.com/problemset/problem/190/C)

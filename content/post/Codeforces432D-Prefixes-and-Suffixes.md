@@ -10,7 +10,7 @@ algorithms: [KMP, 字符串]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces432D](https://codeforces.com/contest/432/problem/D)

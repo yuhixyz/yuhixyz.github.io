@@ -10,7 +10,7 @@ algorithms: [贪心]
 comments: true
 displayCopyright: true
 toc: true
-draft: false
+draft: true
 ---
 
 原题链接：[Codeforces1129A2](http://codeforces.com/contest/1129/problem/A2)
