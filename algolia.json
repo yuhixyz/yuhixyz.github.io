@@ -1,0 +1,331 @@
+[
+    {
+        "title": "关于「我」",
+        "uri": "about",
+        "content": "ACMer    Vimer",
+        "objectID": "about",
+        "date": "2020-01-15T15:35:45.000Z",
+        "tags": [],
+        "description": null,
+        "badge": false,
+        "comments": true,
+        "toc": false,
+        "displayCopyright": false,
+        "meta": false,
+        "gitinfo": false,
+        "draft": false
+    },
+    {
+        "title": "算法",
+        "uri": "algorithms",
+        "content": "",
+        "objectID": "algorithms"
+    },
+    {
+        "title": "分类",
+        "uri": "categories",
+        "content": "",
+        "objectID": "categories"
+    },
+    {
+        "title": "友链",
+        "uri": "links",
+        "content": "",
+        "objectID": "links",
+        "date": "2020-04-28T15:35:45.000Z",
+        "tags": [],
+        "description": null,
+        "badge": false,
+        "comments": true,
+        "toc": false,
+        "displayCopyright": false,
+        "meta": false,
+        "gitinfo": false,
+        "draft": false
+    },
+    {
+        "title": "文章",
+        "uri": "post",
+        "content": "",
+        "objectID": "post"
+    },
+    {
+        "title": "Git 学习笔记",
+        "uri": "post/Git-学习笔记",
+        "content": "yuhixyz      Git                                        Git                     Git             Git             Tracked      Untracked                  Git                                git add                                                           add                            Unmodified     Modified     Staged             Git                        Git                Pro Git book 3 1 Git                         Git             Config file location   global use global config file   system use system config file   local use repository config file   worktree use per worktree config file  f    file use given config file   blob read config given blob object       global   local                      global                 gitconfig      local                git config  local        global                                 global    git config   global user name  yuhixyz  git config   global user email  example yuhi xyz           local            local  git config user name  gugugu  git config user email  example gugugu com                           global       local    git config   list                                global       local    git config git config user name Git          git init            git    git init               repo       git         git clone          git clone         repo_name             git clone  b    b                    git remote  v         v         URL        git remote add git remote add aaa git github com yuhixyz yuhixyz github io git            aaa         git remote rename git remote rename aaa bbb   aaa      bbb          git remote show git remote show bbb        git remote rm git remote rm bbb        master           bbb git push bbb master        git status              git add     file1  file2       git add       dir            git add                                  git commit  m  commit message             git commit  a  m  commit message                                    git log    pretty oneline              HEAD         git reflog               git diff                                add                      commit          git restore      git checkout                           git reset HEAD        commit              commit                  git commit  m  wrong commit msg                    git commit  m  correct commit msg    amend                          commit                   git commit  m  xxx                          git add forget md       add      git commit   amend      commit   forget md        commit                  git                          git        git rm                  commit                          f    git rm  f               git        git rm   cached        git status     file    untracked          git mv               mv git rm git add      git reset   hard HEAD                 git reset   hard HEAD                   git reset   hard                             git tag            git tag git tag  a  m  message          a        m                 git tag       commit        git tag  a  m  message         git tag  d                  git show        Git                git push eg  git push origin v1 0                      git push   tags                git checkout  b                git branch  a          git branch          git branch  r        git branch        git branch  d               git checkout  b         git checkout             git merge      https   git scm com book zh v2 http   www ruanyifeng com blog 2018 10 git internals html http   www ruanyifeng com blog 2015 12 git cheat sheet html https   gitee com all about git         git commit   Git               https   git scm com book zh v2 Git",
+        "objectID": "post/Git-学习笔记",
+        "date": "2021-02-24T12:34:16.000Z",
+        "weight": null,
+        "description": null,
+        "tags": [
+            "Git"
+        ],
+        "categories": [
+            "Git"
+        ],
+        "series": [],
+        "algorithms": [],
+        "comments": true,
+        "displayCopyright": true,
+        "toc": true,
+        "draft": false
+    },
+    {
+        "title": "KMP 算法详解",
+        "uri": "post/KMP-算法详解",
+        "content": "KMP          KMP                           rm S           rm P                            mathcal O    rm S    rm P                              admonition question                 rm S            rm P        rm P      rm S                   1            admonition     KMP      KMP                    rm Next             rm Fail              rm Next                rm P                  rm P                 rm P      rm S          Next         mathrm Next  i           rm P      i       1                     rm P                                     abc       c   bc   abc                  mathrm Formally     mathrm Next  i   max_ 1  le j  le i 1   lbrace j rbrace    mathrm while    mathrm P  1 j    mathrm P  i j 1 i         rm P      b     b                                                                  i    1   2   3   4   5       mathrm Next  i     0   0   1   2   3                          rm Next                rm P                rm Next                                                              yxc                       rm P          rm Next             mathrm Next  i  j     mathrm Next  j  k               k                 i              rm P              mathrm Next  i                    mathrm Next Next  i           mathrm Next Next Next  i     cdots           0                   KMP               rm P        rm S                  KMP                    mathrm Next                         rm S         rm P      rm P      mathrm Next                       rm S         i 1           rm P         j           mathrm S  i j i 1    mathrm P  1 j                 mathrm S  i      mathrm P  j 1      j                       j        rm P            rm P      rm S           rm S           i   mathrm P   1     mathrm S  i   neq  mathrm P  j 1                                      rm P      j              rm S      i 1                   rm P                       rm P          rm S      i 1                  rm S      i 1              rm P      j                mathrm Next  j         mathrm S  i  mathrm Next  j  i 1    mathrm P  1  mathrm Next  j                           rm P                                            j  mathrm Next  j                mathrm S  i       mathrm P  j 1                        j  mathrm Next  j             mathrm P           rm S      i 1                                         rm P               0          j            mathrm S  i    mathrm P  j 1       j                                      mathrm S  i       mathrm P  j 1                   KMP                cpp    n    p    m   s         int   1  j   0   include using namespace std  const int N   100010  M   1000010  int n  m  char p N   s M   int Next N   int main     cin    n    p   1    m    s   1   int   2  j   0",
+        "objectID": "post/KMP-算法详解",
+        "date": "2020-04-18T11:41:51.000Z",
+        "weight": null,
+        "description": "KMP 真是优雅的算法呢",
+        "tags": [
+            "Tutorial"
+        ],
+        "categories": [
+            "ACM",
+            "Tutorials"
+        ],
+        "series": [
+            "字符串"
+        ],
+        "algorithms": [
+            "KMP"
+        ],
+        "comments": true,
+        "displayCopyright": true,
+        "toc": true,
+        "draft": false
+    },
+    {
+        "title": "Manacher 算法详解",
+        "uri": "post/Manacher-算法详解",
+        "content": "Manacher                                                             Manacher                   Manacher      1975                              admonition question                 S                     ababbac            abba        4         admonition     Manacher                                                 S                     cpp    abaa     a b a a        aba     a b a    abaabc     a b a a b c        baab     b a a b                             p     rt  mid           Str     p   p i    Str    i              abab        1   2    3    4   5    6    7    8    9                                                                              Str             b             b         p i    1   2   1   4   1   4   1   2   1           p i     p i    1        rm S                                         p i     rt                                    textrm rt     max j p j   j in 1 i 1   mid    rt                mid   p mid     rt                                               rt                                   p        rt  mid      p i          mid    p mid                         i                    p j           p i  p j                 j                    mid                   j                      mid                                     cpp  i   rt                     p i    1             rt     p i                         cpp  i    rt  p i    1   str i   p i      str i   p i    p i                                         p i          mid   rt        cpp  i   p i    rt          i            rt    rt     p i   mid   i       rt   mid                  AcWing 139             cpp  include  include  include  include using namespace std  const int N   2000010  int n  m  Case  char s N   str N   int p N   void manacher     int rt   0  mid   0  int res   0   int   1  rt    rt     p i   mid   i    res   max res  p i    1     printf  Case  d   d n     Case  res     int main     str 0         str 1            str 0         scanf   s   s   s 0      E     n   strlen s    int   0    n  i      str i   2   2    s i   str i   2   3           m   n   2   1  str m   1                  manacher      return 0                                        abab        a b a b      0                                                          rt                       rt                rt                       Manacher              mathcal O  n                          qscqesze",
+        "objectID": "post/Manacher-算法详解",
+        "date": "2020-04-09T05:14:59.000Z",
+        "weight": null,
+        "description": "看完本文你就学会 Manacher 啦",
+        "tags": [
+            "Tutorial"
+        ],
+        "categories": [
+            "ACM",
+            "Tutorials"
+        ],
+        "series": [
+            "字符串"
+        ],
+        "algorithms": [
+            "Manacher"
+        ],
+        "comments": true,
+        "displayCopyright": true,
+        "toc": true,
+        "draft": false
+    },
+    {
+        "title": "tmux 学习笔记",
+        "uri": "post/tmux-学习笔记",
+        "content": "tmux    tmux         terminal multiplexer                                     SSH                  tmux                         reattach                                        tmux                   tmux          session               window                pane                  tmux         session0  window0  pane0 pane1     window1      session1                1   session    1   window      pane          tmux    macos brew install tmux centos yum install tmux          tmux                     ctrl b                           1               tmux                        0     tmux    tmux exit      ctrl d      tmux    tmux ls           tmux new session  s                tmux detach        tmux attach session  t        tmux kill session  t        tmux kill server         tmux switch client  t           d          s                jk         hl                   2               c            p              n                                         w                         jk         hl                      y         exit 3                        2               2                     z                    x            y        exit                        ctrl            4     tmux source file    tmux conf                      tmux    tmux           tmux conf                     unbind C b set  g prefix C a bind C a send prefix  optional    vim tmux                               hjkl             bind key h select pane  L bind key j select pane  D bind key k select pane  U bind key l select pane  R                                       set option  g mouse              r       bind r source file    tmux conf    display  Reloaded    tmux conf  tmux plugin manager tmux      tpm          clone tpm  git clone https   github com tmux plugins tpm    tmux plugins tpm               tmux conf         List plugins set  g  plugin  tmux plugins tpm  examples  set  g  plugin  githubusername pluginname  set  g  plugin  githubusername pluginname branch  set  g  plugin  git github com user plugin  set  g  plugin  git bitbucket com user plugin  Initialize TMUX plugin manager  keep line bottom tmux conf  run     tmux plugins tpm tpm         r       tpm               U            examples                       1  tmux             tmux               tmux               tmux resurrect                        tmux                tmux continuum              tmux                   tmux conf            set  g  plugin  tmux plugins tmux resurrect  set  g  plugin  tmux plugins tmux continuum  restore neovim session set  g  resurrect strategy nvim  session  set  g  resurrect capture pane contents  on  set  g  continuum restore  on                tmux        resurrect                      2  vim tmux            vim tmux navigator tmux               tmux conf    set  g  plugin  christoomey vim tmux navigator         r                 vim          vim plug        vim        Plug  christoomey vim tmux navigator        PlugInstall               vim         tmux            vim     tmux       tmux                       Tmux          Linux                       Tmux      lakeone Tmux Plugin Manager Tmux Plugin Manager        hongda Tao tmux Tony Narlock",
+        "objectID": "post/tmux-学习笔记",
+        "date": "2021-10-24T11:19:00.000Z",
+        "weight": null,
+        "description": "本文是一篇学习笔记，不宜作为教程食用。",
+        "tags": [
+            "tmux"
+        ],
+        "categories": [
+            "Tools"
+        ],
+        "series": [],
+        "algorithms": [],
+        "comments": true,
+        "displayCopyright": true,
+        "toc": true,
+        "draft": false
+    },
+    {
+        "title": "Win10 邮件配置 QQ, GMAIL, NJUPT 邮箱",
+        "uri": "post/Win10-邮件配置-QQ-GMAIL-NJUPT-邮箱",
+        "content": "Win10                   QQ  GMAIL  NJUPT       QQ            QQ                       POP3 IMAP SMTP Exchange CardDAV CalDAV          POP3 SMTP     IMAP SMTP                                                                     Win10                                         QQ                                    GMAIL         GMAIL      IMAP            Google                                                                  Windows                                                   Win10                                Google           Internet                                                                                                           xxx gmail com           xxx gmail com                16                             app                                      Win10                        imap gmail com 993 1            IMAP4        SMTP           smtp gmail com 465 1                      NJUPT                                       Internet                                                                                                              njupt edu cn                                                                    app                                    Win10                       mail njupt edu cn 143 1            IMAP4        SMTP           mail njupt edu cn 465 1                        xx",
+        "objectID": "post/Win10-邮件配置-QQ-GMAIL-NJUPT-邮箱",
+        "date": "2020-11-18T14:58:52.000Z",
+        "weight": null,
+        "description": null,
+        "tags": [
+            "Win10"
+        ],
+        "categories": [
+            "Tools"
+        ],
+        "series": [],
+        "algorithms": [],
+        "comments": true,
+        "displayCopyright": true,
+        "toc": true,
+        "draft": false
+    },
+    {
+        "title": "Win10 配置 Python 虚拟环境",
+        "uri": "post/win10-配置-python-虚拟环境",
+        "content": "windows10     virtualenvwrapper win    python                        python3                        scoop             powershell                     python3 7 9     scoop       versions   bucket  scoop bucket add versions      python3 7 9  scoop install python 3 7 9         virtualenvwrapper win  pip install virtualenvwrapper win                     mkvirtualenv env4test          env4test   python                      C  Users XXX Envs            env4test         lsvirtualenv                          rmvirtualenv env4test                     workon env4test                            env4test   powershell   workon           cmd              admonition type  warning  title    powershell   workon           details  true  open  open                  cmd           Envs env4test Scripts activate ps1               Scripts        activate ps1        img src  activate png  title  activate ps1        powershell    workon ps1         workon command doesn t work Windows PowerShell activate virtualenv        workon     workon bat        python 3 7 9 Scripts        Scripts         workon bat        workon ps1             cmd                   powershell                    powershell                    workon ps1                not  Test Path env WORKON_HOME      WORKON_HOME      Envs    else    WORKONHOME     env WORKONHOME  Replace             not  Test Path env VIRTUALENVWRAPPERPROJECTFILENAME      VIRTUALENVWRAPPERPROJECTFILENAME     project    else    VIRTUALENVWRAPPERPROJECTFILENAME     env VIRTUALENVWRAPPERPROJECTFILENAME  Replace             args length  eq 0    echo  Pass name activate one following virtualenvs   echo                                                                                 Get ChildItem  Path  WORKON_HOME  Name return    VENV    args 0     Test Path  Path      WORKON_HOME     VENV        echo   virtualenv    VENV  does not exist   echo  Create  mkvirtualenv    VENV    return      Test Path  Path      WORKON_HOME     VENV  Scripts activate ps1        echo     WORKON_HOME    VENV   echo  doesn t contain virtualenv  yet    echo  Create  mkvirtualenv    VENV    return   iex      WORKON_HOME     VENV  Scripts activate ps1    Test Path  Path      WORKONHOME     VENV     VIRTUALENVWRAPPERPROJECT_FILENAME       iex  cdproject         cdproject ps1            cdproject bat          function Show Usage   echo    echo  switches project dir activated virtualenv      not  Test Path env VIRTUAL_ENV     echo    echo  a virtualenv activated  Show Usage return     not  Test Path env VIRTUALENVWRAPPERPROJECTFILENAME      VIRTUALENVWRAPPERPROJECTFILENAME     project    else    VIRTUALENVWRAPPERPROJECTFILENAME     env VIRTUALENVWRAPPERPROJECTFILENAME  Replace             not  Test Path     env VIRTUALENV     VIRTUALENVWRAPPERPROJECT_FILENAME       echo    echo  No project directory found current virtualenv  Show Usage return    ENVPRJDIR   Get Content     env VIRTUALENV     VIRTUALENVWRAPPERPROJECT_FILENAME    First 1 path extracted file contains env variables  system will not find path  TODO  Add functionality cd  ENVPRJDIR       powershell     workon       cdproject          ps1         bat    cmd       bat          admonition        deactivate                        virtualenvwrapper win",
+        "objectID": "post/win10-配置-python-虚拟环境",
+        "date": "2020-11-11T13:04:59.000Z",
+        "weight": null,
+        "description": "Win10, Python3.7.9",
+        "tags": [
+            "Python",
+            "virtualenvwrapper"
+        ],
+        "categories": [
+            "Python"
+        ],
+        "series": [],
+        "algorithms": [],
+        "comments": true,
+        "displayCopyright": true,
+        "toc": true,
+        "gitinfo": true,
+        "draft": false
+    },
+    {
+        "title": "Windows Terminal 美化",
+        "uri": "post/Windows-Terminal-美化",
+        "content": "Powershell7    Windows Terminal               admonition type  warning  title                oh my posh3    powershell            oh my posh2    github                  admonition              PowerShell7       oh my posh3  powershell scoop install oh my posh3         powershell        profile     notepad  profile   code  profile   subl  profile                      15    oh my posh exe    17                     powershell  ScriptBlock  Prompt      lastCommandSuccess       realLASTEXITCODE    global LASTEXITCODE  errorCode   0   lastCommandSuccess  eq  false     native app exit code   realLASTEXITCODE  is  int      errorCode    realLASTEXITCODE   else    errorCode   1      startInfo   New Object System Diagnostics ProcessStartInfo  startInfo FileName    C  Files scoop apps oh my posh3 current bin oh my posh exe   cleanPWD    PWD ProviderPath TrimEnd       startInfo Arguments     config   C  Files scoop apps oh my posh3 current themes zash omp json    error  errorCode  pwd    cleanPWD     startInfo Environment  TERM      xterm 256color   startInfo CreateNoWindow    true  startInfo StandardOutputEncoding    System Text Encoding   UTF8  startInfo RedirectStandardOutput    true  startInfo UseShellExecute    false   PWD Provider Name  eq  FileSystem      startInfo WorkingDirectory    PWD ProviderPath    process   New Object System Diagnostics Process  process StartInfo    startInfo  process Start     Out Null  standardOut    process StandardOutput ReadToEnd    process WaitForExit    standardOut  global LASTEXITCODE    realLASTEXITCODE  remove temp variables Remove Variable realLASTEXITCODE  Confirm  false Remove Variable lastCommandSuccess  Confirm  false   Set Item  Path Function prompt  Value  Prompt  Force         json      oh my posh3        themes          ls       Get ChildItem    ls             powershell           sudo             powershell sudo Install Module  AllowClobber Get ChildItemColor      code  profile            powershell Import Module Get ChildItemColor Set Alias ll Get ChildItem  option AllScope   ll Set Alias ls Get ChildItemColorFormatWide  option AllScope   ls       terminal       ls   ll     Windows Terminal       Windows Terminal   Settings   settings json                    guid     powershell         Guid   NewGuid        json    file initially generated Windows Terminal 1 3 2651 0    usable newer versions  newer versions additional    settings  help text  changes will not unless clear file    let us generate new one you     view default settings  hold  alt  clicking  Settings  button     documentation settings  see  https   aka ms terminal documentation     schema    https   aka ms terminal profiles schema    defaultProfile     d26dae7e 9f65 4c0b 982f 21dca5115e77       add global application settings here     learn global settings  visit https   aka ms terminal global settings    enabled  selections automatically copied clipboard   copyOnSelect   false     enabled  formatted data copied clipboard  copyFormatting   false     profile specifies command execute paired information look feel     one will appear  New Tab  dropdown     invoked commandline wt exe  p xxx    learn profiles  visit https   aka ms terminal profile settings  initialCols   110              initialRows   30              profiles      defaults        Put settings want apply profiles   fontFace    JetBrainsMono NF             SC   Courier Prime  fontSize   13   fontWeight    normal    cursorShape    vintage    colorScheme    gugugu    useAcrylic   true   acrylicOpacity   0 9   cursorColor     7975e6    experimental retroTerminalEffect   false           list        guid     d26dae7e 9f65 4c0b 982f 21dca5115e77     name    PowerShell7    commandline    C  Files pwsh pwsh exe  WorkingDirectory      icon    C  Users yuhixyz Pictures terminal pwsh png    hidden   false       guid     61c54bbd c2c6 5271 96e7 009a87ff44bf     name    PowerShell5    commandline    powershell exe    hidden   true       guid     0caa0dad 35be 5f56 a8ff afceeeaa6101     name    Command    commandline    cmd exe    hidden   true       guid     b453ae62 4e3d 5e58 b989 0a998ec441b8     hidden   true   name    Azure Cloud Shell    source    Windows Terminal Azure        guid     3e87d0d7 4025 451e a03e 21952a86cd79     name    Aliyun yuhixyz    commandline    ssh root yuhi xyz  p 22    icon    C  Users yuhixyz Pictures terminal aliyun png    hidden   false       guid     7eae62b5 4044 43ca b4e7 3be3b09ad75f     name    Tencent yuhixyz    commandline    ssh  i   OneDrive secret surface root b yuhi xyz  p 8972    hidden   false   icon    C  Users yuhixyz Pictures terminal tencent png            Add custom color schemes array     learn color schemes  visit https   aka ms terminal color schemes  schemes        name    gugugu    background     2e3440    foreground     eceff4    brightBlack     3f68b9    brightBlue     5e81ac    brightCyan     8fbcbb    brightGreen     a3be8c    brightPurple     b48ead    brightRed     bf616a    brightWhite     eceff4    brightYellow     ebcb8b    black     2e3440    blue     5e81ac    cyan     8fbcbb    green     a3be8c    purple     b48",
+        "objectID": "post/Windows-Terminal-美化",
+        "date": "2020-01-19T05:48:09.000Z",
+        "weight": null,
+        "description": "🎉 powershell7.1.2，oh-my-posh3",
+        "tags": [
+            "Windows Terminal"
+        ],
+        "categories": [
+            "Tools"
+        ],
+        "series": [],
+        "algorithms": [],
+        "comments": true,
+        "displayCopyright": true,
+        "toc": true,
+        "draft": false
+    },
+    {
+        "title": "Windows 下好用的包管理器 Scoop",
+        "uri": "post/Windows-下好用的包管理器-Scoop",
+        "content": "Scoop           Windows               Surface                                                           Windows                                            Mac      brew install xxx      Windows                                        Windows      scoop            Scoop    scoop       C  Users Yuhi scoop                            D  Files scoop           scoop             Powershell            powershell  environment   setEnvironmentVariable  SCOOP   D  Files scoop   User    env SCOOP  D  Files scoop           scoop  powershell set executionpolicy remotesigned  scope currentuser iex  new object net webclient  downloadstring  https   get scoop sh           Powershell     scoop help           powershell Yuhi SURFACE    12 51 26    scoop help Usage  scoop    useful commands are  alias Manage scoop aliases bucket Manage Scoop buckets cache Show clear download cache checkup Check potential problems cleanup Cleanup apps removing old versions config set configuration values create Create custom app manifest depends List dependencies app export Exports  an importable  list installed apps help Show help command hold Hold app disable updates home Opens app homepage info Display information app install Install apps list List installed apps prefix Returns path specified app reset Reset app resolve conflicts search Search available apps status Show status check new app versions unhold Unhold app enable updates uninstall Uninstall app update Update apps  Scoop itself virustotal Look app s hash virustotal com Locate shim executable  similar  which  Linux  Type  scoop help   help specific command    Scoop             cpp scoop help scoop update  options  scoop search scoop install  options  scoop uninstall scoop cache show rm scoop bucket add list known rm    scoop reset   scoop update           scoop        app     scoop bucket list            bucket        main bucket      bucket                   app               app            bucket      scoop bucket known       scoop       bucket    main extras  versions  nerd fonts                          bucket        scoop bucket add      scoop search         bucket         scoop bucket known           app scoop           bucket           app                bucket   scoop bucket add                    scoop install   scoop install      app    scoop install git  scoop uninstall      app    scoop uninstall everything  scoop cache show         scoop cache rm     app        scoop reset              http     powershell scoop config proxy 127 0 0 1 10809              powershell scoop config rm proxy   Scoop         scoop            app  7zip   git    powershell scoop install 7zip scoop install git        scoop search                           Invoke Expression   scoop search   hook      powershell               scoop search    powershell scoop install scoop search    powershell      notepad  profile   Invoke Expression   scoop search   hook              aria2              powershell scoop install aria2                   aria2    powershell scoop config aria2 enabled false         bucket  powershell scoop bucket add extras scoop bucket add versions          bucket  powershell scoop bucket list              powershell scoop install hugo extended 0 72 0           hugo extended scoop install python 3 7 9           python scoop install python 3 8 7                       python3 7 9    python3 8 7          scoop apps python             powershell d      2020 12 3 20 09 1 3 7 9 d      2021 1 29 12 21 1 3 8 7 d r  l 2021 1 29 12 26 1 current      python3 8 7               python          3 8 7                  powershell scoop reset python 3 7 9      3 7 9 scoop reset python 3 8 7      3 8 7            admonition note           true                scoop search       app            scoop bucket             app        scoop install         scoop list  powershell Yuhi SURFACE    12 32 28    scoop list Installed apps  7zip 19 00  main  aria2 1 35 0 1  main  curl 7 74 0_2  main  dark 3 11 2  main  gcc 9 3 0 2  main  geekuninstaller 1 4 7 142  extras  git 2 30 0 windows 2  main  grep 2 5 4  main  hugo extended 0 72 0  C  Users Yuhi scoop workspace hugo extended json  innounp 0 50  main  lessmsi 1 8 1  main  lxrunoffline 3 5 0  extras  nodejs 15 7 0  main  openssl 1 1 1i  main  potplayer 201209  extras  python 3 8 7  C  Users Yuhi scoop workspace python json  qimgv 0 9 1  extras  quicklook 3 6 10  extras  screentogif 2 27 3  extras  snipaste 1 16 2  extras  sublime text 3 2 2 3211  extras  sudo 0 2020 01 26  main  translucenttb 2020 2  extras  typora 0 9 98  extras  vscode 1 52 1  extras  windows terminal 1 4 3243 0  extras  win dynamic desktop 4 4 0  extras         admonition          Scoop Wiki                  Scoop      Windows    hongda s blog",
+        "objectID": "post/Windows-下好用的包管理器-Scoop",
+        "date": "2020-01-19T06:23:21.000Z",
+        "weight": null,
+        "description": "墙裂推荐",
+        "tags": [
+            "Scoop"
+        ],
+        "categories": [
+            "Tools"
+        ],
+        "series": [],
+        "algorithms": [],
+        "comments": true,
+        "displayCopyright": true,
+        "toc": true,
+        "draft": false
+    },
+    {
+        "title": "Windows 配置 SSH 免密登录 CentOS 服务器",
+        "uri": "post/Windows-配置-SSH-免密登录-CentOS-服务器",
+        "content": "SSH      CentOS                            Windows        SSH      Linux                              idrsa pub          authorizedkeys           Windows          ssh id_rsa pub       powershell      cat    ssh id_rsa pub         id_rsa pub                       Linux          ssh authorized_keys          Linux                          Linux            chmod 700    ssh chmod 600    ssh authorized_keys      SSH    CentOS6 service sshd restart CentOS7 systemctl restart sshd                             ssh    p                                    command1 2 3  ssh    p  command1  command2  command3       ssh root 11 22 33 44  p 22  cd     ls  l   echo       Logout             windows  ssh    linux         web",
+        "objectID": "post/Windows-配置-SSH-免密登录-CentOS-服务器",
+        "date": "2020-10-11T08:34:35.000Z",
+        "weight": null,
+        "description": "Win10, CentOS6.9",
+        "tags": [
+            "SSH"
+        ],
+        "categories": [
+            "Tools"
+        ],
+        "series": [],
+        "algorithms": [],
+        "comments": true,
+        "displayCopyright": true,
+        "toc": true,
+        "draft": false
+    },
+    {
+        "title": "Windows 配置 SSH 密钥登录 CentOS 服务器",
+        "uri": "post/Windows-配置-SSH-密钥登录-CentOS-服务器",
+        "content": "Lignthouse     CentOS7 6             SSH                 X failed login attempts last successful login                 10                                                                   SSH                 SSH      CentOS          SSH                       CentOS     SSH                   SSH                                           ssh idrsa pub                ssh authorizedkeys         ssh    p                                                                                                                                                                         admonition type  warning  title      details  true  open  open                                      SSH                                    1                                   2                                     SSH     22                   SSH                        admonition                                    ssh authorized_keys                                                      OneDrive secret      test    Windows          zhangsan       ip   11 22 33 44 ssh     22   root                                    powershell       icacls  grant  F icacls  inheritancelevel r example icacls   OneDrive secret test  grant zhangsan F icacls   OneDrive secret test  inheritancelevel r                     powershell          ssh  i    p example ssh  i   OneDrive secret test root 11 22 33 44  p 22    CentOS     SSH                              SSH                                 sshd_config     vim  etc ssh sshd_config    PasswordAuthentication yes         no              no       SSH     CentOS6 service sshd restart CentOS7 systemctl restart sshd   https   wangdoc com ssh key html   https   yuhi xyz post Windows    SSH      CentOS       https   cloud tencent com document product 1207 44573",
+        "objectID": "post/Windows-配置-SSH-密钥登录-CentOS-服务器",
+        "date": "2021-02-13T14:38:28.000Z",
+        "weight": null,
+        "description": "腾讯云 Lighthouse，CentOS7.6",
+        "tags": [
+            "SSH"
+        ],
+        "categories": [
+            "Tools"
+        ],
+        "series": [],
+        "algorithms": [],
+        "comments": true,
+        "displayCopyright": true,
+        "toc": true,
+        "draft": false
+    },
+    {
+        "title": "分块学习笔记",
+        "uri": "post/分块学习笔记",
+        "content": "1 n                        B                             lceil frac n  B  rceil            B      lceil frac n  B  rceil             B  sqrt n                          i           i 1  B 1        i               i 1   times B 1            i times B         i                text delta  i        i                     text sum  i        i                             set vector                         l r                                             l  text belong  l  times B                  text belong  r  1  times B 1 r                  text belong  l  1  text belong  r  1                                          l r                     mathrm belong  i         i            B            sz              mathrm L  i   mathrm R  i          i              int n  B  sz  int belong N   L N   R N   void build     B   sqrt n   sz    n   1    B   1   int   1  using namespace std  typedef long long LL  const int N   50010  int n  B  sz  int belong N   L N   R N   LL a N   delta N   void build     B   sqrt n   sz    n   1    B   1   int   1    n  build     int   1  using namespace std  typedef long long LL  const int N   50010  int n  B  sz  int belong N   L N   R N   int a N   delta N   vector v N   void build     B   sqrt n   sz    n   1    B   1   int   1    n  build     int   1  using namespace std  typedef long long LL  const int N   100010  int n  B  sz  int belong N   L N   R N   int a N   delta N   vector v N   void build     B   sqrt n   sz    n   1    B   1   int   1    0  res   max res  vi   delta i       int   L belong r      n  build     int   1  using namespace std  typedef long long LL  const int N   50010  int n  B  sz  int belong N   L N   R N   int a N   delta N   LL sum N   void build     B   sqrt n   sz    n   1    B   1   int   1    n  build     int   1  using namespace std  typedef long long LL  const int N   50010  int n  B  sz  int belong N   L N   R N   int a N   LL sum N   bool st N      st i  true   i     01       void build     B   sqrt n   sz    n   1    B   1   int   1  1  flag   false    st i    flag     int   L belong r      n  build     int   1  using namespace std  typedef long long LL  const int N   300010  int n  B  sz  int belong N   int a N   vector v N   void build     B   sqrt n   sz    n   1    B   1   int   1  v idx  size    l    v idx    size         l   idx      idx    l 1    x v idx  insert v idx  begin     l   1  x    v idx  size     5   B  rebuild      int query int r    int idx   1   r   v idx  size    r    v idx    size    return vidx    int main     cin    n  build     int   1  using namespace std  typedef long long LL  const int N   100010  mod   10007  int n  B  sz  int belong N   L N   R N   LL a N   LL lazyadd N   lazymul N   void build     B   sqrt n   sz    n   1    B   1   int   1    n  build     int   1  using namespace std  typedef long long LL  const int N   100010  int n  B  sz  int belong N   L N   R N   int a N   val N   bool st N   void build     B   sqrt n   sz    n   1    B   1   int   1  r  return   st belong l           l           val belong l      c    res    r   l   1    else            int   L belong l      n  build     int   1  using namespace std  const int N   40010  M   3010  int n  m  B  sz  int belong N   L N   R N   int fM     fi  i j     int sM     si   1 i  j      int a N   cnt N   vector alls         int lim             0 lim void build     B   n   sqrt m   log2 n    sz    n   1    B   1   int   1  rescnt    xcnt    rescnt    x rescnt    cnt a i      rescnt    a i    n    m  build     int   1  rescnt    cnt a j      rescnt    a j  r  swap l  r   printf   d n   last   query l  r      return 0      texttt Solution 2    include using namespace std  typedef pair PII  typedef long long LL  const int N   100010  M   2010  int n  m  B  sz  int belong N   L N   R N   int a N   int modeM     modei    i j      vector v N   vector alls  int mp N   void build     B   n   sqrt n   log2 n    sz    n   1    B   1   int   1  cnt    mp a i      cnt    a i  cnt    xcnt    cnt    x cnt    mp a j      cnt    a j  using namespace std  typedef pair PII  typedef long long LL  const int N   200010  M   510  int n  k  B  int a N   int belong N      belong i     i      vector v M      v i    i       LL res  LL solve int l  int r     l    r  return 0  int x   a l   y   a r    x   y  swap x  y   LL cnt   0           l r             a                 k1 k2     l r           int k1   find v belong l   begin    v belong l   end    a l     v belong l   begin    int k2   find v belong r   begin    v belong r   end    a r     v belong r   begin    vbelong l    ar   v belong r    a l   sort v belong l   begin    v belong l   end     sort v belong r   begin    v belong r   end     swap a l   a r                           a l  a r       l 1 r 1             x 1 y 1     cnt        cnt2 1   x y   cnt2 1  belong l   1     belong r   1      int   l   1  x    a i  x    a i  x    a i  a r    1    1     int main     cin    n    k  B   sqrt N      emm   n wa50    int   1  r  swap l  r   res    solve l  r   cout using namespace std  const int N   100010  M   sqrt N    10  int n  c  m  B  sz  int belong ",
+        "objectID": "post/分块学习笔记",
+        "date": "2020-06-21T07:56:31.000Z",
+        "weight": null,
+        "description": null,
+        "tags": [],
+        "categories": [
+            "ACM",
+            "Notes"
+        ],
+        "series": [],
+        "algorithms": [
+            "分块"
+        ],
+        "comments": true,
+        "displayCopyright": true,
+        "toc": true,
+        "draft": false
+    },
+    {
+        "title": "莫队学习笔记",
+        "uri": "post/莫队学习笔记",
+        "content": "n           m                 l r                      l r              O 1          l 1 r     l 1 r     l r 1     l r 1                                             O n sqrt m                             B       n B                                                                   l r   1 0                          i                   l r               q i  l q i  r                 l r                r                                 r         n         n B        r           n 2 B                                  n             n B             n B                     n 2 B                                    qwq          l                         l                  B        m               mB                                              l            n         l r            O n 2 B mB            n 2 B mB  ge 2 sqrt n 2 m  quad  mathrm iff   B n    sqrt m          B n  sqrt m           O n sqrt m                                                              struct Query   int id  l  r  bool operator W r      q N   AcWing2492 HH                l r       cnt                    res                     include using namespace std  const int N   50010  M   200010  V   1000010  int n  m  B  int belong N   int a N   cnt V   struct Node   int id  l  r  bool operator query i  l  add a   l   res    r   query i  r  del a r     res    l q i  ts         q i  ts 1 text   ts                                                                                                                                               include using namespace std  const int N   10010  M   1000010  int n  m  B  int color N   belong N   int qcnt  pcnt     qcnt      pcnt       struct Query   int id  l  r  ts     id          ts         ts      ts 1    bool operator   q i  l    p ts  x q i  l  add color   l   res    r   q i  r  del color r     res    l q i  ts  modify ts    i  res          q i  ts 1 ts          ans q i  id    res     int   1               i                 r r0         i                      l l0 r_0 1                           l r                l0 r                                                        l0 r             l_0             add                                    r               r                q i  r               tmp                         l_0 r        l                l                                      add                           i                i 1                                            q i  r  le q i 1  r            r            add        l                          i         l            l_0                   cnt                                 B  sqrt n             O n sqrt n  m sqrt n     OI Wiki    include using namespace std  typedef long long LL  const int N   100010  int n  m  B  sz  int belong N   L N   R N   a N   struct Query   int id  l  r  bool operator alls  int cnt N   LL ans N   void build     B   sqrt n   sz    n   1    B   1   int   1  q i  l  add a   l   res   ans q i  id    res             cnt        l        l       first i   last i          i                                    u v          first u   le first v      u     v               u v          u lca u v       u  rightarrow v                   first u  first v          1         u  neq lca u v      p lca u v         u  rightarrow v                   last u  first v          1           p              include using namespace std  const int N   40010  M   100010  int n  m  B  int h N   e N alls  int belong N   0  k       depthfa a     depth b     faa     a    b  return a   int k   15  k    0  k       faa    fab    faa  b   fab    return faa    void dfs int u  int fa    stk   top    u  first u    top   int   h u    i    ne i     int j   e i    j    fa  continue  dfs j  u     stk   top    u  last u    top    void work int x  int  res    st x     1   st x           x      1        w x       cnt w x       cnt w x      1  res      else         x      2  0        w x       cnt w x       cnt w x      0  res        int main     scanf   d d    n   m   memset h   1  sizeof h   build n first b   swap a  b   int p   lca a  b    p    a  q i     i  first a   first b   0   else q i     i  last a   first b   p     sort q  q   m            int   0  l   1  r   0  res   0  q i  r  work stk r     res    r q i  l  work stk   l   res    l using namespace std  typedef long long LL  const int N   50010  int n  m  int a N   cnt N   int belong N   B  struct Query   int id  l  r  a  b  bool operator q i  l  add   l  res    r   q i  r  del r    res    l using namespace std  const int N   100010  int n  m  int aN   cnt N   s N  sumN  int belong N   L N   R N   B  sz  struct Query   int id  l  r  a  b  bool operator q i  l  add   l    r   q i  r  del r      l using namespace std  const int N   100010  int n  m  int a N   int B  belong N   struct Query   int id  l  r  bool operator alls  int cnt N   void build     B   sqrt n    int   1    n    m  build     int   1  q i  l  add   l  res    r   q i  r  del r    res    l using namespace std  const int N   200010  int n  m  int a N   int B  belong N   struct Query   int id  l  r  ts  bool operator alls  int cnt N   num N   void buil",
+        "objectID": "post/莫队学习笔记",
+        "date": "2020-10-04T03:17:14.000Z",
+        "weight": null,
+        "description": null,
+        "tags": [],
+        "categories": [
+            "ACM",
+            "Notes"
+        ],
+        "series": [],
+        "algorithms": [
+            "莫队",
+            "值域分块"
+        ],
+        "comments": true,
+        "displayCopyright": true,
+        "toc": true,
+        "draft": false
+    },
+    {
+        "title": "专栏",
+        "uri": "series",
+        "content": "",
+        "objectID": "series"
+    },
+    {
+        "title": "标签",
+        "uri": "tags",
+        "content": "",
+        "objectID": "tags"
+    }
+]
